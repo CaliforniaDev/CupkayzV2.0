@@ -1,0 +1,15 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    min-height: 100vh;
+
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
