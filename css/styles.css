@@ -31,7 +31,6 @@ nav {
     width: 100vw;
     justify-content: space-between;
     align-items: center;
- 
 }
 .logo {
     text-decoration: none;
@@ -55,23 +54,52 @@ nav {
 }
 .nav-item {
     padding-left: 48px;
+    align-self: center;
 }
 
 
 
- .nav-item a {
+ ul li a {
     color: #f9f8f6;
     text-decoration: none;
 }
+.toggle {
+    align-self: center;
+    visibility: hidden;
+    position: absolute;
+}
 
-@media (max-width: 992px) {
-    .logo {
-        display: inline-block;
+@media (max-width:  1119.98px) {
+ 
+ 
+    
+}
+
+@media (max-width: 992.98px) {
+    nav  {
+        height: auto;
+        justify-content: space-between;
+ 
+    }
+    #nav-links {
+        flex-wrap: wrap;
+    }
+    .nav-item {
+        order: 2; /* changed ordered of nav items  */
+        flex-basis: 100vw;
+        text-align: center;
+        padding: 0px;
+        border-style: solid;
+        white-space: nowrap;   
     }
     .logo img:nth-of-type(2) {
         display: none;
     }
-    .nav {
+    .toggle {
+        order: 1;
+        border: 5px solid red;
+        visibility: visible;
+        position: relative;
     }
     
 }
