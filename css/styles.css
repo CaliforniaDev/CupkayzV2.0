@@ -48,7 +48,7 @@ nav {
     vertical-align: middle;
 }
 .logo img:nth-of-type(2) {
-    padding-left: 1rem;
+    
     width: 15rem;
     vertical-align: middle;
     display: inline-block;
@@ -88,13 +88,14 @@ nav {
 }
 
 @media only screen and (max-width:  1119.98px) {
-    .logo img:nth-of-type(2) {
-        display: none;
-    }
+   
    
 }
 
 @media only screen and (max-width: 992.98px) {
+    nav {
+        padding: 0 1.6rem;
+    }
     #nav-menu {
         flex-direction: column;
         width: 100vw;
@@ -103,7 +104,6 @@ nav {
         position: fixed;
         text-align: center;
         transition: 0.3s;
-        border-radius: 1rem;
         background-color: #667a68; 
         box-shadow: 0 1rem 2.7rem rgba(0, 0, 0, 0.11);
         
