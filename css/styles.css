@@ -6,10 +6,12 @@
 }
 
 html {
-    font-size: 100%;
+    color: #222;
+    font-size: 62.5%;
+    line-height: 1.15;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    font-size: 62.5%;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
