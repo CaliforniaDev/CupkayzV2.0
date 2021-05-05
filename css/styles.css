@@ -70,6 +70,10 @@ nav {
     color: #f9f8f6;
     text-decoration: none;
 }
+.nav-item a:hover {
+    color: #D99691;
+    transition: 0.3s ease-in-out;
+}
 .hamburger {
     display: none;
 }
@@ -108,23 +112,29 @@ nav {
     .nav-item {
         order: 2;
         margin: 2.4rem 0;
-        border-style: solid;
-          
     }
-
     #nav-menu.active {
         left: 0;
-    }
-
-    .toggle {
-        order: 1;
-        border: 5px solid red;
-        visibility: visible;
-        position: relative;
     }
     .hamburger {
         display: block;
         cursor: pointer;
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #D99691;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #D99691;
+    }
+    .hamburger:hover .bar {
+        background-color: #D99691;
     }
     
 }
