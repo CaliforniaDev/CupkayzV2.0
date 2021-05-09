@@ -7,23 +7,28 @@
     <title>Cupkayz</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 
 <body>
+    <header class="container">
     <nav id="top-nav">
         <a href="#" class="logo">
             <img src="images/cupkaysFamicom_icon.svg" alt="Cup Kayz logo" />
             <img src="images/cupkaysFamicon_name.svg" alt="Cup Kayz" />
         </a>
-        <ul id="nav-menu" class="">
-            <li class="nav-item"><a href="#">HOME </a></li>
-            <li class="nav-item"><a href="#">ORDER MENU</a></li>
-            <li class="nav-item"><a href="#">MAKE IT SPECIAL</a></li>
-            <li class="nav-item"><a href="#">JOIN</a></li>
-            <li class="nav-item"><a href="#">CONTACT</a></li>
+        <ul id="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link"href="#">CONTACT</a></li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -31,8 +36,10 @@
             <span class="bar"></span>
         </div>
     </nav>
-
-
+</header>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
 </body>
 
 </html>
