@@ -18,15 +18,10 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    min-height: 100vh;
+    min-height: 200vh; /*TEST*/
     font-family: 'Karla', sans-serif;
     font-size: 1.6rem;
     background: #604543;
-    /*
-    background-image: url("../images/SVG/photo-cupcakes.svg");
-    background-position: center center;
-    background-size: cover;
-    mask-image: url("../images/SVG/Asset\ 2.svg");*/
 }
  #hero {
     z-index: -1;
@@ -54,6 +49,9 @@ h1 h2 h3 {
 }
 *, *::before, *::after {
     box-sizing: inherit;
+}
+#top-nav {
+    position: fixed;
 }
 nav {
     display: flex;
