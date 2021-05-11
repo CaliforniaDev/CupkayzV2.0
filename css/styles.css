@@ -29,7 +29,7 @@ body {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
     mask-size: cover;
     mask-repeat: no-repeat;
     mask-image: url(../images/SVG/curvy-mask.svg);
