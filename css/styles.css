@@ -32,16 +32,16 @@ body {
     overflow: hidden;
     mask-size: cover;
     mask-repeat: no-repeat;
-    mask-image: url(../images/SVG/bg-black.svg);
+    mask-image: url(../images/SVG/curvy-mask.svg);
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url(../images/SVG/bg-black.svg);
+    -webkit-mask-image: url(../images/SVG/curvy-mask.svg);
     -webkit-mask-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-image:
     radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
-    url(../images/SVG/photo-cupcakes.svg);
+    url(../images/SVG/hero-bg-cupcakes.svg);
 }
 
 h1 h2 h3 {
