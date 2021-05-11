@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.168" height="462.292" viewBox="0 0 27.168 462.292">
+  <g id="Arrow" transform="translate(-95.916 -171.5)">
+    <path id="arrow_down" data-name="arrow down" d="M15.584,14.487,2,.9,6.046,2.289l9.538,9.538,9.538-9.538L29.168.9Z" transform="translate(93.916 619.305)" fill="#f1f9ff"/>
+    <path id="Divider" d="M0,0V393" transform="translate(109.5 171.5)" fill="none" stroke="#f1f9ff" stroke-width="2"/>
+  </g>
+</svg>
