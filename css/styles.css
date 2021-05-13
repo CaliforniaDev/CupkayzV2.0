@@ -47,7 +47,6 @@ h4 {
 }
 .light-font {
     color: #F9F8F6;
-    z-index: -1;
 }
 
 *, *::before, *::after {
@@ -118,11 +117,10 @@ nav {
     
 }
 
-.container {
-    border: 2px solid purple;
+.hero {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 100vh;
     background-image: 
     radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
@@ -132,30 +130,43 @@ nav {
     background-repeat: no-repeat;
 }
 .hero-header {
-    margin-top: 8rem;
-   
+    display:flex;
+    margin-top: 17.2rem;
+    margin-bottom: 1.6rem;
+    margin-left: 15.2rem;
+    color: #f9f8f6;
 }
 .hero-footer {
     display: flex;
-
-    border: 1px solid red;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-left: 15.2rem;
+    padding-bottom: 9.2rem;
 }
 .order-button {
+    width: 18.2rem;
+    margin-bottom: 3.4rem;
     border: none;
     text-decoration: none;
     color: #444;
-    padding: 1.2vh 4vh;
+    padding: 1.2rem 4rem;
     background-color: #EDA39E;
     border-radius: 0.4rem;
     text-align: center;
 }
 .special-button {
+    width: 18.2rem;
     text-decoration: none;
     color: #F9F8F6;
-    padding: 1.2vh vh;
+    padding: 1.2rem 2.4rem;
     background-color: transparent;
     border: 0.2rem solid #EDA39E;
     border-radius: 0.4rem;
+}
+.arrow {
+    margin-top: 17.2rem;
+    margin-left:9.2rem;
+    position: absolute;
 }
 
 
@@ -192,6 +203,7 @@ nav {
     
 }
 */
+/*
 #hero .arrow {
     margin-top: 9.1rem;
     padding-right: 2.6rem;
@@ -221,7 +233,7 @@ nav {
     background-color: #EDA39E;
     border: none;
     border-radius: 0.4rem;
-}
+} 
 
 #article {
     display:flex;
@@ -231,7 +243,8 @@ nav {
 .fa-instagram {
     color: #f9f8f6;
     margin-left: 9.2rem;
-}
+}*/
+
 /*
 .container:nth-child(1) {
     height: 92vh;
@@ -249,7 +262,7 @@ nav {
 
 @media only screen and (max-width: 992.98px) {
     nav {
-        padding: 0 1.6rem;
+        padding: 0 rem;
     }
     #nav-menu {
         flex-direction: column;
@@ -260,7 +273,7 @@ nav {
         text-align: center;
         transition: 0.3s;
         background-color: #667a68; 
-        box-shadow: 0 1rem 2.7rem rgba(0, 0, 0, 0.11);
+        /*box-shadow: 0 1rem 2.7rem rgba(0, 0, 0, 0.11); */
         
         
     }
@@ -298,7 +311,8 @@ nav {
     .arrow {
         padding-right:9.2rem;
         position: absolute;
-        left: 1.6rem;
+        margin-left: 1.6rem;
+       
     }
     .hero-content {
         text-align: center;
@@ -306,6 +320,30 @@ nav {
     .fa-instagram {
         margin-left: 1.6rem;
     }
+
+
     /* REMEMBER TO ADD PADDING TO HERO FOR LAYOUT GRID*/
+}
+@media only screen and (max-height: 650px) {
+    .arrow {
+        height: 40rem;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero-header {
+        margin-left: 0;
+        align-self: center;
+        flex-direction: column;
+        align-content: center;
+    }
+    .hero-footer {
+        margin: 0;
+        align-self: center;
+
+    }
+    .hero-header > h1 {
+        text-align: center;
+    }
+
 }
 
