@@ -52,10 +52,8 @@ h4 {
 *, *::before, *::after {
     box-sizing: inherit;
 }
-#top-nav {
-    position: fixed;
-}
 nav {
+    position: fixed;
     display: flex;
     width: 100vw;
     height: 8rem;
@@ -65,16 +63,14 @@ nav {
     background: #667a68;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
 }
-.logo {
+nav > a {
     text-decoration: none;
-    
 }
 .logo img:nth-of-type(1) {
     width: 4.8rem;
     vertical-align: middle;
 }
 .logo img:nth-of-type(2) {
-    
     width: 15rem;
     vertical-align: middle;
     display: inline-block;
@@ -112,10 +108,9 @@ nav {
     transition: all 0.3s ease-in-out;
     background-color: #f9f8f6;
 }
-#large-cupcake {
-    border: 1px solid green;
-    
-}
+
+
+
 
 .hero {
     display: flex;
@@ -163,94 +158,19 @@ nav {
     border: 0.2rem solid #EDA39E;
     border-radius: 0.4rem;
 }
+.order-button:hover {
+    background-color: #EED1CA;
+    cursor: pointer;
+}
+.special-button:hover {
+    background-color: #604543;
+    cursor: pointer;
+}
 .arrow {
     margin-top: 17.2rem;
     margin-left:9.2rem;
     position: absolute;
 }
-
-
-
-/*
-#hero {
-    z-index: -1;
-    top: 0;
-    display: flex;
-    overflow: visible;
-    align-items: flex-start;
-    padding: 8rem 9.2rem 0rem 9.2rem;
-    mask-position: top;
-    -webkit-mask-position: top;
-    position: absolute;
-    overflow: visible;
-    width: 100vw;
-    height: 100vh;
-    overflow: visible;
-    mask-size: cover;
-    mask-repeat: no-repeat;
-    mask-image: url(../images/SVG/curvy-mask.svg);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url(../images/SVG/curvy-mask.svg);
-    -webkit-mask-size: cover;
-    mask-clip: 0;
-    -webkit-mask-clip: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image:
-    radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
-    url(../images/SVG/hero-bg-cupcakes.svg);
-    
-}
-*/
-/*
-#hero .arrow {
-    margin-top: 9.1rem;
-    padding-right: 2.6rem;
-    
-}
-#hero .hero-content > h1 {
-    padding-bottom: 0.8rem;
-}
-.hero-content {
-    padding-top: 9.2rem;
-    display: flex;
-    flex-direction: column;
-    
-}
-.hero-content button:nth-of-type(2) {
-    margin-top: 3.4rem;
-    margin-bottom: 16.8rem;
-}
-#hero > a {
-    text-decoration: none;
-    left: 0;
-}
-.pink-button {
-    color: #444;
-    font-size: 1.6rem;
-    padding: 1.2rem 4rem; 
-    background-color: #EDA39E;
-    border: none;
-    border-radius: 0.4rem;
-} 
-
-#article {
-    display:flex;
-    justify-content: flex-start;
-    height: 100vh;
-}
-.fa-instagram {
-    color: #f9f8f6;
-    margin-left: 9.2rem;
-}*/
-
-/*
-.container:nth-child(1) {
-    height: 92vh;
-}
-
-*/
 
 @media only screen and (min-width: 1500px) {
     #hero {
@@ -347,3 +267,84 @@ nav {
 
 }
 
+
+/*
+#hero {
+    z-index: -1;
+    top: 0;
+    display: flex;
+    overflow: visible;
+    align-items: flex-start;
+    padding: 8rem 9.2rem 0rem 9.2rem;
+    mask-position: top;
+    -webkit-mask-position: top;
+    position: absolute;
+    overflow: visible;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-image: url(../images/SVG/curvy-mask.svg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url(../images/SVG/curvy-mask.svg);
+    -webkit-mask-size: cover;
+    mask-clip: 0;
+    -webkit-mask-clip: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:
+    radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
+    url(../images/SVG/hero-bg-cupcakes.svg);
+    
+}
+*/
+/*
+#hero .arrow {
+    margin-top: 9.1rem;
+    padding-right: 2.6rem;
+    
+}
+#hero .hero-content > h1 {
+    padding-bottom: 0.8rem;
+}
+.hero-content {
+    padding-top: 9.2rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+.hero-content button:nth-of-type(2) {
+    margin-top: 3.4rem;
+    margin-bottom: 16.8rem;
+}
+#hero > a {
+    text-decoration: none;
+    left: 0;
+}
+.pink-button {
+    color: #444;
+    font-size: 1.6rem;
+    padding: 1.2rem 4rem; 
+    background-color: #EDA39E;
+    border: none;
+    border-radius: 0.4rem;
+} 
+
+#article {
+    display:flex;
+    justify-content: flex-start;
+    height: 100vh;
+}
+.fa-instagram {
+    color: #f9f8f6;
+    margin-left: 9.2rem;
+}*/
+
+/*
+.container:nth-child(1) {
+    height: 92vh;
+}
+
+*/
