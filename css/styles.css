@@ -114,6 +114,7 @@ nav > a {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 100vw;
     background-image: 
     radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
     url("../images/SVG/hero-bg-cupcakes.svg");
@@ -124,8 +125,7 @@ nav > a {
 }
 .hero-header {
     display:flex;
-    margin-top: 17.2rem;
-    margin-bottom: 1.6rem;
+    margin-top: 14rem;
     margin-left: 15.2rem;
     color: #f9f8f6;
 }
@@ -167,9 +167,10 @@ nav > a {
     cursor: pointer;
 }
 .arrow {
+    height: 39rem;
     position: absolute;
     margin-left:9.2rem;
-    top: 17.2rem;
+    top: 12.4rem;
     left: 0;
 
 }
@@ -180,12 +181,7 @@ nav > a {
     right: 0;
     /*max-width: 20%*/
 }
-.bg-overlay-container {
-    border: 1px solid red;
-    width: 100vw;
-    justify-content: space-between;
-    
-}
+
 /*
 .giant-cupcake {
     max-height: 90vh;
@@ -203,14 +199,7 @@ nav > a {
     
 } */
 
-@media only screen and (min-width: 1700px){
- 
-}
-@media only screen and (min-width: 1500px) {
 
-}
-@media only screen and (max-width:  1119.98px) {
-}
 
 @media only screen and (max-width: 992.98px) {
     nav {
@@ -253,13 +242,9 @@ nav > a {
     .hamburger:hover .bar {
         background-color: #D99691;
     }
-    #hero {
-        padding: 8rem 1.6rem 0 1.6rem;
-        justify-content: center;
-    }
     .arrow {
         padding-right:9.2rem;
-        position: absolute;
+
         margin-left: 1.6rem;
        
     }
@@ -286,10 +271,7 @@ nav > a {
     .giant-cupcake {
         display: none;
     }
-    .hero {
-        mask-image: none;
-        -webkit-mask-image: none;
-    }
+   
 
 
 }
