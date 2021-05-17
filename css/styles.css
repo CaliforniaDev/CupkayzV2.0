@@ -110,9 +110,6 @@ nav > a {
     background-color: #f9f8f6;
 }
 
-
-
-
 .hero {
     display: flex;
     flex-direction: column;
@@ -123,12 +120,6 @@ nav > a {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    mask-size:contain;
-    -webkit-mask-size: cover;
-    mask-repeat: no-repeat;
-    mask-image: url(../images/SVG/curvy-mask.svg);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url(../images/SVG/curvy-mask.svg);
     
 }
 .hero-header {
@@ -276,11 +267,7 @@ nav > a {
         margin-left: 7.6rem;
     }
 }
-@media only screen and (max-height: 650px) {
-    .arrow {
-        height: 40rem;
-    }
-}
+
 @media only screen and (max-width: 768px) {
     .hero-header {
         margin-left: 0;
