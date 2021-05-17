@@ -175,15 +175,14 @@ nav > a {
     position: absolute;
 }
 .giant-cupcake {
-    max-width: 20%;
-
+    height: 85vh;
+    /*max-width: 20%*/
 }
 .bg-overlay-container {
    position: absolute;
     display: flex;
     height: 100vh;
     width: 100vw;
-
     justify-content: flex-end;
     align-items: flex-end;
 }
@@ -200,7 +199,7 @@ nav > a {
 
 @media only screen and (max-width: 992.98px) {
     nav {
-        padding: 0 rem;
+        padding: 0 1.6rem;
     }
     #nav-menu {
         flex-direction: column;
@@ -252,8 +251,8 @@ nav > a {
         margin-left: 1.6rem;
        
     }
-    .hero-content {
-        text-align: center;
+    .hero-header, .hero-footer {
+        margin-left: 7.6rem;
     }
     .fa-instagram {
         margin-left: 1.6rem;
@@ -282,6 +281,10 @@ nav > a {
     .hero-header > h1 {
         text-align: center;
     }
+    .bg-overlay-container {
+        display: none;
+    }
+
 
 }
 
