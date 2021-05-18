@@ -94,8 +94,8 @@ nav > a {
     text-decoration: none;
 }
 .nav-item a:hover {
-    color: #D99691;
-    transition: 0.3s ease-in-out;
+    color: #EDA39E;
+    transition: 0.2s ease-in-out;
 }
 .hamburger {
     display: none;
@@ -126,6 +126,7 @@ nav > a {
 .hero-header {
     display:flex;
     margin-top: 14rem;
+    margin-bottom: 3.4rem;
     margin-left: 15.2rem;
     color: #f9f8f6;
 }
@@ -161,12 +162,17 @@ nav > a {
 .order-button:hover {
     background-color: #EED1CA;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .special-button:hover {
     background-color: #604543;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .arrow {
+    opacity: 0.6;
     height: 39rem;
     position: absolute;
     margin-left:9.2rem;
@@ -180,6 +186,18 @@ nav > a {
     bottom: 0;
     right: 0;
     /*max-width: 20%*/
+}
+.instagram-favicon {
+    opacity: 0.6;
+    position: absolute;
+    width: 4rem;
+    bottom: 9.2rem;
+    margin-left: 8.4rem;
+}
+.instagram-favicon:hover {
+    opacity: 1.0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 /*
@@ -244,9 +262,11 @@ nav > a {
     }
     .arrow {
         padding-right:9.2rem;
-
         margin-left: 1.6rem;
-       
+    }
+    .instagram-favicon {
+        margin-left: 1.6rem;
+        bottom: 1.6rem;
     }
     .hero-header, .hero-footer {
         margin-left: 7.6rem;
