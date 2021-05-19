@@ -113,7 +113,8 @@ nav > a {
 .hero {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 700px;
     width: 100vw;
     background-image: 
     radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
@@ -131,11 +132,23 @@ nav > a {
     color: #f9f8f6;
 }
 .hero-footer {
+   
+   
+    border: 1px solid red;
     display: flex;
+    height: 100vh;
+    width: 100vw;
     flex-direction: column;
-    align-content: flex-start;
+
+}
+.headline{
+    color: #f9f8f6;
+    margin-top: 14rem;
     margin-left: 15.2rem;
-    padding-bottom: 9.2rem;
+}
+.order-button, .special-button {
+    margin-left: 15.2rem;
+    
 }
 .order-button {
     z-index: 1;
@@ -189,10 +202,11 @@ nav > a {
 }
 .instagram-favicon {
     opacity: 0.6;
-    position: absolute;
     width: 4rem;
-    bottom: 9.2rem;
-    margin-left: 8.4rem;
+    position: absolute;
+    bottom: 8.3rem;
+    margin-left: 8.3rem;
+ 
 }
 .instagram-favicon:hover {
     opacity: 1.0;
@@ -262,36 +276,30 @@ nav > a {
     }
     .arrow {
         padding-right:9.2rem;
-        margin-left: 1.6rem;
+        margin-left: 2.4rem;
     }
     .instagram-favicon {
         margin-left: 1.6rem;
         bottom: 1.6rem;
     }
-    .hero-header, .hero-footer {
-        margin-left: 7.6rem;
-    }
+  
 }
 
 @media only screen and (max-width: 768px) {
-    .hero-header {
+    .hero-footer  {
+        align-items: center;
         margin-left: 0;
-        align-self: center;
-        flex-direction: column;
-        align-content: center;
     }
-    .hero-footer {
-        margin: 0;
-        align-self: center;
-
-    }
-    .hero-header > h1 {
-        text-align: center;
+    .headline, .order-button, .special-button {
+        margin-left: 0;
+        text-align: center;  
     }
     .giant-cupcake {
         display: none;
     }
-   
+    .instagram-favicon {
+        left: 0;
+    }
 
 
 }
