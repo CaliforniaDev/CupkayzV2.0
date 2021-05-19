@@ -109,7 +109,26 @@ nav > a {
     transition: all 0.3s ease-in-out;
     background-color: #f9f8f6;
 }
+.header {
+    position: relative;
+}
+.hero-overlay {
+    z-index: 0;
+    position: absolute;
+    padding-top: 8rem;
+}
+.hero-overlay > h1 {
+    color: #f9f8f6;
+}
+.hero-image {
+    z-index: -1;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+
+/*
 .hero {
     display: flex;
     flex-direction: column;
@@ -198,7 +217,7 @@ nav > a {
     height: 85vh;
     bottom: 0;
     right: 0;
-    /*max-width: 20%*/
+    max-width: 20%
 }
 .instagram-favicon {
     opacity: 0.6;
@@ -213,7 +232,7 @@ nav > a {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
-
+*/
 /*
 .giant-cupcake {
     max-height: 90vh;
