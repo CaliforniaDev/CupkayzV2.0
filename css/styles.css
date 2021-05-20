@@ -109,8 +109,63 @@ nav > a {
     transition: all 0.3s ease-in-out;
     background-color: #f9f8f6;
 }
-.header {
-    position: relative;
+.hero {
+    overflow: hidden;
+    height: 100vh;
+    min-height: 65rem;
+    width: 100vw;
+    display: grid;
+    padding-left: 9.2rem;
+    grid-auto-columns: auto;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    column-gap: 3.2rem;
+    background-position: center center;
+    background-image: radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
+    url("../images/bg-hero.jpg");;
+    background-size: cover;
+   
+
+}
+
+.hero > .col-1 {
+    display: grid;
+    margin-top: 9.2rem;
+    margin-left: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 0 / 4;
+    column-gap: 3.2rem;
+    grid-row: 1 / 12;
+}
+.col-1 > div {
+    border: 1px solid red;
+}
+.col-2 {
+    
+    margin-top: 0;
+    grid-column:  12;
+    grid-row:  12;
+}
+.hero-image {
+    height: 85vh;
+    min-height: 600px;
+    justify-self: end;
+}
+
+
+/*///////////////////////////////////////////////////////
+
+.hero {
+    display: grid;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    min-height: 650px;
+    background-image: radial-gradient(at top left, rgba(102,122,104,0.85) 0%, rgba(27,36,28,0.85) 45%),
+    url("../images/bg-hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .hero-overlay {
     z-index: 0;
@@ -120,12 +175,11 @@ nav > a {
 .hero-overlay > h1 {
     color: #f9f8f6;
 }
-.hero-image {
-    z-index: -1;
+.hero-overlay > button {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 1.6rem;
 }
+////////////////////////////////////////////////////////*/
 
 
 /*
@@ -293,18 +347,14 @@ nav > a {
     .hamburger:hover .bar {
         background-color: #D99691;
     }
-    .arrow {
-        padding-right:9.2rem;
-        margin-left: 2.4rem;
-    }
-    .instagram-favicon {
-        margin-left: 1.6rem;
-        bottom: 1.6rem;
+    .hero {
+        padding-left: 1.6rem;
     }
   
 }
 
 @media only screen and (max-width: 768px) {
+ 
     .hero-footer  {
         align-items: center;
         margin-left: 0;
@@ -319,6 +369,7 @@ nav > a {
     .instagram-favicon {
         left: 0;
     }
+    
 
 
 }
