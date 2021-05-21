@@ -17,7 +17,6 @@
 </head>
 
 <body>
-    <header class="container">
     <nav id="top-nav">
         <a href="#" class="logo">
             <img src="images/cupkaysFamicom_icon.svg" alt="Cup Kayz logo" />
@@ -28,7 +27,7 @@
             <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
             <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
             <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
-            <li class="nav-item"><a class="nav-link"href="#">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -36,25 +35,30 @@
             <span class="bar"></span>
         </div>
     </nav>
-   <!--<img id="large-cupcake" src="images/SVG/lrg-cupcake-logo.svg"> -->
-    <section id="hero">
-            <img class="arrow" src="images/SVG/Arrow.svg">
-            <div class="hero-content">
-                <h1 class="light-font">Treat<br> Yourself<br> SWEET</h1>
-                <button class="pink-button">ORDER MENU</button>
-                <button class="special-button">MAKE IT SPECIAL</button>
+
+    <section class="hero">
+        <header class="col-1">
+            <img src="images/SVG/Arrow.svg" alt="Arrow pointing down, instructing user to scroll">
+
+            <div class="header-content">
+                <h1>Treat <br> Yourself <br> Sweet</h1>
+                <button class="order-menu-btn" href="#">ORDER MENU</button>
+                <button class="special-btn" href="#">MAKE IT SPECIAL</button>
             </div>
+            
+        </header>
+        <div class="col-2">
+            <img src="images/SVG/half-cupcake.svg" alt="Half of a cupcake">
+        </div>
+
     </section>
-    
-</header>
 
-<article id="article">
-    <i class="fab fa-instagram fa-2x"></i>
-</article>
-
+ 
+    </section>
     <script src="js/main.js"></script>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
+
 </body>
 
 </html>
