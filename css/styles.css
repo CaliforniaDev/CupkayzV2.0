@@ -123,7 +123,6 @@ nav > a {
     url("../images/bg-hero.jpg");;
     background-size: cover;
 }
-
 .col-1 {
     padding-top: 17.2rem;
     padding-left: 9.2rem;
@@ -173,8 +172,6 @@ nav > a {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
-
 .col-2 {
     grid-column: 7 / 13;
     grid-row: 1 / 7;
