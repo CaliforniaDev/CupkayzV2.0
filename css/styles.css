@@ -24,7 +24,7 @@ body {
     background: #604543;
 }
 
-h1 h2 h3 {
+h1, h2, h3 {
     font-family: 'Spectral', serif;
 }
 h1 {
@@ -147,6 +147,17 @@ nav > a {
     border-radius: 0.4rem;
    
 }
+.hero-col-2 {
+    grid-column: 7 / 13;
+    grid-row: 1 / 7;
+    justify-self: end;
+    align-self: end;
+}
+.hero-col-2 > img {
+    height: 85vh;
+    min-height: 50vh;
+}
+
 .order-menu-btn {
     margin-bottom: 3.4rem;
     color: #444;
@@ -160,17 +171,6 @@ nav > a {
     background-color: transparent;
     border: 0.2rem solid #EDA39E;
 }
-.hero-col-2 {
-    grid-column: 7 / 13;
-    grid-row: 1 / 7;
-    justify-self: end;
-    align-self: end;
-}
-.hero-col-2 > img {
-    height: 85vh;
-    min-height: 50vh;
-}
-
 .order-menu-btn:hover {
     background-color: #EED1CA;
     cursor: pointer;
@@ -183,6 +183,28 @@ nav > a {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
+
+
+.most-popular-items {
+    margin: 8rem 9.2rem 8rem 9.2rem;
+    text-align: center;
+}
+.item-container {
+    display: grid;
+    /*grid-template-columns: repeat(3, 1fr);*/
+    column-gap: 3.2rem;
+    row-gap: 3.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+}
+.item-container > div {
+    background-color: rgb(179, 179, 179);
+    height: 44rem;
+}
+.item-container > div:nth-child(odd) {
+    background-color: #444;
+}
+
+
 
 
 
