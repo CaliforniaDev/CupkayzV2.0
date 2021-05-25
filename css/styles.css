@@ -123,14 +123,14 @@ nav > a {
     url("../images/bg-hero.jpg");;
     background-size: cover;
 }
-.col-1 {
+.hero-col-1 {
     padding-top: 17.2rem;
     padding-left: 9.2rem;
     grid-column: 1 / 7 ;
     grid-row: 1 / 7;
 }
 
-.col-1 > .header-content {
+.hero-col-1 > .header-content {
     display: inline-block;
     vertical-align: top;
     margin-top: 1.6rem;
@@ -140,7 +140,7 @@ nav > a {
     color: #f9f8f6;
     margin-bottom: 1.6rem;
 }
-.col-1 > .header-content > button {
+.header-content > button {
     display: block;
     width: 18.2rem;
     text-decoration: none;
@@ -154,17 +154,28 @@ nav > a {
     padding: 1.2rem 4rem;
     background-color: #EDA39E;
 }
-.order-menu-btn:hover {
-    background-color: #EED1CA;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-}
 .special-btn {
     color: #F9F8F6;
     padding: 1.2rem 2.4rem;
     background-color: transparent;
     border: 0.2rem solid #EDA39E;
+}
+.hero-col-2 {
+    grid-column: 7 / 13;
+    grid-row: 1 / 7;
+    justify-self: end;
+    align-self: end;
+}
+.hero-col-2 > img {
+    height: 85vh;
+    min-height: 50vh;
+}
+
+.order-menu-btn:hover {
+    background-color: #EED1CA;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .special-btn:hover {
     background-color: #604543;
@@ -172,17 +183,6 @@ nav > a {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-.col-2 {
-    grid-column: 7 / 13;
-    grid-row: 1 / 7;
-    justify-self: end;
-    align-self: end;
-}
-.col-2 > img {
-    height: 85vh;
-    min-height: 50vh;
-}
-
 
 
 
@@ -231,12 +231,12 @@ nav > a {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6. 1fr);
     }
-    .col-1 {
+    .hero-col-1 {
         grid-column: 1 / 4;
         grid-row: 1 / 7;
         padding-left: 1.6rem;
     }
-    .col-2 {
+    .hero-col-2 {
         grid-column: 4 / 7;
         grid-row: 1 / 7;
     }
@@ -249,13 +249,17 @@ nav > a {
     .hero {
         grid-template-columns: repeat(4, 1fr) ;
     }
-    .col-1 {
+    .hero-col-1 {
         grid-column: 1 / 5;
         padding-top: 12rem;
         text-align: center;
     }
-    .col-1 > .header-content {
+    .hero-col-1 > .header-content {
         margin-left: 0;
+    }
+    .hero-col-1 > img {
+      position: absolute;
+      left: 1.6rem;
     }
     .header-content > h1 {
         text-align: center;
@@ -265,11 +269,7 @@ nav > a {
         margin-left: auto;
         margin-right: auto;
     }
-     .col-1 > img {
-       position: absolute;
-       left: 1.6rem;
-    }
-    .col-2 {
+    .hero-col-2 {
         display: none;
     }
 }
