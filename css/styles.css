@@ -191,10 +191,12 @@ nav > a {
 }
 .item-container {
     display: grid;
+    justify-content: center;
+    align-items: center;
     /*grid-template-columns: repeat(3, 1fr);*/
     column-gap: 3.2rem;
     row-gap: 3.2rem;
-    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 384px));
 }
 .item-container > div {
     background-color: rgb(179, 179, 179);
