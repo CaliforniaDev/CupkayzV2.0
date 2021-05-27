@@ -22,9 +22,10 @@ body {
     font-family: 'Karla', sans-serif;
     font-size: 1.6rem;
     background: #604543;
+    transition: 0.6s linear;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Spectral', serif;
 }
 h1 {
@@ -47,6 +48,13 @@ h4 {
 }
 .light-font {
     color: #F9F8F6;
+}
+.fade {
+    opacity: 0.5;
+}
+.fade:hover {
+    opacity: 1;
+    transition: 0.6s;
 }
 
 *, *::before, *::after {
@@ -183,37 +191,127 @@ nav > a {
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
-
-.most-popular-items {
-    margin: 8rem 9.2rem 8rem 9.2rem;
+.popular-items-section {
+     /*height: 100vh; CSS grid is needed */
+    margin: 0 9.2rem;
+    margin-bottom: 12rem;
+    margin-top: 4rem;
+}
+.popular-items-section > h3 {
+    margin-bottom: 4rem;
     text-align: center;
 }
-.item-container {
+.card-container {
     display: grid;
     justify-content: center;
-    align-items: center;
-    /*grid-template-columns: repeat(3, 1fr);*/
     column-gap: 3.2rem;
     row-gap: 3.2rem;
-    grid-template-columns: repeat(auto-fill, minmax(auto, 38.4rem));
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr ));
     grid-auto-rows: auto;
 }
-.item-container > div {
-    height: 44rem;
+.card-container > .product-card {
+    width: 100%;
+    border-radius: 0.8rem;
+    background-color: #667A68;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.product-card > .product-img {
+    width: 100%;
+    height: 22rem;
+    background-size: cover;
+    background-position: 50% 75%;
+    border-radius: 0.8rem 0.8rem 0 0;
+    background-image: url(../images/stuffed-oreo.jpg);
+}
+.product-card:nth-child(2) > .product-img {
+    background-image: url(../images/strawberry-special.jpg);
+}
+.product-card:nth-child(3) > .product-img {
+    background-image: url(../images/reeses-cup.jpg);
+    background-position: 100% 50%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 22rem;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
+    text-align: justify;
+
+}
+.card-body > h4 {
+padding: 2.4rem 0 1.6rem 0;
+}
+.card-body > button {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: 2.4rem;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.4rem;
+    border: none;
+    color: #444;
+    background-color: #EDA39E
+}
+.card-body > button:hover {
+    background-color: #EED1CA;
+    cursor: pointer;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+/*
+.item-container > .product-card {
+    position: relative;
+    min-height: 44rem;
     border-radius: 0.8rem;
     background-color: #667A68;
 }
-
-
+.product-card > h4 {
+   text-align: left;
+   padding: 4rem 2.4rem 1.6rem 2.4rem;
+}
+.product-card > p {
+    text-align: left;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  
+}
 .product-card > img {
     width: 100%;
     height: 22rem;
     object-fit: cover;
+    margin-bottom: 4rem;
     border-top-left-radius: 0.8rem;
     border-top-right-radius: 0.8rem;
 }
+.product-card > button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 2.4rem 2.4rem 0;
+    padding: 1.2rem 2.4rem;
+    background-color: #EDA39E;
+    color: #444;
+    border: none;
+    border-radius: 0.4rem;
+}
+.product-content {
+    border: 1px solid cyan;
+    text-align: right;
+}
+.product-content > h4 , p {
+    text-align: justify;
+}
+.product-content > button {
+    text-align: right;
+}
 
+*/
 
 
 
