@@ -208,12 +208,12 @@ nav > a {
 }
 .card-container {
     display: grid;
-    justify-content: center;
-    justify-items: center;
-    column-gap: 3.2rem;
-    row-gap: 3.2rem;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-auto-rows: auto;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 3.2rem;
+    column-gap: 3.2rem;
 }
 .card-container > .product-card {
     width: 100%;
@@ -254,20 +254,20 @@ nav > a {
 padding: 2.4rem 0 1.6rem 0;
 }
 .card-body > button {
+    border: none;
     margin-left: auto;
     margin-top: auto;
     margin-bottom: 2.4rem;
     padding: 1.2rem 2.4rem;
     border-radius: 0.4rem;
-    border: none;
     color: #444;
     background-color: #EDA39E
 }
 .card-body > button:hover {
-    background-color: #EED1CA;
     cursor: pointer;
-    -webkit-transition: all 0.2s ease-in-out;
+    background-color: #EED1CA;
     transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
 }
 
 
@@ -291,7 +291,7 @@ padding: 2.4rem 0 1.6rem 0;
     
     #mobile-nav-menu.active {
         top: 0;
-        transition: 0.6s;
+        transition: 0.4s;
         opacity: 1;
     }
     #mobile-nav-menu {
@@ -309,6 +309,22 @@ padding: 2.4rem 0 1.6rem 0;
         justify-content: space-between;
         transition: 0.3s;
         background-color: #667a68;
+    }
+
+    .nav-overlay {
+        z-index: 0;
+        opacity: 0;
+        position: fixed;
+        position: absolutes;
+        background-color: rgb(20, 20, 20); 
+        height: 100vh;
+        width: 100vw;
+        transition: 0.6s;
+    }
+    .nav-overlay.active {
+        z-index: 1;
+        opacity: 0.75;
+        transition: 0.6s;
     }
 
 
@@ -333,21 +349,7 @@ padding: 2.4rem 0 1.6rem 0;
     .hamburger:hover .bar {
         background-color: #D99691;
     }
-    .nav-overlay {
-        z-index: 0;
-        opacity: 0;
-        position: fixed;
-        position: absolutes;
-        background-color: rgb(20, 20, 20); 
-        height: 100vh;
-        width: 100vw;
-        transition: 0.6s;
-    }
-    .nav-overlay.active {
-        z-index: 1;
-        opacity: 0.75;
-        transition: 0.6s;
-    }
+
     .hero {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(6. 1fr);
