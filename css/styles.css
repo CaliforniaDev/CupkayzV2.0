@@ -326,6 +326,7 @@ padding: 2.4rem 0 1.6rem 0;
 .article-info> .info-container > h2 {
     color: #444;
     line-height: 5.6rem;
+    white-space: nowrap; 
     padding-bottom: 2rem;
 }
 .article-info > .info-container > p {
