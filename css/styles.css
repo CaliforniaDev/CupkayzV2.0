@@ -160,7 +160,7 @@ nav > a {
     color: #f9f8f6;
     margin-bottom: 1.6rem;
 }
-.header-content > button {
+.header-content > a {
     display: block;
     width: 18.2rem;
     text-decoration: none;
@@ -181,7 +181,6 @@ nav > a {
 .order-menu-btn {
     margin-bottom: 3.4rem;
     color: #444;
-    border: none;
     padding: 1.2rem 4rem;
     background-color: #EDA39E;
     transition: all 0.2s ease-in-out;
@@ -267,19 +266,20 @@ nav > a {
 .card-body > h4 {
 padding: 2.4rem 0 1.6rem 0;
 }
-.card-body > button {
-    border: none;
+.card-body > a {
+    display: inline-block;
     margin-left: auto;
     margin-top: auto;
     margin-bottom: 2.4rem;
     padding: 1.2rem 2.4rem;
     border-radius: 0.4rem;
+    text-decoration: none;
     color: #444;
     background-color: #EDA39E;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 }
-.card-body > button:hover {
+.card-body > a:hover {
     cursor: pointer;
     background-color: #EED1CA;
     transition: all 0.2s ease-in-out;
@@ -287,6 +287,8 @@ padding: 2.4rem 0 1.6rem 0;
 }
 
 .view-all-btn {
+    display: inline-block;
+    text-decoration: none;
     margin-top: 8rem;
     border-radius: 0.4rem;
     transition: all 0.2s ease-in-out;
@@ -326,7 +328,7 @@ padding: 2.4rem 0 1.6rem 0;
 .article-info > .info-container {
     align-self: center;
 }
-.article-info> .info-container > h2 {
+.article-info > .info-container > h2 {
     color: #444;
     line-height: 5.6rem;
     white-space: nowrap; 
@@ -336,16 +338,18 @@ padding: 2.4rem 0 1.6rem 0;
     font-size: 1.8rem;
 }
 
-.article-info > .info-container > button {
+.article-info > .info-container > a {
+    display: inline-block;
     margin-top: 4rem;
     padding: 1.2rem 2.4rem;
-    border: none;
     border-radius: 0.4rem;
+    color: #f9f8f6;
+    text-decoration: none;
     background-color: #667a68;
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
 }
-.article-info > .info-container > button:hover {
+.article-info > .info-container > a:hover {
     cursor: pointer;
     background-color: #758E77;
     transition: all 0.2s ease-in-out;
@@ -587,7 +591,7 @@ footer {
         text-align: center;
         font-size: 5.2rem;
     }
-    .header-content > button {
+    .header-content > a {
         margin-left: auto;
         margin-right: auto;
     }
@@ -610,7 +614,7 @@ footer {
     .article-info > .info-container > p {
         font-size: 1.6rem;
     }
-    .article-info > .info-container > button {
+    .article-info > .info-container > a {
         margin-top: 5.6rem;
     }
     .news-letter-form > h3 {
