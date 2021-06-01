@@ -1,7 +1,23 @@
+main {
+    padding-top: 8rem;
+}
+.section-grid {
+    display: grid;
+    column-gap: 3.2rem;
+    padding-left: 9.2rem;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+}
+.search-menu {
+    background-color: gray;
+    grid-column: 1 / 5;
+    height: 500px;
+
+}
 #map {
-    height: 100vh;
+    height: 500px;
     border: 2px, solid, #333;
-    width: 80vw;
+    grid-column: 6/ 13;
 }
 html, body {
     box-sizing: border-box;
