@@ -1,24 +1,46 @@
 main {
+    display: grid;
+    height: 100vh;
     padding-top: 8rem;
+    background-color: #667A68;
+    grid-template-rows: 1fr;
+   /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: repeat(12, 1fr);
 }
 .section-grid {
     display: grid;
     column-gap: 3.2rem;
-    padding-left: 9.2rem;
+    background-color: #604543;
+    grid-column: 1 / 13;
+   /* grid-row: 1 / 7; */
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(12, 1fr);
 }
 .search-menu {
-    background-color: gray;
+    grid-row: 1 / 7;
+    border: 1px solid cyan;
     grid-column: 1 / 5;
-    height: 500px;
 
 }
 #map {
-    height: 500px;
+    grid-row: 1 / 7;
     border: 2px, solid, #333;
-    grid-column: 6/ 13;
+    grid-column: 5/ 13;
 }
+.contact-info {
+    /*grid-row: 7;*/
+    grid-column: 1 / 13;
+    height: 5.6rem;
+    background-color: #604543;
+    vertical-align: middle;
+}
+.contact-info > p {
+    left: 0;
+    line-height: 5.6rem;
+    padding-left: 9.2rem;
+}
+
+
 html, body {
     box-sizing: border-box;
     height: 100%;
