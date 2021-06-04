@@ -40,14 +40,14 @@ function initMap() {
 
     const originMarker = {
         marker: new google.maps.Marker(),
-        iconSource: "images/cupkayzFamicom_icon.svg",
+        iconSource: "images/cupcake-map-pin.svg",
         contentString: "<h1>Origin Point</h1>",
         position: () => mapOptions.center,
     };
     
     const recipientMarker = {
         marker: new google.maps.Marker(),
-        iconSource: "images/cupkayzFamicom_icon.svg",
+        iconSource: "images/delivery-map-pin.svg",
         contentString: "<h1>Delivery Point</h1>",
         position: () => {
             let latitudeInput = recipientMarker.place.geometry.location.lat();
