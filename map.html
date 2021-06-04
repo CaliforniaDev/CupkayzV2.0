@@ -25,8 +25,8 @@
 <body>
     <nav id="top-nav">
         <a href="index.html" class="logo">
-            <img src="images/cupkaysFamicom_icon.svg" alt="Cup Kayz logo" />
-            <img src="images/cupkaysFamicom_name.svg" alt="Cup Kayz" />
+            <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
+            <img src="images/cupkayzFamicom_name.svg" alt="Cup Kayz" />
         </a>
         <ul id="nav-menu">
             <li class="nav-item"><a class="nav-link" href="index.html">HOME </a></li>
@@ -77,7 +77,22 @@
     <main>
         <section class="section-grid">
             <div class="search-menu">
-
+                <div class="result"></div>
+    
+                <div class="form-group">
+                    <label class="light-font">Location:</label>
+                    <input type="text" class="form-control" id="search_input" placeholder="type address" />
+                    <input id="origins" type="hidden" name="origin" required />
+                </div>
+                <div id="results">
+                    <ul class="list-group">
+                        <li class=" light-font list-group-item d-flex justify-content-between align-items-center">
+                            Distance in miles:
+                            <span id="in_mile"  class="badge badge-primary badge-pill"></span>
+                        </li>
+                    </ul>
+            
+                </div>
             </div>
             <div id="map"></div>
             
