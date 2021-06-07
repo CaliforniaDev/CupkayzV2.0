@@ -372,12 +372,12 @@ padding: 2.4rem 0 1.6rem 0;
 .news-letter-form > input[type="email"] {
     cursor: pointer;
     border: 2px solid #444;
-    color: #F9F8F6;
+
     display: block;
     padding: 1.8rem 9.2rem 1.8rem 2.8rem;
     border-radius: 4rem;
     background-color: #667A68;
-    color: rgba(249, 248, 246, 0.6);
+   
     width: 75%;
     min-width: 300px;
         transition: all 0.2s ease-in-out;
