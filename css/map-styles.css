@@ -1,55 +1,87 @@
+nav {
+    padding: 0 2.4rem;
+}
+
 main {
+    position: relative;
     display: grid;
     height: 100vh;
     padding-top: 8rem;
     background-color: #667A68;
-    grid-template-rows: 1fr;
    /* grid-template-rows: repeat(3, 1fr); */
     grid-template-columns: repeat(12, 1fr);
 }
-.section-grid {
-    display: grid;
-    column-gap: 3.2rem;
-    background-color: #604543;
-    grid-column: 1 / 13;
-   /* grid-row: 1 / 7; */
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(12, 1fr);
-}
-.search-menu {
-    grid-row: 1 / 7;
-    border: 1px solid cyan;
-    grid-column: 1 / 5;
+#results {
+    display: none;
 }
 
+
 #map {
-    grid-row: 1 / 7;
+  
     border: 2px, solid, #333;
     grid-column: 5/ 13;
 }
+.form-container {
+    z-index: 1;
+    min-width: 30rem;
+    background-color: #667A68;
+    grid-column: 1 / 5;
+    padding: 2.4rem;
+    grid-row: 1 / 2;
+}
+.input-container {
+    display: flex;
+    position: relative;
+    align-content: center;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    height: 4.8rem;
+    border: none;
+    outline: none;
+    padding-left: 5.6rem;
+    color: #f9f8f6;
+    border-bottom: 3px solid #fff;
+    background-color: transparent;
+}
+::placeholder {
+    color: #f9f8f6;
+    opacity: 0.8;
+}
+.input-container .map-pin-icon {
+    position: absolute;
+    height: 3.2rem;
+}
+.arrow-btn {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    height: 4.8rem;
+    border: none;
+    cursor: pointer;
+}
+.input-container .right-arrow-icon {
+    height: 4rem;
+}
+
 .contact-info {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
     /*grid-row: 7;*/
     grid-column: 1 / 13;
     height: 5.6rem;
+    width: 100vw;
     background-color: #604543;
-    vertical-align: middle;
+ 
 }
 .contact-info > p {
     left: 0;
     line-height: 5.6rem;
-    padding-left: 9.2rem;
+    padding-left: 2.4rem;
 }
-.form-group, #results {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
-}
-.form-group {
-    display: flex;
-}
-#search_input {
-   flex: 1;
-   height: 4.8rem;
-  
 
 
-}
+
