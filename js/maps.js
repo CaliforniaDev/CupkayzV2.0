@@ -13,6 +13,7 @@ function initMap() {
         center: { lat: 33.9806, lng: -117.3755 },
         mapId: "3a2b78e6ed566683",
         draggable: true,
+        mapTypeControl: false,
         restriction: {
             latLngBounds: DELIVERY_BOUNDS,
             strictBounds: false
