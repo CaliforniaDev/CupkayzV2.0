@@ -29,10 +29,7 @@ function initMap() {
         strictBounds: false,
         types: ["address"],
     };
-    autocomplete.setComponentRestrictions({
-        country: ["us"]
-    });
-    
+   
     const addressInput = document.getElementById("search_input");
     const autocomplete = new google.maps.places.Autocomplete(addressInput, autocompleteOptions);
     autocomplete.bindTo("bounds", map);
@@ -42,6 +39,7 @@ function initMap() {
 
     const directionService = new google.maps.DirectionsService();
     const directionRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
+
 
     const originMarker = {
         marker: new google.maps.Marker(),
@@ -161,15 +159,12 @@ function initMap() {
         });
     }
     
-    $(document).on("change", $("#searchInput"), clearInput);
+ 
     function clearInput() {
         document.getElementById("search_input").value = "";
         map.setCenter(mapOptions.center);
         directionRenderer.setMap(null)
     }
-
-
-
 
 
     function codeAddress(placeId) {
