@@ -8,7 +8,7 @@ main {
     height: 100vh;
     padding-top: 8rem;
     background-color: #667A68;
-   /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-rows: repeat(3, 1fr); 
     grid-template-columns: repeat(12, 1fr);
 }
 #results {
@@ -17,15 +17,12 @@ main {
 
 
 #map {
-  
     border: 2px, solid, #333;
-    grid-column: 5/ 13;
+    grid-column: 6/ 13;
+    grid-row: 1 / 4;
 }
 .form-container {
-    z-index: 1;
-    min-width: 30rem;
-    background-color: #667A68;
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     padding: 2.4rem;
     grid-row: 1 / 2;
 }
@@ -35,16 +32,18 @@ main {
     align-content: center;
     align-items: center;
 }
-
 .input-field {
     width: 100%;
     height: 4.8rem;
-    border: none;
+    padding-right: 3.2rem;
     outline: none;
-    padding-left: 5.6rem;
+    border: none;
+    padding-left: 3.2rem;
     color: #f9f8f6;
     border-bottom: 3px solid #fff;
     background-color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 ::placeholder {
     color: #f9f8f6;
@@ -53,6 +52,7 @@ main {
 .input-container .map-pin-icon {
     position: absolute;
     height: 3.2rem;
+    left: 0;
 }
 .arrow-btn {
     position: absolute;
@@ -65,9 +65,7 @@ main {
 .input-container .right-arrow-icon {
     height: 4rem;
 }
-
 .contact-info {
-    position: absolute;
     z-index: 1;
     bottom: 0;
     /*grid-row: 7;*/
