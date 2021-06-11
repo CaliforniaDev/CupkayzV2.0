@@ -166,7 +166,7 @@ function initMap() {
         directionRenderer.setMap(null)
     }
 
-    
+
     $('form input').keydown(function (e) {
         if (e.keyCode == 13) {
             var inputs = $(this).parents("form").eq(0).find(":input");
@@ -177,9 +177,17 @@ function initMap() {
             return false;
         }
     });
-    
+    const submitButton = document.getElementById("submit");
 
+    submitButton.addEventListener("click", () => {
+        passValue(addressInput);
+    });
 
+   function passValue(address) {
+    let addressValue = address.value;
+    localStorage.setItem("textvalue", addressValue);
+    return false; 
+   }
 
 
     function codeAddress(placeId) {
