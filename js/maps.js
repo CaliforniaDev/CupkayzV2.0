@@ -39,7 +39,7 @@ function initMap() {
 
     const directionService = new google.maps.DirectionsService();
     const directionRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
-
+    addressInput.addEventListener("click", () => addressInput.select());
 
     const originMarker = {
         marker: new google.maps.Marker(),
@@ -165,6 +165,9 @@ function initMap() {
         map.setCenter(mapOptions.center);
         directionRenderer.setMap(null)
     }
+    
+
+
 
 
     function codeAddress(placeId) {
