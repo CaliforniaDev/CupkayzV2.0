@@ -55,13 +55,13 @@
 
     <span class="nav-overlay"></span>
     <main>
-        <form class="form-container">
+        <form class="form-container" method="get" action="order-menu.html">
             <div class="input-container">
                 <img class="map-pin-icon" src="images/map-pin.svg">
                 <input id="origins" type="hidden" name="origin" required />
-                <input type="text" class="form-control input-field" id="search_input"
+                <input id="search_input" class="input-field" type="text" name="address"  
                     placeholder="Enter delivery address here.." />
-                <button class="arrow-btn">
+                <button id="submit" class="arrow-btn" type="submit">
                     <img class="right-arrow-icon" src="images/right-arrow.svg">
                 </button>
             </div>
