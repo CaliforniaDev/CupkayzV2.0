@@ -29,6 +29,10 @@ function initMap() {
         strictBounds: false,
         types: ["address"],
     };
+    autocomplete.setComponentRestrictions({
+        country: ["us"]
+    });
+    
     const addressInput = document.getElementById("search_input");
     const autocomplete = new google.maps.places.Autocomplete(addressInput, autocompleteOptions);
     autocomplete.bindTo("bounds", map);
