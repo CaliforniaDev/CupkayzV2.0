@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
     <script async type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/maps.js"></script>
 
@@ -55,7 +55,7 @@
 
     <span class="nav-overlay"></span>
     <main>
-        <form class="form-container">
+        <div class="form-container">
             <div class="input-container">
                 <img class="map-pin-icon" src="images/map-pin.svg">
                 <input id="origins" type="hidden" name="origin" required />
@@ -65,7 +65,9 @@
                     <img class="right-arrow-icon" src="images/right-arrow.svg">
                 </button>
             </div>
-        </form>
+            <h2>Uh OH!</h2>
+            <p>We couldnt find that location.</p>
+        </div>
 
         <div id="map"></div>
 
