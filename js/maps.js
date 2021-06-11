@@ -188,7 +188,7 @@ function initMap() {
     localStorage.setItem("textvalue", addressValue);
     return false; 
    }
-
+// We Need to have zip code included with the data collected ////
 
     function codeAddress(placeId) {
         geocoder.geocode ({"placeId": placeId}, (results, status) => {
