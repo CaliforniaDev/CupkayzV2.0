@@ -89,10 +89,10 @@ function initMap() {
     autocomplete.addListener("place_changed", addressChangeHandler);
 
     function addressChangeHandler() {
-        console.log(autocomplete.getPlace())
         recipientMarker.marker.setVisible(false);
         recipientMarker.place = autocomplete.getPlace();
         recipientMarker.address = recipientMarker.place.formatted_address;
+        console.log(recipientMarker.address)
         let placeId = getPlaceId();
         if (isInputValid(recipientMarker)) {
             directionRenderer.setMap(map);
@@ -181,20 +181,18 @@ function initMap() {
     const submitButton = document.getElementById("submit");
 
     submitButton.addEventListener("click", () => {
-        passValue(addressInput);
+        passValue(recipientMarker.address);
     });
 
    function passValue(address) {
-    console.log(addressInput)
-    let addressValue = address.value;
-    localStorage.setItem("textvalue", addressValue);
+    localStorage.setItem("textvalue", address);
     return false; 
    }
 
 
 
 
-   
+
    enableEnterKey(addressInput);
 
 
