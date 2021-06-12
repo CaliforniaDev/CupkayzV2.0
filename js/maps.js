@@ -89,6 +89,7 @@ function initMap() {
     autocomplete.addListener("place_changed", addressChangeHandler);
 
     function addressChangeHandler() {
+        console.log(autocomplete.getPlace())
         recipientMarker.marker.setVisible(false);
         recipientMarker.place = autocomplete.getPlace();
         recipientMarker.address = recipientMarker.place.formatted_address;
@@ -184,11 +185,51 @@ function initMap() {
     });
 
    function passValue(address) {
+    console.log(addressInput)
     let addressValue = address.value;
     localStorage.setItem("textvalue", addressValue);
     return false; 
    }
-// We Need to have zip code included with the data collected ////
+
+
+
+
+   
+   enableEnterKey(addressInput);
+
+
+   function enableEnterKey(input) {
+    /* Store original event listener */
+    const _addEventListener = input.addEventListener
+
+    const addEventListenerWrapper = (type, listener) => {
+      if (type === 'keydown') {
+        /* Store existing listener function */
+        const _listener = listener
+        listener = (event) => {
+            console.log(event);
+          /* Simulate a 'down arrow' keypress if no address has been selected */
+          const suggestionSelected = document.getElementsByClassName('pac-item-selected').length
+          console.log(suggestionSelected)
+          if (event.key === 'Enter' && !suggestionSelected) {
+            const e = new KeyboardEvent('keydown', { 
+              key: 'ArrowDown', 
+              code: 'ArrowDown', 
+              keyCode: 40, 
+            })
+            _listener.apply(input, [e])
+          }
+          _listener.apply(input, [event])
+        }
+      }
+      _addEventListener.apply(input, [type, listener])
+    }
+
+    input.addEventListener = addEventListenerWrapper
+  }
+
+
+
 
     function codeAddress(placeId) {
         geocoder.geocode ({"placeId": placeId}, (results, status) => {
