@@ -29,17 +29,23 @@ function initMap() {
         strictBounds: false,
         types: ["address"],
     };
-   
-    const addressInput = document.getElementById("search_input");
-    const autocomplete = new google.maps.places.Autocomplete(addressInput, autocompleteOptions);
-    autocomplete.bindTo("bounds", map);
+ 
 
     const distanceService = new google.maps.DistanceMatrixService();
-    const geocoder = new google.maps.Geocoder();
-
     const directionService = new google.maps.DirectionsService();
     const directionRenderer = new google.maps.DirectionsRenderer({suppressMarkers: true});
+
+    const addressInput = document.getElementById("search_input");
+    const submitButton = document.getElementById("submit");
+
     addressInput.addEventListener("click", () => addressInput.select());
+    addressInput.addEventListener("keydown", event => {
+         ( event.key === "Enter") ? event.preventDefault() : false;
+    });
+
+    const autocomplete = new google.maps.places.Autocomplete(addressInput, autocompleteOptions);
+    autocomplete.bindTo("bounds", map);
+    
 
     const originMarker = {
         marker: new google.maps.Marker(),
@@ -83,16 +89,15 @@ function initMap() {
             setTimeout(() => marker.infoWindow.close(map, marker), 4000)
         });
     }
-    
     setMarkerAndFeatures(originMarker);
 
     autocomplete.addListener("place_changed", addressChangeHandler);
+
 
     function addressChangeHandler() {
         recipientMarker.marker.setVisible(false);
         recipientMarker.place = autocomplete.getPlace();
         recipientMarker.address = recipientMarker.place.formatted_address;
-        console.log(recipientMarker.address)
         let placeId = getPlaceId();
         if (isInputValid(recipientMarker)) {
             directionRenderer.setMap(map);
@@ -168,18 +173,7 @@ function initMap() {
     }
 
 
-    $('form input').keydown(function (e) {
-        if (e.keyCode == 13) {
-            var inputs = $(this).parents("form").eq(0).find(":input");
-            if (inputs[inputs.index(this) + 1] != null) {                    
-                inputs[inputs.index(this) + 1].focus();
-            }
-            e.preventDefault();
-            return false;
-        }
-    });
-    const submitButton = document.getElementById("submit");
-
+   
     submitButton.addEventListener("click", () => {
         passValue(recipientMarker.address);
     });
@@ -194,8 +188,6 @@ function initMap() {
 
 
    enableEnterKey(addressInput);
-
-
    function enableEnterKey(input) {
     /* Store original event listener */
     const _addEventListener = input.addEventListener
@@ -205,10 +197,8 @@ function initMap() {
         /* Store existing listener function */
         const _listener = listener
         listener = (event) => {
-            console.log(event);
           /* Simulate a 'down arrow' keypress if no address has been selected */
           const suggestionSelected = document.getElementsByClassName('pac-item-selected').length
-          console.log(suggestionSelected)
           if (event.key === 'Enter' && !suggestionSelected) {
             const e = new KeyboardEvent('keydown', { 
               key: 'ArrowDown', 
@@ -225,21 +215,6 @@ function initMap() {
 
     input.addEventListener = addEventListenerWrapper
   }
-
-
-
-
-    function codeAddress(placeId) {
-        geocoder.geocode ({"placeId": placeId}, (results, status) => {
-            if (status === "OK") {
-                let newDestination = results[0].geometry.location
-                console.log(results[0].geometry)
-                
-                return newDestination
-            }
-
-        }) 
-    }
 
 } //END OF initMap
 
