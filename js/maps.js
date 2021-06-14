@@ -19,6 +19,9 @@ function initMap() {
             strictBounds: false
         },
     };
+    
+
+
 
     const map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
@@ -37,6 +40,7 @@ function initMap() {
 
     const addressInput = document.getElementById("search_input");
     const submitButton = document.getElementById("submit");
+    const searchErrorMessage = document.querySelector(".search-error");
 
     addressInput.addEventListener("click", () => addressInput.select());
     addressInput.addEventListener("keydown", event => {
@@ -95,6 +99,7 @@ function initMap() {
 
 
     function addressChangeHandler() {
+        searchErrorMessage.classList.contains("active") ? toggleSearchError() : false; 
         recipientMarker.marker.setVisible(false);
         recipientMarker.place = autocomplete.getPlace();
         recipientMarker.address = recipientMarker.place.formatted_address;
@@ -103,7 +108,7 @@ function initMap() {
             directionRenderer.setMap(map);
         } else {
             clearInput();
-            return window.alert("Location does not exist for " + recipientMarker.place.name);
+            toggleSearchError();
         };
         setMarkerAndFeatures(recipientMarker);
         calculateDistanceAndDirections();
@@ -114,6 +119,9 @@ function initMap() {
              : !marker.place.geometry.location ? false
              : true;
     };
+    function toggleSearchError() {
+        searchErrorMessage.classList.toggle("active");
+    }
 
     function getPlaceId() {
         return recipientMarker.place.place_id;

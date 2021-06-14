@@ -65,6 +65,17 @@ main {
 .input-container .right-arrow-icon {
     height: 4rem;
 }
+.search-error {
+    margin-top: 4rem;
+    display: none;
+}
+.search-error.active{
+    display: block;
+}
+.search-error > p{
+    line-height: 2.4rem;
+    padding-left: 0.4rem;
+}
 
 .pac-container {
     background-color: #604543;
