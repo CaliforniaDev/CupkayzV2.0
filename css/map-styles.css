@@ -65,6 +65,31 @@ main {
 .input-container .right-arrow-icon {
     height: 4rem;
 }
+
+.pac-container {
+    background-color: #604543;
+    color: #f9f8f6;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pac-item-query {
+    font-size: 1.6rem;
+    color: #f9f8f6;
+}
+.pac-item:hover , .pac-item-selected {
+    background-color: #667A68;
+}
+.pac-container, .pac-item {
+    width: inherit !important;
+    font-family: 'Karla', sans-serif;
+}
+.pac-matched {
+    color: #EDA39E;
+    font-size: 1.8rem;
+}
 .contact-info {
     z-index: 1;
     bottom: 0;
@@ -80,6 +105,4 @@ main {
     line-height: 5.6rem;
     padding-left: 2.4rem;
 }
-
-
 
