@@ -27,7 +27,7 @@ function initMap() {
 
     const autocompleteOptions = {
         componentRestrictions: { country: "us" },
-        fields: ["formatted_address", "geometry", "name", "place_id"],
+        fields: ["address_components", "geometry", "place_id"],
         origin: map.getCenter(),
         strictBounds: false,
         types: ["address"],
@@ -41,6 +41,7 @@ function initMap() {
     const addressInput = document.getElementById("search_input");
     const submitButton = document.getElementById("submit");
     const searchErrorMessage = document.querySelector(".search-error");
+    const addressDisplay = document.querySelector("#address-display");
 
     addressInput.addEventListener("click", () => addressInput.select());
     addressInput.addEventListener("keydown", event => {
@@ -106,12 +107,15 @@ function initMap() {
         let placeId = getPlaceId();
         if (isInputValid(recipientMarker)) {
             directionRenderer.setMap(map);
+            setMarkerAndFeatures(recipientMarker);
+            calculateDistanceAndDirections();
+            fillInAddress();
+            return true;
         } else {
             clearInput();
             toggleSearchError();
+            return false;
         };
-        setMarkerAndFeatures(recipientMarker);
-        calculateDistanceAndDirections();
     };  
 
     function isInputValid (marker) {
@@ -189,6 +193,60 @@ function initMap() {
    function passValue(address) {
     localStorage.setItem("textvalue", address);
     return false; 
+   }
+//REFACTOR FUNCTION
+   function fillInAddress() {
+       let place = autocomplete.getPlace();
+       let postalField = document.querySelector("#postcode");
+       let deliveryAddress = document.querySelector("#delivery-address");
+       let address1 = "";
+       let address2 = "";
+       let postcode = "";
+       console.log(place.address_components);
+       for (const component of place.address_components) {
+        const componentType = component.types[0];
+    
+        switch (componentType) {
+          case "street_number": {
+            address1 = `${component.long_name} ${address1}`;
+            break;
+          }
+    
+          case "route": {
+            address1 += component.short_name;
+            break;
+          }
+    
+          case "postal_code": {
+            postcode = `${component.long_name}${postcode}`;
+            break;
+          }
+    
+          case "postal_code_suffix": {
+            postcode = `${postcode}-${component.long_name}`;
+            break;
+          }
+          case "locality":
+            document.querySelector("#locality").value = component.long_name;
+            break;
+    
+          case "administrative_area_level_1": {
+            document.querySelector("#state").value = component.short_name;
+            break;
+          }
+          case "country":
+            document.querySelector("#country").value = component.long_name;
+            break;
+        }
+      }
+      deliveryAddress.value = address1;
+      postalField.value = postcode;
+      // After filling the form with address components from the Autocomplete
+      // prediction, set cursor focus on the second address line to encourage
+      // entry of subpremise information such as apartment, unit, or floor number.
+      
+      
+
    }
 
 
