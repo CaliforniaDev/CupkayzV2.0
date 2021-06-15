@@ -116,4 +116,14 @@ main {
     line-height: 5.6rem;
     padding-left: 2.4rem;
 }
-
+.address-display > input {
+    height: 4.8rem;
+    padding-right: 3.2rem;
+    outline: none;
+    border: none;
+    color: #f9f8f6;
+    border-bottom: 3px solid #fff;
+    background-color: transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
