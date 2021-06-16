@@ -114,14 +114,14 @@ function initMap() {
 
     function isInputValid(marker) {
         return !marker.place.geometry ? false
-            : !marker.place.geometry.location ? false
-                : true;
+             : !marker.place.geometry.location ? false
+             : true;
     };
 
     const SEARCH_ERROR_MESSAGE = document.querySelector(".search-error");
     function isSearchErrorMessageActive() {
         return !SEARCH_ERROR_MESSAGE.classList.contains("active") ? false
-               :true;
+             : true;
     }
 
     function toggleSearchError() {
