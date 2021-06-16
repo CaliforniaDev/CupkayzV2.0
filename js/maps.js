@@ -78,7 +78,7 @@ function initMap() {
 
     const AUTO_COMPLETE_OPTIONS = {
         componentRestrictions: { country: "us" },
-        fields: ["address_components", "geometry", "place_id"],
+        fields: ["formatted_address", "address_components", "geometry", "place_id" ],
         origin: MAP.getCenter(),
         strictBounds: false,
         types: ["address"],
@@ -230,12 +230,13 @@ function initMap() {
 
 
 
-
     const SUBMIT_BUTTON = document.getElementById("submit");
     SUBMIT_BUTTON.addEventListener("click", () => {
-        passValue(recipientMarker.address);
+        passValue(recipientMarker.place.formatted_address);
     });
-    let passValue = (address) => localStorage.setItem("textvalue", address);
+    function passValue(address) {
+        localStorage.setItem("textvalue", address);
+    }
 
 
 
