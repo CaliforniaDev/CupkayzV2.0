@@ -96,7 +96,7 @@ function initMap() {
             DIRECTIONS_RENDERER.setMap(MAP);
             setMarkerAndFeatures(recipientMarker);
             calculateDistanceAndDirections();
-            fillInAddress();
+            fillInAddressInputs();
             return true;
         } else {
             clearInput();
@@ -123,6 +123,10 @@ function initMap() {
     function toggleSearchError() {
         let searchErrorMessage = document.querySelector("#search-error");
         searchErrorMessage.classList.toggle("active");
+    }
+    function toggleAddressInputs() {
+        let addressInputs = document.querySelector("#address-input-container");
+        addressInputs.classList.toggle("active");
     }
 
     function calculateDistanceAndDirections() {
@@ -177,7 +181,7 @@ function initMap() {
         DIRECTIONS_RENDERER.setMap(null);
     }
 
-    function fillInAddress() {
+    function fillInAddressInputs() {
         let place = AUTO_COMPLETE.getPlace();
         let postalField = document.querySelector("#postcode");
         let deliveryAddress = document.querySelector("#delivery-address");
