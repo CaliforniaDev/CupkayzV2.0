@@ -55,16 +55,16 @@
     <span class="nav-overlay"></span>
     <main>
         <form class="form-container" method="get" action="order-menu.html">
-            <section class="input-container">
+            <section class="search-input-container">
                 <img class="map-pin-icon" src="images/map-pin.svg">
                 <input id="origins" type="hidden" name="origin" required />
-                <input id="search_input" class="input-field" type="text" name="address"  
+                <input id="search_input" type="text" name="address"  
                     placeholder="Enter delivery address here.." />
                 <button id="submit" class="arrow-btn" type="submit">
                     <img class="right-arrow-icon" src="images/right-arrow.svg">
                 </button>
             </section>
-            <section class="address-display">
+            <section id="address-input-container">
                 <h3>Confirm information is displayed correctly</h3>
                 <input id="delivery-address" type="text" name="delivery address" disabled="disabled"/>
                 <input id="locality" type="text" name="locality" disabled="disabled"/>
@@ -74,7 +74,7 @@
 
             </section>
 
-            <span id="search-error "class="light-font">
+            <span id="search-error" class="light-font">
                 <h2>Uh OH!</h2>
                 <p>We couldnt find that location.</p>
                 <p>Please search again.</p>

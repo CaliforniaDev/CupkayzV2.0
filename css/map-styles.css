@@ -26,13 +26,13 @@ main {
     padding: 2.4rem;
     grid-row: 1 / 2;
 }
-.input-container {
+.search-input-container {
     display: flex;
     position: relative;
     align-content: center;
     align-items: center;
 }
-.input-field {
+#search_input {
     width: 100%;
     height: 4.8rem;
     padding-right: 3.2rem;
@@ -49,7 +49,7 @@ main {
     color: #f9f8f6;
     opacity: 0.8;
 }
-.input-container .map-pin-icon {
+.search-input-container .map-pin-icon {
     position: absolute;
     height: 3.2rem;
     left: 0;
@@ -62,7 +62,7 @@ main {
     border: none;
     cursor: pointer;
 }
-.input-container .right-arrow-icon {
+.search-input-container .right-arrow-icon {
     height: 4rem;
 }
 #search-error {
