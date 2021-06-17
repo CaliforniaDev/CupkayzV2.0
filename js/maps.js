@@ -18,10 +18,10 @@ function initMap() {
             strictBounds: false
         }
     };
-    
+
     const MAP = new google.maps.Map(document.querySelector("#map"), MAP_OPTIONS);
-    const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({suppressMarkers: true});
-    
+    const DIRECTIONS_RENDERER = new google.maps.DirectionsRenderer({ suppressMarkers: true });
+
     function MarkerFeatures(iconSource, contentString, position) {
         this.map = MAP;
         this.icon = iconSource;
@@ -78,7 +78,7 @@ function initMap() {
 
     const AUTO_COMPLETE_OPTIONS = {
         componentRestrictions: { country: "us" },
-        fields: ["formatted_address", "address_components", "geometry", "place_id" ],
+        fields: ["formatted_address", "address_components", "geometry", "place_id"],
         origin: MAP.getCenter(),
         strictBounds: false,
         types: ["address"],
@@ -87,33 +87,35 @@ function initMap() {
     AUTO_COMPLETE.bindTo("bounds", MAP);
     AUTO_COMPLETE.addListener("place_changed", addressChangeHandler);
 
-    
+
     function addressChangeHandler() {
-        (isSearchErrorMessageActive()) ? toggleSearchError() : false;
         recipientMarker.place = AUTO_COMPLETE.getPlace();
-        let placeId = getPlaceId();
         if (isInputValid(recipientMarker)) {
             DIRECTIONS_RENDERER.setMap(MAP);
+
             setMarkerAndFeatures(recipientMarker);
+
             calculateDistanceAndDirections();
+
             fillInAddressInputs();
-            return true;
+
+            (isSearchErrorMessageActive()) ? toggleSearchError() : false;
+            
+            (!isAddressInputsActive()) ? toggleAddressInputs() : false;
         } else {
             clearInput();
-            toggleSearchError();
             recipientMarker.marker.setVisible(false);
-            return false;
-        }; 
+            (!isSearchErrorMessageActive()) ? toggleSearchError() : false;
+            (isAddressInputsActive()) ? toggleAddressInputs() : false;
+        };
     };
 
-    function getPlaceId () { 
-        return recipientMarker.place.place_id; 
-    }
+
 
     function isInputValid(marker) {
         return !marker.place.geometry ? false
-             : !marker.place.geometry.location ? false
-             : true;
+            : !marker.place.geometry.location ? false
+                : true;
     };
 
     function isSearchErrorMessageActive() {
@@ -124,9 +126,14 @@ function initMap() {
         let searchErrorMessage = document.querySelector("#search-error");
         searchErrorMessage.classList.toggle("active");
     }
+
     function toggleAddressInputs() {
         let addressInputs = document.querySelector("#address-input-container");
         addressInputs.classList.toggle("active");
+    }
+    function isAddressInputsActive() {
+        let addressInputs = document.querySelector("#address-input-container");
+        return addressInputs.classList.contains("active") ? true : false;
     }
 
     function calculateDistanceAndDirections() {
@@ -159,7 +166,7 @@ function initMap() {
         let nonNumberChar = /(\d+\.\d+|\d+)/g;
         return distance.match(nonNumberChar)[0] <= 75 ? true : false
     }
-    
+
     function setRoute() {
         let directionService = new google.maps.DirectionsService();
         let directionOptions = {
@@ -174,7 +181,9 @@ function initMap() {
         });
     }
 
-
+    function getPlaceId() {
+        return recipientMarker.place.place_id;
+    }
     function clearInput() {
         document.querySelector(".form-container").reset();
         MAP.setCenter(MAP_OPTIONS.center);
@@ -185,7 +194,7 @@ function initMap() {
         let place = AUTO_COMPLETE.getPlace();
         let postalField = document.querySelector("#postcode");
         let deliveryAddress = document.querySelector("#delivery-address");
-        
+
         let address1 = "";
         let address2 = "";
         let postcode = "";

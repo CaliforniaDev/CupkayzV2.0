@@ -116,9 +116,16 @@ main {
     line-height: 5.6rem;
     padding-left: 2.4rem;
 }
-.address-display > input {
+#address-input-container.active {
+    display: inline-block;
+}
+#address-input-container {
+    display: none;
+}
+#address-input-container > input {
     height: 4.8rem;
-    padding-right: 3.2rem;
+    width: 20rem;
+    margin-right: 1.6rem;
     outline: none;
     border: none;
     color: #f9f8f6;
