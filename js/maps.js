@@ -74,6 +74,7 @@ function initMap() {
     ADDRESS_INPUT.addEventListener("keydown", event => {
         (event.key === "Enter") ? event.preventDefault() : false;
     });
+    ADDRESS_INPUT.focus();
 
 
     const AUTO_COMPLETE_OPTIONS = {
