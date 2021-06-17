@@ -89,9 +89,9 @@ function initMap() {
 
     
     function addressChangeHandler() {
+        (isSearchErrorMessageActive()) ? toggleSearchError() : false;
         recipientMarker.place = AUTO_COMPLETE.getPlace();
         let placeId = getPlaceId();
-
         if (isInputValid(recipientMarker)) {
             DIRECTIONS_RENDERER.setMap(MAP);
             setMarkerAndFeatures(recipientMarker);
@@ -103,9 +103,7 @@ function initMap() {
             toggleSearchError();
             recipientMarker.marker.setVisible(false);
             return false;
-        };
-        recipientMarker.marker.setVisible(false);
-        (isSearchErrorMessageActive) ? toggleSearchError() : false;
+        }; 
     };
 
     function getPlaceId () { 
