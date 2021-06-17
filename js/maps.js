@@ -195,9 +195,10 @@ function initMap() {
         let place = AUTO_COMPLETE.getPlace();
         let postalField = document.querySelector("#postcode");
         let deliveryAddress = document.querySelector("#delivery-address");
+        let address2Field = document.querySelector("#address2");
+        console.log(address2Field)
 
         let address1 = "";
-        let address2 = "";
         let postcode = "";
 
         for (const component of place.address_components) {
@@ -236,6 +237,7 @@ function initMap() {
         }
         deliveryAddress.value = address1;
         postalField.value = postcode;
+        address2Field.focus();
     }
 
 
