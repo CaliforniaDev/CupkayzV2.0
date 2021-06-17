@@ -65,14 +65,14 @@ main {
 .input-container .right-arrow-icon {
     height: 4rem;
 }
-.search-error {
+#search-error {
     margin-top: 4rem;
     display: none;
 }
-.search-error.active{
+#search-error.active{
     display: block;
 }
-.search-error > p{
+#search-error > p{
     line-height: 2.4rem;
     padding-left: 0.4rem;
 }

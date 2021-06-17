@@ -116,15 +116,15 @@ function initMap() {
              : true;
     };
 
-    const SEARCH_ERROR_MESSAGE = document.querySelector(".search-error");
     function isSearchErrorMessageActive() {
-        return !SEARCH_ERROR_MESSAGE.classList.contains("active") ? false
-             : true;
+        let searchErrorMessage = document.querySelector("#search-error");
+        return searchErrorMessage.classList.contains("active") ? true : false;
+    }
+    function toggleSearchError() {
+        let searchErrorMessage = document.querySelector("#search-error");
+        searchErrorMessage.classList.toggle("active");
     }
 
-    function toggleSearchError() {
-        SEARCH_ERROR_MESSAGE.classList.toggle("active");
-    }
     function calculateDistanceAndDirections() {
         let serviceOptions = {
             origins: [MAP_OPTIONS.center],
