@@ -165,7 +165,7 @@ function initMap() {
 
     function isInDeliveryRange(distance) {
         let nonNumberChar = /(\d+\.\d+|\d+)/g;
-        return distance.match(nonNumberChar)[0] <= 75 ? true : false
+        return distance.match(nonNumberChar).join() <= 75 ? true : false
     }
 
     function setRoute() {
