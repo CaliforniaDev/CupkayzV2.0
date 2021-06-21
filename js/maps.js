@@ -130,7 +130,9 @@ function initMap() {
 
     function toggleAddressInputs() {
         let addressInputs = document.querySelector("#address-input-container");
+        let confirmButton = document.querySelector("#confirmation-btn");
         addressInputs.classList.toggle("active");
+        confirmButton.classList.toggle("active");
     }
     function isAddressInputsActive() {
         let addressInputs = document.querySelector("#address-input-container");
@@ -196,7 +198,6 @@ function initMap() {
         let postalField = document.querySelector("#postcode");
         let deliveryAddress = document.querySelector("#delivery-address");
         let address2Field = document.querySelector("#address2");
-        console.log(address2Field)
 
         let address1 = "";
         let postcode = "";
