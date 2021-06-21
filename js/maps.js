@@ -244,7 +244,7 @@ function initMap() {
 
 
 
-    const SUBMIT_BUTTON = document.getElementById("submit");
+    const SUBMIT_BUTTON = document.getElementById("confirmation-btn");
     SUBMIT_BUTTON.addEventListener("click", () => {
         passValue(recipientMarker.place.formatted_address);
     });
