@@ -23,8 +23,7 @@ main {
     flex-direction: column;
     grid-column: 1 / 6;
     grid-row: 1 / 6;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
+    padding: 0 3.2rem;
     background-color: #604543;
 }
 
@@ -59,14 +58,6 @@ main {
     left: 2.4rem;
 }
 
-.arrow-btn {
-    position: absolute;
-    right: 2.4rem;
-    background-color: transparent;
-    height: 4.8rem;
-    border: none;
-    cursor: pointer;
-}
 .search-input-container .right-arrow-icon {
     height: 4rem;
 }
@@ -142,15 +133,12 @@ main {
 .country-input {
     order: 6;
     flex-basis: 50%;
-    
-  
 }
 
 #confirmation-btn {
     display: none;
 }
 #confirmation-btn.active {
-    margin-top: auto;
     margin-bottom: 2.4rem;
     border-radius: 2.8rem;
     padding: 2rem 3.6rem;
@@ -204,29 +192,59 @@ main {
 }
 
 @media only screen and (max-width: 992.98px) {
+    nav {
+        padding: 0 1.6rem;
+    }
+
     main {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(12, 1fr);
     }
     .form-container {
         grid-column: 1 / 7;
-        grid-row: 13 / 13;
+        grid-row:  12;
+        padding: 0 1.6rem;
     }
     .form-container.active {
         grid-row: 7 / 13;
-
+        overflow: hidden;
+    }
+    .search-input-container {
+        margin: 1.6rem 0;
+    }
+    #search_input {
+        height: 3.2rem;
+        padding-left: 4rem;
+    }
+    .map-pin-icon {
+        height: 2.4rem;
+    }
+    #address-input-container > input {
+        height: 3.2rem;
     }
     #map.active {
         grid-row: 1 / 7;
     }
+
+    #address-input-container.active {
+        padding: 0;
+        border: 1px solid green;
+    }
+    #address-input-container > h4 {
+        margin-bottom: 0.8rem;
+    }
     #map {
        
         grid-column: 1 / 7;
-        grid-row: 1 / 13;
+        grid-row: 1 / 12;
     }
     .contact-info {
-        grid-row: 40;
+        grid-row: 13;
     }
+    .pac-container {
+        margin-top: -24rem;
+    }
+
 
 }
 
