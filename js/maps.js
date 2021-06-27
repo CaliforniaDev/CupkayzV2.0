@@ -131,8 +131,13 @@ function initMap() {
     function toggleAddressInputs() {
         let addressInputs = document.querySelector("#address-input-container");
         let confirmButton = document.querySelector("#confirmation-btn");
+        let formContainer = document.querySelector(".form-container");
+        let map = document.querySelector("#map");
+        
         addressInputs.classList.toggle("active");
         confirmButton.classList.toggle("active");
+        formContainer.classList.toggle("active");
+        map.classList.toggle("active");
     }
     function isAddressInputsActive() {
         let addressInputs = document.querySelector("#address-input-container");
