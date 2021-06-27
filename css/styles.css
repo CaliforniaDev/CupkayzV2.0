@@ -19,7 +19,6 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    min-height: 100vh; /*TEST*/
     font-family: 'Karla', sans-serif;
     font-size: 1.6rem;
     background: #604543;
@@ -306,9 +305,7 @@ padding: 2.4rem 0 1.6rem 0;
 
 .make-it-special-section {
     display: grid;
- 
     grid-template-columns:repeat(2, 1fr);
-
     background-image: radial-gradient(at top left, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.55) 45%),
     url(../images/pink_cupcakes.jpg);
     background-repeat: no-repeat;
@@ -321,9 +318,7 @@ padding: 2.4rem 0 1.6rem 0;
     grid-column: 1 / 2 ;
     background-color: #D99691;
     padding: 6.4rem 9.2rem 6.4rem 9.2rem;
-   
     opacity: 0.90;
-    
 }
 .article-info > .info-container {
     align-self: center;
@@ -482,7 +477,6 @@ footer {
         z-index: -1;
         opacity: 0;
         position: fixed;
-        position: absolutes;
         background-color: rgb(20, 20, 20); 
         height: 100vh;
         width: 100vw;
