@@ -447,7 +447,7 @@ footer {
 @media only screen and (max-width: 992.98px) {
     nav {
         padding-right: 1.6rem;
-        padding-left: 0.8rem
+        padding-left: 1.6rem;
     }
     #nav-menu {
         display: none;
@@ -498,7 +498,6 @@ footer {
     .hamburger {
         display: block;
         cursor: pointer;
-        margin-right: 1.6rem;
     }
     
     .hamburger.active .bar:nth-child(2) {
