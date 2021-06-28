@@ -245,7 +245,7 @@ main {
         grid-row: 1 /11 ;
     }
     .contact-info {
-        grid-row: 12;
+        grid-row:  12;
     }
     .pac-container {
         margin-top: -24rem;
@@ -257,7 +257,11 @@ main {
 
     main {
         grid-template-columns: repeat(4, 1fr);
-        min-height: 100vh;
+        height: 100vh;
+        min-height: 35rem;
+    }
+    .contact-info {
+        font-size: 1.2rem;
     }
 
 
