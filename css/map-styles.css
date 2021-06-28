@@ -6,6 +6,7 @@ main {
     position: relative;
     display: grid;
     height: 100vh;
+    min-height: 80rem;
     padding-top: 8rem;
     background-color: #667A68;
     grid-template-rows: repeat(3, 1fr); 
@@ -139,6 +140,7 @@ main {
     display: none;
 }
 #confirmation-btn.active {
+    margin-top: auto;
     margin-bottom: 2.4rem;
     border-radius: 2.8rem;
     padding: 2rem 3.6rem;
@@ -228,7 +230,6 @@ main {
 
     #address-input-container.active {
         padding: 0;
-        border: 1px solid green;
     }
     #address-input-container > h4 {
         margin-bottom: 0.8rem;
