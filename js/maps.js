@@ -243,7 +243,9 @@ function initMap() {
         }
         deliveryAddress.value = address1;
         postalField.value = postcode;
-        address2Field.focus();
+        address2Field.select();
+        
+        
     }
 
 
