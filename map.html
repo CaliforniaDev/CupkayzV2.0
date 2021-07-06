@@ -54,15 +54,16 @@
 
     <span class="nav-overlay"></span>
     <main>
+        <section class="search-input-container">
+            <img class="map-pin-icon" src="images/map-pin.svg">
+            <input id="origins" type="hidden" name="origin" required />
+            <input id="search_input" type="text" name="address"  
+                placeholder="Enter delivery address here.." />
+        </section>
         <form class="form-container" method="get" action="order-menu.html">
-            <section class="search-input-container">
-                <img class="map-pin-icon" src="images/map-pin.svg">
-                <input id="origins" type="hidden" name="origin" required />
-                <input id="search_input" type="text" name="address"  
-                    placeholder="Enter delivery address here.." />
-            </section>
+
             <section id="address-input-container" class="light-font">
-                <h4>Confirm information is <span class="line-break">displayed correctly.</span></h4>
+            
                 
                 <input class="address1-input" id="delivery-address" type="text" name="delivery address" disabled="disabled"/>
                 <input class="address2-input" id="address2" type="text" name="address2" placeholder="Enter Apartment or unit #" />
@@ -84,9 +85,6 @@
 
         <div id="map"></div>
 
-        <span class="contact-info">
-            <p class="light-font">Having trouble? Call us at (951) 123-4567</p>
-        </span>
     </main>
 
 
