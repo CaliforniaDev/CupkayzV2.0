@@ -12,7 +12,6 @@ main {
     display: grid;
     height: 100vh;
     height: var(--app-height);
-    border: 1px solid cyan;
     min-height: 65rem;
     padding-top: 8rem;
     background-color: #667A68; 
