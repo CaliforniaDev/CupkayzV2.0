@@ -2,11 +2,14 @@ nav {
     padding: 0 2.4rem;
     
 }
-
+:root {
+    --app-height: 100%;
+}
 main {
     position: relative;
     display: grid;
     height: 100vh;
+    height: var(--app-height);
     border: 1px solid red;
     min-height: 65rem;
     padding-top: 8rem;
