@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --app-height: 100%;
+}
 
 html {
     color: #444;
@@ -131,6 +134,7 @@ nav > a {
 .hero {
     z-index: -1;
     height: 100vh;
+    height: var(--app-height);
     min-height: 65rem;
     width: 100vw;
     display: grid;

@@ -1,10 +1,12 @@
+:root {
+    --app-height: 100%;
+}
+
 nav {
     padding: 0 2.4rem;
     
 }
-:root {
-    --app-height: 100%;
-}
+
 main {
     position: relative;
     display: grid;
@@ -216,7 +218,6 @@ main {
 
     main {
         grid-template-columns: repeat(6, 1fr);
-       
         min-height: 35rem;
      
     }
