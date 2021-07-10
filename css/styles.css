@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --app-height: 100%;
+}
 
 html {
     color: #444;
@@ -19,7 +22,6 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    min-height: 100vh; /*TEST*/
     font-family: 'Karla', sans-serif;
     font-size: 1.6rem;
     background: #604543;
@@ -132,6 +134,7 @@ nav > a {
 .hero {
     z-index: -1;
     height: 100vh;
+    height: var(--app-height);
     min-height: 65rem;
     width: 100vw;
     display: grid;
@@ -306,9 +309,7 @@ padding: 2.4rem 0 1.6rem 0;
 
 .make-it-special-section {
     display: grid;
- 
     grid-template-columns:repeat(2, 1fr);
-
     background-image: radial-gradient(at top left, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.55) 45%),
     url(../images/pink_cupcakes.jpg);
     background-repeat: no-repeat;
@@ -321,9 +322,7 @@ padding: 2.4rem 0 1.6rem 0;
     grid-column: 1 / 2 ;
     background-color: #D99691;
     padding: 6.4rem 9.2rem 6.4rem 9.2rem;
-   
     opacity: 0.90;
-    
 }
 .article-info > .info-container {
     align-self: center;
@@ -372,16 +371,19 @@ padding: 2.4rem 0 1.6rem 0;
 .news-letter-form > input[type="email"] {
     cursor: pointer;
     border: 2px solid #444;
-    color: #F9F8F6;
     display: block;
     padding: 1.8rem 9.2rem 1.8rem 2.8rem;
     border-radius: 4rem;
     background-color: #667A68;
-    color: rgba(249, 248, 246, 0.6);
     width: 75%;
     min-width: 300px;
-        transition: all 0.2s ease-in-out;
+    outline: none;
+    transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
+}
+::placeholder {
+    color: #f9f8f6;
+    opacity: 0.7;
 }
 .news-letter-form > input[type="submit"] {
     cursor: pointer;
@@ -444,7 +446,7 @@ footer {
 @media only screen and (max-width: 992.98px) {
     nav {
         padding-right: 1.6rem;
-        padding-left: 0.8rem
+        padding-left: 1.6rem;
     }
     #nav-menu {
         display: none;
@@ -479,7 +481,6 @@ footer {
         z-index: -1;
         opacity: 0;
         position: fixed;
-        position: absolutes;
         background-color: rgb(20, 20, 20); 
         height: 100vh;
         width: 100vw;
@@ -495,7 +496,6 @@ footer {
     .hamburger {
         display: block;
         cursor: pointer;
-        margin-right: 1.6rem;
     }
     
     .hamburger.active .bar:nth-child(2) {

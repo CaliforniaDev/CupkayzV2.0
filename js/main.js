@@ -6,7 +6,7 @@ window.onload = () => {
     const navMenu = document.querySelector("#mobile-nav-menu");
     const navOverlay = document.querySelector(".nav-overlay");
     const navLink = document.querySelectorAll(".nav-link");
-    const emailInput = document.getElementById("email");
+ 
     
     hamburger.addEventListener("click", openMobileNav);
     navLink.forEach(n => n.addEventListener("click", closeMobileMenu));
@@ -22,12 +22,16 @@ window.onload = () => {
         navMenu.classList.toggle("active");
         navOverlay.classList.toggle("active");
     }
-    function selectText() {
-        emailInput.focus();
-        emailInput.select();
-    }
+
+
 }
 
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty("--app-height", `${window.innerHeight}px`)
+}
+window.addEventListener("resize", appHeight);
+appHeight()
 
 
 

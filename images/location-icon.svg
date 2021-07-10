@@ -1,0 +1,11 @@
+<svg id="icons_Q2" data-name="icons Q2" xmlns="http://www.w3.org/2000/svg" width="17" height="22.008" viewBox="0 0 17 22.008">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <path id="Path_47" data-name="Path 47" class="cls-1" d="M20.5,12A1.5,1.5,0,1,1,19,13.5,1.45,1.45,0,0,1,20.5,12m0-2A3.5,3.5,0,1,0,24,13.5,3.5,3.5,0,0,0,20.5,10Z" transform="translate(-12 -6)"/>
+  <path id="Path_48" data-name="Path 48" class="cls-1" d="M15.5,4C19.2,4,22,7,22,11s-4.3,8.35-6.5,10.6C13.3,19.35,9,14.75,9,11a6.765,6.765,0,0,1,6.5-7m0-2C10.55,2,7,6.05,7,11s5.75,10.65,7.8,12.7a.95.95,0,0,0,1.4,0C18.25,21.65,24,16.05,24,11S20.45,2,15.5,2Z" transform="translate(-7 -2)"/>
+</svg>
