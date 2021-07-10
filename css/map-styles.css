@@ -18,7 +18,6 @@ main {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
-
 #map {
     grid-column: 6/ 13;
     grid-row: 1 / 13;
@@ -33,7 +32,6 @@ main {
     background-color: #604543;
 
 }
-
 .search-input-container {
     display: flex;
     padding: 3.2rem 4rem 3.2rem 3.2rem;
@@ -246,7 +244,7 @@ main {
         left: 1.4rem
     }
     #address-input-container > input {
-        height: 2.4rem;
+        height: 3.2rem;
     }
     #map {
         grid-column: 1 / 7;
@@ -268,13 +266,8 @@ main {
     .address-input-header {
         font-size: 2.4rem;
     }
-
-
-    
-
-
 }
-/*
+
 @media only screen and (max-width: 768px) {
 
     main {
@@ -282,28 +275,10 @@ main {
         height: 100vh;
         min-height: 50rem;
     }
-
-    .contact-info {
-        font-size: 1.2rem;
-    }
-    #address-input-container > h4 {
-        display: none;
-    }
     #address-input-container > input {
-        height: 3.2rem;
+        height: 2.4rem;
         
     }
-    .search-input-container {
-        padding: 2rem;
-    }
-    #confirmation-btn.active {
-        padding: 1.6rem 2.4rem;
-        
-    } 
-
-
-
-
 }
- */
+ 
 
