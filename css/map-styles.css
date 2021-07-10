@@ -36,7 +36,7 @@ main {
 
 .search-input-container {
     display: flex;
-    padding: 3.2rem 3.2rem 3.2rem 3.2rem;
+    padding: 3.2rem 4rem 3.2rem 3.2rem;
     align-items: baseline;
     grid-column: 1 / 6;
     grid-row: 1;
@@ -212,7 +212,6 @@ main {
 @media only screen and (max-width: 992.98px) {
     nav {
         padding: 0 1.6rem;
-        overflow-y: scroll;
     }
 
     main {
@@ -231,6 +230,9 @@ main {
         
     }
     .search-input-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         grid-row: 1;
         grid-column: 1 / 7;
         padding: 1.6rem 1.6rem 1.6rem 1.6rem;
