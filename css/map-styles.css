@@ -208,9 +208,6 @@ main {
 
 
 @media only screen and (max-width: 992.98px) {
-    nav {
-        padding: 0 1.6rem;
-    }
 
     main {
         grid-template-columns: repeat(6, 1fr);
