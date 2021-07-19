@@ -21,7 +21,7 @@ html {
 
 
 body {
-    overflow-x: hidden;
+    
     margin: 0;
     padding: 0;
     font-family: 'Karla', sans-serif;
@@ -73,6 +73,7 @@ h4 {
     box-sizing: inherit;
 }
 nav {
+   
     margin: 0;
     z-index: 10;
     position: fixed;
@@ -80,7 +81,7 @@ nav {
     width: 100vw;
     max-width: 100%;
     height: 8rem;
-    padding: 0rem 9.2rem ;
+    padding: 0rem 9.2rem 0 8rem ;
     align-items: center;
     justify-content: space-between;
     background: #667a68;
