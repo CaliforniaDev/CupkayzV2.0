@@ -17,9 +17,8 @@ main {
     padding-left: 9.2rem;
     padding-right: 9.2rem;
     gap: 3.2rem;
-    border: 1px solid red;
 }
-.section-title{
+.section-title {
     position: absolute;
     top: 10.5rem;
     left: 9rem;
@@ -32,12 +31,11 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 .top-picks-col-2 {
-    max-width: 50vw;
-    min-width: 50vw;
     display: grid;
     flex: auto;
     min-width: 30rem; 
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    row-gap: 3.2rem;
+    
 }
 
 
@@ -49,16 +47,6 @@ main {
     border: none;
     overflow: hidden;
     border-radius: 0.8rem;
-}
-.filled-card {
-    height: 27.5rem;
-    grid-column: span 2;
-    position: relative;
-    background-color: gray;
-    border-radius: 0.8rem;
-    max-width: 100%;
-    
-    
 }
 .card__image-container {
     width: 100%;
@@ -94,22 +82,26 @@ main {
 .flex-container {
     position: relative;
     display: flex;
-    flex-direction: column;
+    height: 32rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
 }
 .flex-container__image {
-    overflow:hidden;
+    width: 100%; 
     height: 32rem;
     border-radius: 0.8rem;
     background-image: url("../images/cup-cake-mask@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    display: block;
+   
 }
 .flex-container__overlay {
-    min-width: 200px;
+    min-width: 20rem;
     background-color: #1B241C;
     text-align: center;
+    top:0;
+    right: 0;
     height: 32rem;
     width: 50%;
     display: flex;
