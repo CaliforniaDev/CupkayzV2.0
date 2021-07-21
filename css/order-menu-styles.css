@@ -14,12 +14,12 @@ main {
     gap: 3.2rem;
     border: 1px solid red;
 }
-.top-picks-header{
+.section-title{
     position: absolute;
     margin-top: 10.8rem;
     left: 9rem;
 }
-.order-menu-container {
+.top-picks-col-1 {
     display: grid;
     width: 50vw;
     position: relative;
@@ -28,7 +28,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     
 }
-.order-menu-col-2 {
+.top-picks-col-2 {
     flex: auto;
     border: 1px solid green;
     margin-top: 16rem;
@@ -74,7 +74,38 @@ main {
 .card-btn > p {
     padding: 2.4rem 0;
 }
-
+.flex-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.flex-container figure {
+    overflow:hidden;
+    height: 32rem;
+    border-radius: 0.8rem;
+    background-image: url("../images/cup-cake-mask@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: block;
+}
+.flex-container span {
+    background-color: #1B241C;
+    text-align: center;
+    height: 32rem;
+    width: 50%;
+    display: flex;
+    position: absolute;
+    align-self: flex-end;
+    opacity: 0.9;
+    margin: auto;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.flex-container span > h4 {
+    margin: auto;
+    padding: 0 4.2rem;
+}
 
 
 
