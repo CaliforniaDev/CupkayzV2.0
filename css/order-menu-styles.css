@@ -7,16 +7,14 @@
 }
 
 main {
-    padding-top: 16rem;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     width: 100vw;
     max-width: 100%;
-    grid-template-columns: repeat(auto-fit , 1fr);
-    padding-left: 9.2rem;
-    padding-right: 9.2rem;
+    flex-wrap: wrap;
     gap: 3.2rem;
+    grid-template-columns: repeat(auto-fit , 1fr);
+    justify-content: center;
+    padding: 16rem 9.2rem 0 9.2rem;
 }
 .section-title {
     position: absolute;
@@ -24,13 +22,14 @@ main {
     left: 9rem;
 }
 .top-picks-col-1 {
-    display: grid;
     width: 50vw;
+    display: grid;
     position: relative;
     gap: 3.2rem;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 .top-picks-col-2 {
+    max-width: 50vw;
     display: grid;
     flex: auto;
     min-width: 30rem; 
@@ -116,6 +115,19 @@ main {
     margin: auto;
     padding: 0 1.6rem;
 }
+
+.flex-container:nth-child(2) {
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2.4rem;
+}
+.flex-container:nth-child(2) h4 {
+    padding-top: 4rem; 
+    color: #EDA39E;   
+}
+
+
 
 
 
