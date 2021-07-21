@@ -1,8 +1,13 @@
+.no-wrap {
+    white-space: nowrap;
+}
 
 .nav-item:nth-child(2) a {
     color: #EDA39E;
 }
+
 main {
+    padding-top: 16rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -16,7 +21,7 @@ main {
 }
 .section-title{
     position: absolute;
-    margin-top: 10.8rem;
+    top: 10.5rem;
     left: 9rem;
 }
 .top-picks-col-1 {
@@ -24,15 +29,15 @@ main {
     width: 50vw;
     position: relative;
     gap: 3.2rem;
-    margin-top: 16rem;
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-    
 }
 .top-picks-col-2 {
+    max-width: 50vw;
+    min-width: 50vw;
+    display: grid;
     flex: auto;
-    border: 1px solid green;
-    margin-top: 16rem;
     min-width: 30rem; 
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
 }
 
 
@@ -91,7 +96,7 @@ main {
     display: flex;
     flex-direction: column;
 }
-.flex-container figure {
+.flex-container__image {
     overflow:hidden;
     height: 32rem;
     border-radius: 0.8rem;
@@ -101,7 +106,8 @@ main {
     background-position: center center;
     display: block;
 }
-.flex-container span {
+.flex-container__overlay {
+    min-width: 200px;
     background-color: #1B241C;
     text-align: center;
     height: 32rem;
@@ -114,9 +120,9 @@ main {
     border-top-right-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
 }
-.flex-container span > h4 {
+.flex-container__overlay  > h4 {
     margin: auto;
-    padding: 0 4.2rem;
+    padding: 0 1.6rem;
 }
 
 
