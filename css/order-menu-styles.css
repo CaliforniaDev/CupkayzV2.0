@@ -11,36 +11,27 @@ main {
     width: 100vw;
     max-width: 100%;
     flex-wrap: wrap;
-    gap: 3.2rem;
-    grid-template-columns: repeat(auto-fit , 1fr);
+    gap: 1.6rem;
     justify-content: center;
-    padding: 16rem 9.2rem 0 9.2rem;
-}
-.section-title {
-    position: absolute;
-    top: 10.5rem;
-    left: 9rem;
+    padding: 10rem 9.2rem 10rem 9.2rem;
 }
 .top-picks-col-1 {
-    width: 50vw;
+    width: 100%;
+    flex: auto;
     display: grid;
     position: relative;
-    gap: 3.2rem;
-    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit , minmax(25rem, 1fr));
 }
 .top-picks-col-2 {
-    max-width: 50vw;
     display: grid;
     flex: auto;
-    min-width: 30rem; 
-    row-gap: 3.2rem;
+    row-gap: 1.6rem;
     
 }
-
-
 .card {
     display: flex;
-    height: 32rem;
+    height: 30rem;
     position: relative;
     flex-direction: column;
     border: none;
@@ -49,24 +40,20 @@ main {
 }
 .card__image-container {
     width: 100%;
+    height: 35rem;
     overflow: hidden;
 }
 
 .card__image-container > img {
     object-fit: cover;
+    object-position: 50% 50%;
     width: 100%;
     height: 100%;
-    overflow: hidden
+    max-height: 250px;
+    overflow: hidden;
+   
     
 }
-/* Test /////////////////////////////////*/
-.card > img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-/* Test ////////////////////////////////*/
 .card-btn {
     position: absolute;
     bottom: 0;
@@ -81,9 +68,11 @@ main {
 .flex-container {
     position: relative;
     display: flex;
-    height: 32rem;
+    height: 24rem;
     border-radius: 0.8rem;
     overflow: hidden;
+    
+    
 }
 .flex-container__image {
     width: 100%; 
@@ -96,39 +85,128 @@ main {
    
 }
 .flex-container__overlay {
-    min-width: 20rem;
     background-color: #1B241C;
-    text-align: center;
-    top:0;
+    bottom: 0;
     right: 0;
-    height: 32rem;
+    height: 100%;
     width: 50%;
     display: flex;
     position: absolute;
-    align-self: flex-end;
-    opacity: 0.9;
-    margin: auto;
+    opacity: 0.75;
     border-top-right-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
 }
+.flex-container__overlay:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.4s;
+}
 .flex-container__overlay  > h4 {
     margin: auto;
+    text-align: center;
     padding: 0 1.6rem;
 }
 
-.flex-container:nth-child(2) {
-    text-align: center;
+
+
+#bottom-nav {
+    display: flex;
+    padding: 0 9.2rem;
+    align-items: center;
+    background-color: #604543;
     justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 2.4rem;
+    width: 100vw;
+    max-width: 100%;
+    min-width: 100%;
+    height: 8rem;
+    position: fixed;
+    bottom: 0;
+    opacity: 0.9;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, .16);
 }
-.flex-container:nth-child(2) h4 {
-    padding-top: 4rem; 
-    color: #EDA39E;   
+#bottom-nav > img:nth-child(1) {
+    align-self: center;
+    position: absolute;
+    text-align: center;
+    padding-bottom: 0.4rem;
+    left: 9.2rem;
+    height: 2.4rem;
+}
+#bottom-nav > img:nth-child(3) {
+    width: 3.2rem;
+}
+.bottom-nav__address-container {
+    display: flex;
+    height: 100%;
+    margin-right: 1.6rem;
+    overflow: hidden;
+    width: 100%;
+    
+    
+}
+.bottom-nav__address {
+    position: relative;
+    align-self: center;
+    border-bottom: 2px solid #f9f8f6;
+    padding: 0 1.6rem 0.2rem 2.4rem;
+    text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+   
+    
 }
 
+@media only screen and (max-width: 1112px) {
+    nav {
+        padding: 0 1.6rem;
+    }
+    main {
+        padding: 10rem 1.6rem 0 1.6rem;
+        max-width: 100%; 
+    }
+    .top-picks-col-1 {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    .card {
+        min-height: 40rem;
+    }
+    .card__image-container > img {
+        max-height: 40rem;
+    }
+    .section-title {
+        left: 1.6rem;
+    }
+    .top-picks-col-1 {
+        width: 100vw;
+        
+    }
+    .top-picks-col-2 {
+        width: 100vw;
+        max-width: 100%;
+        
+    }
+    #bottom-nav {
+        padding: 0 1.6rem;
+    }
+    #bottom-nav > img:nth-child(1) {
+        left: 1.6rem;
+    }
 
+}
 
-
-
-
+@media only screen and (max-width: 650px) {
+    .top-picks-col-1 {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    .card {
+        min-height: 30rem;
+    }
+    .card__image-container > img {
+        max-height: 300px;
+    }
+    .flex-container__overlay {
+        width: 100%;
+   
+    }
+}
