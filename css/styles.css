@@ -89,6 +89,9 @@ nav {
 nav > a {
     text-decoration: none;
 }
+.nav-item:nth-child(1) a {
+    color: #EDA39E;
+}
 
 .logo img:nth-of-type(1) {
     width: 4.8rem;
