@@ -16,66 +16,21 @@ main {
     flex-wrap: wrap;
     gap: 1.6rem;
     justify-content: center;
+    background-color: #604543;
     padding: 10rem 9.2rem 10rem 9.2rem;
 }
-.top-picks-col-1 {
-    width: 100%;
-    flex: auto;
-    display: grid;
-    position: relative;
-    gap: 1.6rem;
-    grid-template-columns: repeat(auto-fit , minmax(25rem, 1fr));
-}
-.top-picks-col-2 {
+
+.top-section {
     display: grid;
     flex: auto;
     row-gap: 1.6rem;
-    
 }
-.card {
-    display: flex;
-    height: 30rem;
-    position: relative;
-    flex-direction: column;
-    border: none;
-    overflow: hidden;
-    border-radius: 0.8rem;
-}
-.card__image-container {
-    width: 100%;
-    height: 35rem;
-    overflow: hidden;
-}
-
-.card__image-container > img {
-    object-fit: cover;
-    object-position: 50% 50%;
-    width: 100%;
-    height: 100%;
-    max-height: 250px;
-    overflow: hidden;
-   
-    
-}
-.card-btn {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
-    text-align: center;
-    background-color: #667A68;
-}
-.card-btn > p {
-    padding: 2.4rem 0;
-}
-.flex-container {
+.top-section__flex-container {
     position: relative;
     display: flex;
     height: 24rem;
     border-radius: 0.8rem;
     overflow: hidden;
-    
-    
 }
 .flex-container__image {
     width: 100%; 
@@ -85,76 +40,125 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-   
 }
 .flex-container__overlay {
-    background-color: #1B241C;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    width: 50%;
     display: flex;
     position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
     opacity: 0.75;
+    background-color: #1B241C;
     border-top-right-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
 }
 .flex-container__overlay:hover {
-    cursor: pointer;
     opacity: 0.9;
+    cursor: pointer;
     transition: 0.4s;
 }
 .flex-container__overlay  > h4 {
     margin: auto;
-    text-align: center;
     padding: 0 1.6rem;
+    text-align: center;
 }
+
+
+
+.product-section {
+    display: grid;
+    position: relative;
+    width: 100%;
+    gap: 1.6rem;
+    margin-bottom: 9.6rem;
+    flex: auto;
+    grid-template-columns: repeat(auto-fit , minmax(25rem, 1fr));
+}
+
+.card {
+    display: flex;
+    position: relative;
+    height: 30rem;
+    border: none;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    flex-direction: column;
+}
+.card__image-container {
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.card__image-container > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 25rem;
+    overflow: hidden;
+    object-position: 50% 50%;
+   
+    
+}
+.card-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    margin-top: auto;
+    text-align: center;
+    background-color: #667A68;
+}
+.card-btn > p {
+    padding: 2.4rem 0;
+}
+
 
 
 
 #bottom-nav {
     display: flex;
-    padding: 0 9.2rem;
-    align-items: center;
-    background-color: #604543;
-    justify-content: space-between;
+    position: fixed;
+    height: 8rem;
     width: 100vw;
     max-width: 100%;
     min-width: 100%;
-    height: 8rem;
-    position: fixed;
+    padding: 0 9.2rem;
     bottom: 0;
     opacity: 0.9;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #604543;
     box-shadow: 0px -3px 6px rgba(0, 0, 0, .16);
 }
 #bottom-nav > img:nth-child(1) {
-    align-self: center;
     position: absolute;
-    text-align: center;
-    padding-bottom: 0.4rem;
     left: 9.2rem;
     height: 2.4rem;
+    padding-bottom: 0.4rem;
+    align-self: center;
+    text-align: center;
 }
 #bottom-nav > img:nth-child(3) {
     width: 3.2rem;
 }
 .bottom-nav__address-container {
     display: flex;
+    width: 100%;
     height: 100%;
     margin-right: 1.6rem;
     overflow: hidden;
-    width: 100%;
     
     
 }
 .bottom-nav__address {
     position: relative;
     align-self: center;
-    border-bottom: 2px solid #f9f8f6;
-    padding: 0 1.6rem 0.2rem 2.4rem;
-    text-decoration: none;
     overflow: hidden;
+    text-decoration: none;
     text-overflow: ellipsis;
+    padding: 0 1.6rem 0.2rem 2.4rem;
+    border-bottom: 2px solid #f9f8f6;
     
    
     
