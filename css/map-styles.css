@@ -10,11 +10,10 @@ nav {
 main {
     position: relative;
     display: grid;
-    height: 100vh;
     height: var(--app-height);
-    min-height: 65rem;
     padding-top: 8rem;
     background-color: #667A68; 
+    border: 1px solid cyan;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
