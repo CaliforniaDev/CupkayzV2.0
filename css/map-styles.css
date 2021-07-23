@@ -14,7 +14,6 @@ main {
     min-height: 40rem;
     padding-top: 8rem;
     background-color: #667A68; 
-    border: 4px solid cyan;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
