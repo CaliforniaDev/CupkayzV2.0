@@ -23,12 +23,12 @@ main {
 .top-section {
     display: grid;
     flex: auto;
-    row-gap: 1.6rem;
+    margin: 1.6rem 0;
 }
 .top-section__flex-container {
     position: relative;
     display: flex;
-    height: 24rem;
+    height: 32rem;
     border-radius: 0.8rem;
     overflow: hidden;
 }
@@ -77,6 +77,7 @@ main {
 }
 
 .card {
+    transform: rotate(0);
     display: flex;
     position: relative;
     height: 30rem;
@@ -84,6 +85,19 @@ main {
     overflow: hidden;
     border-radius: 0.8rem;
     flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover {
+    cursor: pointer;
+}
+.card:hover > .card-btn {
+    cursor: pointer;
+    box-shadow: 0 0 20px #EDA39E;
+    text-shadow: 0 0 20px #EDA39E;
+}
+.card:hover > .card__image-container > img {
+    transform: scale(1.10);
+    border-radius: 0.8rem;
 }
 .card__image-container {
     width: 100%;
@@ -98,17 +112,20 @@ main {
     max-height: 25rem;
     overflow: hidden;
     object-position: 50% 50%;
-   
-    
+    transition: .5s;
 }
+
 .card-btn {
+    overflow: hidden;
     position: absolute;
     width: 100%;
     bottom: 0;
     margin-top: auto;
     text-align: center;
     background-color: #667A68;
+    transition: 0.5s;
 }
+
 .card-btn > p {
     padding: 2.4rem 0;
 }
