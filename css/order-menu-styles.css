@@ -193,6 +193,7 @@ main {
     position: fixed;
     left: 0;
     top: 0rem;
+    padding: 1.6rem;
     background-color: rgba(0,0,0,0.5);
   
     opacity: 0;
@@ -337,6 +338,10 @@ main {
     .top-picks-col-1 {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     }
+    .modal-box {
+        height: 36rem;
+    }
+
     .card {
         min-height: 30rem;
     }
