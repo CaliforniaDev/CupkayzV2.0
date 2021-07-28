@@ -7,10 +7,12 @@ function init() {
     function addClickListener() {
         let productCard = document.querySelectorAll(".card");
         let closeBtn = document.querySelector(".close-btn");
+        let orderBtn = document.querySelector(".order-btn");
         for(let i = 0; i < productCard.length; i++) {
             productCard[i].addEventListener("click", setAndOpenModalBox);
         }
         closeBtn.addEventListener("click", closeModalContainer);
+        orderBtn.addEventListener("click", closeModalContainer);
     }
 
     function ModalBox(image, name, detail, price) {
@@ -27,7 +29,7 @@ function init() {
         let itemDetail = item.querySelector(".item-detail").innerHTML;
         let itemPrice = item.querySelector(".item-price").innerHTML;
         let modalBoxCard = new ModalBox(imageSource, itemName, itemDetail, itemPrice);
-        
+
         setModalBox(modalBoxCard);
         openModalContainer()
     }
