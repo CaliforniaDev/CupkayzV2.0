@@ -129,6 +129,10 @@ main {
 .card-btn > p {
     padding: 2.4rem 0;
 }
+.card-btn > .item-detail {
+    display: none;
+    /* detail will only show inside modalbox using modalbox.js script */
+}
 
 
 
@@ -176,7 +180,7 @@ main {
     border-bottom: 2px solid #f9f8f6;
 }
 .modal-container {
-    display: flex;
+    display: none;
     justify-items: flex-end;
     z-index: 1;
     width: 100vw;
@@ -188,7 +192,7 @@ main {
     border: 1px solid cyan;
     background-color: rgba(0,0,0,0.5);
 }.modal-container.active {
-    display: none;
+    display: flex;
 }
 .modal-box{
     display: flex;
@@ -282,7 +286,6 @@ main {
     border-radius: 0.4rem;
     padding-left: 1.6rem;
 }
-
 
 
 @media only screen and (max-width: 1112px) {
