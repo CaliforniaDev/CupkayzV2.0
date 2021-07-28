@@ -181,7 +181,10 @@ main {
     border-bottom: 2px solid #f9f8f6;
 }
 .modal-container {
-    display: none;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s linear;
     justify-items: flex-end;
     z-index: 1;
     width: 100vw;
@@ -190,11 +193,13 @@ main {
     position: fixed;
     left: 0;
     top: 0rem;
-    border: 1px solid cyan;
     background-color: rgba(0,0,0,0.5);
+  
+    opacity: 0;
 }
 .modal-container.active {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 .modal-box{
     display: flex;
