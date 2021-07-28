@@ -129,7 +129,8 @@ main {
 .card-btn > p {
     padding: 2.4rem 0;
 }
-.card-btn > .item-detail {
+.card-btn > .item-detail,
+.card-btn > .item-price {
     display: none;
     /* detail will only show inside modalbox using modalbox.js script */
 }
@@ -191,7 +192,8 @@ main {
     top: 0rem;
     border: 1px solid cyan;
     background-color: rgba(0,0,0,0.5);
-}.modal-container.active {
+}
+.modal-container.active {
     display: flex;
 }
 .modal-box{
