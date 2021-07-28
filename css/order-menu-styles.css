@@ -28,7 +28,7 @@ main {
 .top-section__flex-container {
     position: relative;
     display: flex;
-    height: 32rem;
+    height: 24rem;
     border-radius: 0.8rem;
     overflow: hidden;
 }
