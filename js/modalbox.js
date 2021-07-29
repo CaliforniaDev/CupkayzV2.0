@@ -1,6 +1,6 @@
-window.onload = init;
 
-function init() {
+$(document).ready(() => {
+
 
     addClickListener()
 
@@ -54,9 +54,12 @@ function init() {
         MODAL_CONTAINER.classList.toggle("active");
     }
 
+});
+console.log("hello world");    
 
 
 
 
 
-}
+
+
