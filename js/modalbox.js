@@ -1,5 +1,4 @@
 
-$(document).ready(() => {
 
 
     addClickListener()
@@ -53,8 +52,6 @@ $(document).ready(() => {
         const MODAL_CONTAINER = document.querySelector(".modal-container");
         MODAL_CONTAINER.classList.toggle("active");
     }
-
-});   
 
 
 

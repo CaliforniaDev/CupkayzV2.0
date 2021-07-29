@@ -1,8 +1,4 @@
 
-
-
-$(document).ready(() => {
-
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("#mobile-nav-menu");
     const navOverlay = document.querySelector(".nav-overlay");
@@ -30,7 +26,6 @@ $(document).ready(() => {
     window.addEventListener("resize", appHeight);
     appHeight()
     
-});
 
 
 
