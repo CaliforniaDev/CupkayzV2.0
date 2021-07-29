@@ -54,8 +54,7 @@ $(document).ready(() => {
         MODAL_CONTAINER.classList.toggle("active");
     }
 
-});
-console.log("hello world");    
+});   
 
 
 
