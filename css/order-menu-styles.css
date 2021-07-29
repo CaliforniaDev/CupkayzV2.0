@@ -67,22 +67,22 @@ main {
 
 
 .product-section {
-    display: grid;
     position: relative;
+    display: grid;
+    flex: auto;
     width: 100%;
     gap: 1.6rem;
     margin-bottom: 9.6rem;
-    flex: auto;
     grid-template-columns: repeat(auto-fit , minmax(25rem, 1fr));
 }
 
 .card {
-    transform: rotate(0);
-    display: flex;
     position: relative;
+    display: flex;
     height: 30rem;
     border: none;
     overflow: hidden;
+    transform: rotate(0);
     border-radius: 0.8rem;
     flex-direction: column;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -106,24 +106,23 @@ main {
 }
 
 .card__image-container > img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     max-height: 25rem;
     overflow: hidden;
-    object-position: 50% 50%;
     transition: .5s;
+    object-position: 50% 50%;
 }
 
 .card-btn {
-    overflow: hidden;
     position: absolute;
     width: 100%;
     bottom: 0;
-    margin-top: auto;
+    transition: 0.5s;
+    overflow: hidden;
     text-align: center;
     background-color: #667A68;
-    transition: 0.5s;
 }
 
 .card-btn > p {
@@ -140,37 +139,35 @@ main {
 
 
 .modal-container {
+    position: fixed;
     display: flex;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0.2s, opacity 0.2s linear;
-    justify-items: flex-end;
-    z-index: 1;
     width: 100vw;
     max-width: 100%;
     height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0rem;
-    padding: 1.6rem; /* Test padding Mobile */
-    background-color: rgba(0,0,0,0.5);
-  
     opacity: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding: 1.6rem; 
+    visibility: hidden;
+    justify-items: flex-end;
+    background-color: rgba(0,0,0,0.5);
+    transition: visibility 0.2s, opacity 0.2s linear;
 }
 .modal-container.active {
     visibility: visible;
     opacity: 1;
 }
 .modal-box{
+    position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     margin: auto;
     width: 38.4rem;
     height: 43.2rem;
-    background-color: #667a66;
-    border-radius: 0.8rem;
     overflow: hidden;
+    border-radius: 0.8rem;
+    background-color: #667a66;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .modal-box > figure {
@@ -180,19 +177,19 @@ main {
     background-color: #777;
 }
 .modal-box > figure > img {
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     object-position: 50% 50% ;
 }
 .close-btn {
-    cursor: pointer;
-    opacity: 0.9;
-    top: 0;
     position: absolute;
-    background-color: #667A68;
-    height: 4.8rem;
     width: 4.8rem;
+    height: 4.8rem;
+    top: 0;
+    opacity: 0.9;
+    cursor: pointer;
+    background-color: #667A68;
     border-bottom-right-radius: 0.8rem;
 }
 
@@ -258,8 +255,8 @@ footer {
 }
 
 #bottom-nav {
-    display: flex;
     position: fixed;
+    display: flex;
     height: 8rem;
     width: 100vw;
     max-width: 100%;
