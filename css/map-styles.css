@@ -10,9 +10,8 @@ nav {
 main {
     position: relative;
     display: grid;
-    height: 100vh;
     height: var(--app-height);
-    min-height: 65rem;
+    min-height: 40rem;
     padding-top: 8rem;
     background-color: #667A68; 
     grid-template-columns: repeat(12, 1fr);
@@ -208,13 +207,10 @@ main {
 
 
 @media only screen and (max-width: 992.98px) {
-    nav {
-        padding: 0 1.6rem;
-    }
 
     main {
         grid-template-columns: repeat(6, 1fr);
-        min-height: 35rem;
+        
      
     }
     .form-container {
@@ -272,8 +268,8 @@ main {
 
     main {
         grid-template-columns: repeat(4, 1fr);
-        height: 100vh;
-        min-height: 50rem;
+        
+        
     }
     #address-input-container > input {
         height: 2.4rem;
