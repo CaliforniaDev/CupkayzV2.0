@@ -37,6 +37,8 @@
         let modalBoxName = document.querySelector(".info-container > h4");
         let modalBoxDetail = document.querySelector(".info-container > p");
         let modalBoxPrice = document.querySelector(".total-price");
+        let orderButton = document.querySelector(".order-btn");
+        orderButton.addEventListener("click", addToCart);
 
         modalBoxImage.src = object.image;
         modalBoxName.innerHTML = object.name;
@@ -51,6 +53,13 @@
     function closeModalContainer() {
         const MODAL_CONTAINER = document.querySelector(".modal-container");
         MODAL_CONTAINER.classList.toggle("active");
+    }
+    function addToCart() {
+        let cartNotificationBar = document.querySelector("#cart-notification-bar");
+        cartNotificationBar.classList.toggle("active");
+        setTimeout(function() {
+            cartNotificationBar.classList.toggle("active");
+        }, 3000)
     }
 
 
