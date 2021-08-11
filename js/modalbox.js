@@ -37,7 +37,6 @@
         const itemPriceContainer = document.querySelector(".modal-box__total-price");
         const itemQuantity = document.querySelector(".item-qty");
         const orderButton = document.querySelector(".order-btn");
-        console.log(orderButton);
 
 
         imageContainer.src = object.image;
