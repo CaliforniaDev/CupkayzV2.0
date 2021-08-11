@@ -4,14 +4,12 @@
     addClickListener()
 
     function addClickListener() {
-        let productCard = document.querySelectorAll(".card");
-        let closeBtn = document.querySelector(".close-btn");
-        let orderBtn = document.querySelector(".order-btn");
+        const productCard = document.querySelectorAll(".card");
+        const closeBtn = document.querySelector(".close-btn");
         for(let i = 0; i < productCard.length; i++) {
             productCard[i].addEventListener("click", setAndOpenModalBox);
         }
         closeBtn.addEventListener("click", closeModalContainer);
-        orderBtn.addEventListener("click", closeModalContainer);
     }
 
     function ModalBox(image, name, detail, price) {
@@ -22,28 +20,31 @@
     }
 
     function setAndOpenModalBox(event) {
-        let item = event.currentTarget;
-        let imageSource = item.querySelector(".item-img").getAttribute("src");
-        let itemName = item.querySelector(".item-name").innerHTML;
-        let itemDetail = item.querySelector(".item-detail").innerHTML;
-        let itemPrice = item.querySelector(".item-price").innerHTML;
-        let modalBoxCard = new ModalBox(imageSource, itemName, itemDetail, itemPrice);
+        const item = event.currentTarget;
+        const imageSource = item.querySelector(".item-img").getAttribute("src");
+        const itemName = item.querySelector(".item-name").innerHTML;
+        const itemDetail = item.querySelector(".item-detail").innerHTML;
+        const itemPrice = item.querySelector(".item-price").innerHTML;
+        const modalBoxCard = new ModalBox(imageSource, itemName, itemDetail, itemPrice);
 
         setModalBox(modalBoxCard);
         openModalContainer()
     }
     function setModalBox(object) {
-        let modalBoxImage = document.querySelector(".modal-box > figure > img");
-        let modalBoxName = document.querySelector(".info-container > h4");
-        let modalBoxDetail = document.querySelector(".info-container > p");
-        let modalBoxPrice = document.querySelector(".total-price");
-        let orderButton = document.querySelector(".order-btn");
-        orderButton.addEventListener("click", addToCart);
+        const imageContainer = document.querySelector(".modal-box > figure > img");
+        const itemNameContainer = document.querySelector(".info-container > h4");
+        const itemDetailContainer = document.querySelector(".info-container > p");
+        const itemPriceContainer = document.querySelector(".total-price");
+        const orderButton = document.querySelector(".order-btn");
+        
 
-        modalBoxImage.src = object.image;
-        modalBoxName.innerHTML = object.name;
-        modalBoxDetail.innerHTML = object.detail;
-        modalBoxPrice.innerHTML = object.price;
+        imageContainer.src = object.image;
+        itemNameContainer.innerHTML = object.name;
+        itemDetailContainer.innerHTML = object.detail;
+        itemPriceContainer.innerHTML = object.price;
+
+        orderButton.addEventListener("click", addToCart);
+        orderButton.addEventListener("click", closeModalContainer);
     }
 
     function openModalContainer() {
@@ -55,11 +56,17 @@
         MODAL_CONTAINER.classList.toggle("active");
     }
     function addToCart() {
-        let cartNotificationBar = document.querySelector("#cart-notification-bar");
+        const cartNotificationBar = document.querySelector("#cart-notification-bar");
+        const itemName = document.querySelector(".modal-container .info-container > h4").innerHTML;
+        const itemQuantity = document.querySelector(".item-qty").value;
+        
+        document.querySelector("#cart-notification-bar .item-name").innerHTML = itemName;
+        document.querySelector("#cart-notification__item-quantity").innerHTML = itemQuantity;
         cartNotificationBar.classList.toggle("active");
         setTimeout(function() {
             cartNotificationBar.classList.toggle("active");
-        }, 3000)
+        }, 3000);
+
     }
 
 
