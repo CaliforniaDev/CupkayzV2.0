@@ -32,9 +32,9 @@
     }
     function setModalBox(object) {
         const imageContainer = document.querySelector(".modal-box > figure > img");
-        const itemNameContainer = document.querySelector(".info-container > h4");
-        const itemDetailContainer = document.querySelector(".info-container > p");
-        const itemPriceContainer = document.querySelector(".total-price");
+        const itemNameContainer = document.querySelector(".modal-box__info-container > h4");
+        const itemDetailContainer = document.querySelector(".modal-box__info-container > p");
+        const itemPriceContainer = document.querySelector(".modal-box__total-price");
         const itemQuantity = document.querySelector(".item-qty");
         const orderButton = document.querySelector(".order-btn");
 
@@ -57,10 +57,12 @@
         const MODAL_CONTAINER = document.querySelector(".modal-container");
         MODAL_CONTAINER.classList.toggle("active");
     }
-    
+
     function addToCart() {
         const cartNotificationBar = document.querySelector("#cart-notification-bar");
         const itemName = document.querySelector(".modal-container .info-container > h4").innerHTML;
+        const itemPrice = document.querySelector(".total-price");
+        
         const itemQuantity = document.querySelector(".item-qty").value;
         
         document.querySelector("#cart-notification-bar .item-name").innerHTML = itemName;
