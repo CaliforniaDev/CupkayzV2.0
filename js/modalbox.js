@@ -2,7 +2,6 @@
 const shoppingCart = []; 
 
     addClickListener()
-
     function addClickListener() {
         const productCard = document.querySelectorAll(".card");
         const closeBtn = document.querySelector(".close-btn");
@@ -22,6 +21,7 @@ const shoppingCart = [];
 
     CartItem.prototype = new ModalBox();
     CartItem.prototype.constructor = CartItem;
+
     function CartItem(image, itemName, price, detail, quantity) {
         ModalBox.call(this, image, itemName, price, detail);
         this.quantity = quantity;
@@ -71,22 +71,29 @@ const shoppingCart = [];
         const MODAL_CONTAINER = document.querySelector(".modal-container");
         MODAL_CONTAINER.classList.toggle("active");
     }
+    function addTotalItemsInCart() {
+        return shoppingCart.length + 1;
+    }
 
     function addToCart() {
+        const bottomNav = document.querySelector("#bottom-nav");
+        const cartTotalQuantity = bottomNav.querySelector(".cart-quantity");
         const cartNotificationBar = document.querySelector("#cart-notification-bar");
         const imgSrc = document.querySelector(".modal-box__img-container > img").getAttribute("src");
         const itemName = document.querySelector(".modal-box__info-container > h4").innerHTML;
         const itemPrice = document.querySelector(".modal-box__total-price").innerHTML;
         const itemQuantity = document.querySelector(".item-qty").value;
+        const cartItem = new CartItem(imgSrc, itemName, itemPrice, undefined, itemQuantity);
         
         document.querySelector("#cart-notification-bar .item-name").innerHTML = itemName;
         document.querySelector("#cart-notification__item-quantity").innerHTML = itemQuantity;
         cartNotificationBar.classList.toggle("active");
+        
         setTimeout(function() {
             cartNotificationBar.classList.toggle("active");
         }, 3000);
-
-        const cartItem = new CartItem(imgSrc, itemName, itemPrice, undefined, itemQuantity);
+        
+        cartTotalQuantity.innerHTML = addTotalItemsInCart();
         return shoppingCart.push(cartItem) ;
     }
     
