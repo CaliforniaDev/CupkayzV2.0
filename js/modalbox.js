@@ -57,6 +57,7 @@
         const MODAL_CONTAINER = document.querySelector(".modal-container");
         MODAL_CONTAINER.classList.toggle("active");
     }
+    
     function addToCart() {
         const cartNotificationBar = document.querySelector("#cart-notification-bar");
         const itemName = document.querySelector(".modal-container .info-container > h4").innerHTML;
