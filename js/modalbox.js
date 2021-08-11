@@ -1,5 +1,5 @@
 
-
+const shoppingCart = []; 
 
     addClickListener()
 
@@ -12,12 +12,27 @@
         closeBtn.addEventListener("click", closeModalContainer);
     }
 
-    function ModalBox(image, name, detail, price) {
+    function ModalBox(image, itemName, price, detail) {
         this.image = image;
-        this.name = name;
-        this.detail = detail;
+        this.itemName = itemName;
         this.price = price;
+        this.detail = detail;
     }
+
+
+    CartItem.prototype = new ModalBox();
+    CartItem.prototype.constructor = CartItem;
+    function CartItem(image, itemName, price, detail, quantity) {
+        ModalBox.call(this, image, itemName, price, detail);
+        this.quantity = quantity;
+    }
+
+
+    
+    let cartItem = new CartItem("cart Image", "cart name", "$35", undefined, "item quantity");
+    console.log(cartItem);
+  
+   
 
     function setAndOpenModalBox(event) {
         const item = event.currentTarget;
@@ -25,7 +40,7 @@
         const itemName = item.querySelector(".item-name").innerHTML;
         const itemDetail = item.querySelector(".item-detail").innerHTML;
         const itemPrice = item.querySelector(".item-price").innerHTML;
-        const modalBoxCard = new ModalBox(imageSource, itemName, itemDetail, itemPrice);
+        const modalBoxCard = new ModalBox(imageSource, itemName, itemPrice, itemDetail);
 
         setModalBox(modalBoxCard);
         openModalContainer()
@@ -38,9 +53,8 @@
         const itemQuantity = document.querySelector(".item-qty");
         const orderButton = document.querySelector(".order-btn");
 
-
         imageContainer.src = object.image;
-        itemNameContainer.innerHTML = object.name;
+        itemNameContainer.innerHTML = object.itemName;
         itemDetailContainer.innerHTML = object.detail;
         itemPriceContainer.innerHTML = object.price;
         itemQuantity.value = 1;
@@ -60,9 +74,9 @@
 
     function addToCart() {
         const cartNotificationBar = document.querySelector("#cart-notification-bar");
+        const imgSrc = document.querySelector(".modal-box__img-container > img").getAttribute("src");
         const itemName = document.querySelector(".modal-box__info-container > h4").innerHTML;
-        const itemPrice = document.querySelector(".total-price");
-        
+        const itemPrice = document.querySelector(".modal-box__total-price").innerHTML;
         const itemQuantity = document.querySelector(".item-qty").value;
         
         document.querySelector("#cart-notification-bar .item-name").innerHTML = itemName;
@@ -72,7 +86,10 @@
             cartNotificationBar.classList.toggle("active");
         }, 3000);
 
+        const cartItem = new CartItem(imgSrc, itemName, itemPrice, undefined, itemQuantity);
+        return shoppingCart.push(cartItem) ;
     }
+    
 
 
 
