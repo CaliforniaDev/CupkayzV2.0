@@ -35,13 +35,15 @@
         const itemNameContainer = document.querySelector(".info-container > h4");
         const itemDetailContainer = document.querySelector(".info-container > p");
         const itemPriceContainer = document.querySelector(".total-price");
+        const itemQuantity = document.querySelector(".item-qty");
         const orderButton = document.querySelector(".order-btn");
-        
+
 
         imageContainer.src = object.image;
         itemNameContainer.innerHTML = object.name;
         itemDetailContainer.innerHTML = object.detail;
         itemPriceContainer.innerHTML = object.price;
+        itemQuantity.value = 1;
 
         orderButton.addEventListener("click", addToCart);
         orderButton.addEventListener("click", closeModalContainer);
