@@ -117,9 +117,11 @@
             </div>
         </section>
     </main>
+
     <span id="cart-notification-bar">
         <p><span id="cart-notification__item-quantity">1</span> Dozen added: <span class="item-name"></span></p>
     </span>
+
     <aside id="bottom-nav">
         <img src="images/map-pin.svg" />
         <div class="bottom-nav__address-container">
@@ -129,7 +131,6 @@
             <img src="images/icon-shopping-bag.svg" />
             <p class="light-font cart-quantity">1</p>
         </div>
-        
     </aside>
 
 
@@ -149,8 +150,8 @@
             </div>
             <p class="light-font">DOZEN: $<span class="total-price">00</span></p>
             <div class="form-container">
-                <label class="light-font">Qty:</label>
-                <input class="item-qty" type="number" min="1"max="99" value="1"/>
+                <label for="Quantity" class="light-font">Qty:</label>
+                <input name="Quantity" class="item-qty" type="number" min="1"max="99" value="1"/>
                 <button class="order-btn">
                     <p>Order Now</p>
                 </button>
