@@ -101,7 +101,8 @@ const shoppingCart = [];
         }, 3000);
         
         cartTotalQuantity.innerHTML = addTotalItemsInCart();
-        return shoppingCart.push(cartItem) ;
+        shoppingCart.push(cartItem) ;
+        localStorage.setItem("cart-array", shoppingCart);
     }
     
 
