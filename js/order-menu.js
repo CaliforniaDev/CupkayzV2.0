@@ -1,4 +1,4 @@
-
+document.getElementById("address-result").innerHTML = localStorage.getItem("recipient-address");
 const shoppingCart = []; 
 
     addClickListener()
