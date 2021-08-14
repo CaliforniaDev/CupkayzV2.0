@@ -292,8 +292,12 @@ footer {
     border-bottom: 2px solid #f9f8f6;
 }
 .bottom-nav__cart-container {
+    text-align: center;
     position: relative;
     cursor: pointer;
+    text-decoration: none;
+    
+   
 }
 .bottom-nav__cart-container > p {
     font-size: 2.4rem;
@@ -301,6 +305,7 @@ footer {
     top: 62%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #444;
 }
 #cart-notification-bar {
     display: block;
@@ -308,7 +313,7 @@ footer {
     width: 100vw;
     max-width: 100%;
     height: 8rem;
-    background-color: #EDA39E;
+    background-color: #EED1CA;
     position: fixed;
     bottom: -8rem;
     transition: ease-in, 0.3s;
@@ -317,6 +322,35 @@ footer {
     bottom: 8rem;
     transition: ease-in, 0.3s;
 }
+
+.clip-icon {
+    z-index: -1;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: -20px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s linear;
+    overflow: hidden;
+    
+}
+.clip-circle {
+    z-index: -1;
+    top: -32.5px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    clip-path: circle(30px at center);
+    transition: all .08s linear;
+}
+.cart {
+    z-index: 1;
+}
+
+
 
 @media only screen and (max-width: 1112px) {
     nav {
