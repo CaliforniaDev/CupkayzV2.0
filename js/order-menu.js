@@ -85,6 +85,11 @@ const shoppingCart = [];
         const itemPrice = document.querySelector(".modal-box__total-price").innerHTML;
         const itemQuantity = document.querySelector(".item-qty").value;
         const cartItem = new CartItem(imgSrc, itemName, itemPrice, undefined, itemQuantity);
+        const clipIcon = document.querySelector(".clip-icon");
+        const clipCircle = document.querySelector(".clip-circle");
+        clipIcon.style.width="70px";
+        clipCircle.style.width="120px";
+
         if (itemQuantity < 1 || itemQuantity === NaN) {
             alert("invalid quantity, please add a number between 1 - 99");
             openModalContainer();
@@ -93,12 +98,19 @@ const shoppingCart = [];
         
         document.querySelector("#cart-notification-bar .item-name").innerHTML = itemName;
         document.querySelector("#cart-notification__item-quantity").innerHTML = itemQuantity;
+        document.querySelector(".clip-circle").src = imgSrc;
         bagIcon.src = "images/icon-shopping-bag-filled.svg";
         cartNotificationBar.classList.toggle("active");
         
         setTimeout(function() {
             cartNotificationBar.classList.toggle("active");
+
         }, 3000);
+        setTimeout(function() {
+            clipIcon.style.width="0px";
+            clipCircle.style.width="0px";
+
+        }, 2000);
         
         cartTotalQuantity.innerHTML = addTotalItemsInCart();
         shoppingCart.push(cartItem) ;
