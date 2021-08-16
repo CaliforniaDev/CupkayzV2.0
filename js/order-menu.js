@@ -114,7 +114,11 @@ const shoppingCart = [];
         
         cartTotalQuantity.innerHTML = addTotalItemsInCart();
         shoppingCart.push(cartItem) ;
-        localStorage.setItem("cart-array", shoppingCart);
+        
+        let shoppingCart_serialized = JSON.stringify(shoppingCart);
+        localStorage.setItem("cart-array", shoppingCart_serialized);
+        console.log(localStorage);
+
     }
     
 
