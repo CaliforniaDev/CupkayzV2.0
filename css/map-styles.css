@@ -11,6 +11,8 @@ main {
     position: relative;
     display: grid;
     height: var(--app-height);
+    width: 100vw;
+    max-width: 100%;
     min-height: 40rem;
     padding-top: 8rem;
     background-color: #667A68; 
