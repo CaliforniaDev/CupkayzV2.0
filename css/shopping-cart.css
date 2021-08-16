@@ -1,0 +1,26 @@
+#top-nav {
+    justify-content: flex-start;
+}
+
+.backToMenu-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #f9f8f6;
+    transition: 0.4s;
+    margin-left: 2.4rem;
+}
+
+.backToMenu-link > p {
+    display: inline-block;
+    transition: 0.4s;
+    padding-left: 0.8rem;
+    
+}
+.backToMenu-link:hover > p {
+    padding-left: 1.6rem;
+}
+.backToMenu-link:hover {
+    margin-left: 1.6rem;
+   
+}
