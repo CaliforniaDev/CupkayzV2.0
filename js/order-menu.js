@@ -28,9 +28,7 @@ const shoppingCart = [];
     }
 
 
-    
-    let cartItem = new CartItem("cart Image", "cart name", "$35", undefined, "item quantity");
-    console.log(cartItem);
+
   
    
 
