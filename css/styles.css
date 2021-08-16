@@ -139,7 +139,6 @@ nav > a {
 }
 .hero {
     z-index: -1;
-    height: 100vh;
     height: var(--app-height);
     min-height: 65rem;
     width: 100vw;
