@@ -1,5 +1,10 @@
+:root {
+    --app-height: 100%;
+}
+
 #top-nav {
     justify-content: flex-start;
+    padding: 0 2.4rem;
 }
 
 .backToMenu-link {
@@ -9,6 +14,7 @@
     color: #f9f8f6;
     transition: 0.4s;
     margin-left: 2.4rem;
+    text-decoration: none;
 }
 
 .backToMenu-link > p {
@@ -23,4 +29,19 @@
 .backToMenu-link:hover {
     margin-left: 1.6rem;
    
+}
+main {
+    display: grid;
+    max-height: var(--app-height);
+    height: 100vh;
+    width: 100vw;
+    min-width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+.left-section {
+    display: flex;
+    padding-top: 8rem;
+    background-color: gray;
+    grid-row: 1/ 13;
 }
