@@ -1,41 +1,57 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Shopping Cart</title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-        <link rel="stylesheet" type="text/css" href="css/main.css" />
-        <link rel="stylesheet" type="text/css" href="css/shopping-cart.css" />
-        <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg" />
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
-    
-    </head>
-    <body>
-        <nav id="top-nav">
-            <a href="index.html" class="logo">
-                <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
-            </a>
-            <a href="order-menu.html" class="backToMenu-link">
-                <i class="fas fa-chevron-left"></i> 
-                <p>Back to menu</p>
-            </a>
-        </nav>
 
-        <main>
-            <section class="left-section">
-                <h1>Hello World</h1>
-            </section>
-        </main>
-    
-   
-        
-    </body>
-    <script src="js/cart.js"></script>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Shopping Cart</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/shopping-cart.css" />
+    <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <nav id="top-nav">
+        <a href="index.html" class="logo">
+            <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
+        </a>
+        <div href="order-menu.html" class="backToMenu-link">
+            <i class="fas fa-chevron-left"></i>
+            <p>Back to menu</p>
+        </div>
+    </nav>
+
+    <main>
+        <section class="review-order-section light-font">
+            <div class="order-review">
+                <h4>Review Order (1)</h4>
+                <p>Prep time: 2 - 5 business days</p>
+                <label>Delivery Address</label>
+                <a class="test-link" href="map.html">
+                    <div class="label-container">
+                        <span class="delivery-address light-font">Placement Text</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section class="cart-items-section">
+
+        </section>
+    </main>
+
+
+
+</body>
+<script src="js/cart.js"></script>
+
 </html>

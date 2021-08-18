@@ -1,6 +1,14 @@
 :root {
     --app-height: 100%;
 }
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+.text-xxs {
+    font-size: 1.3rem;
+}
 
 #top-nav {
     justify-content: flex-start;
@@ -28,7 +36,7 @@
 }
 .backToMenu-link:hover {
     margin-left: 1.6rem;
-   
+
 }
 main {
     display: grid;
@@ -38,9 +46,36 @@ main {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
-.left-section {
+.review-order-section {
     display: flex;
+    flex-direction: column;
     padding-top: 8rem;
-    background-color: purple;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #667A68;
     grid-row: 1/ 13;
+    grid-column: 1 / 6;
+}
+.order-review {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 13.2rem;
+}
+.order-review > label {
+    font-size: 1.3rem;
+}
+.order-review > p {
+    margin-bottom: 0.8rem;
+}
+.label-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #f9f8f6;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.cart-items-section {
+    background-color: gray;
+    grid-column: 6 / 13;
+    grid-row: 1 / 13;
 }
