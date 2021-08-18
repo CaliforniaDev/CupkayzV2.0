@@ -24,10 +24,10 @@
         <a href="index.html" class="logo">
             <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
         </a>
-        <div href="order-menu.html" class="backToMenu-link">
+        <a href="order-menu.html" class="backToMenu-link">
             <i class="fas fa-chevron-left"></i>
             <p>Back to menu</p>
-        </div>
+        </a>
     </nav>
 
     <main>
@@ -37,7 +37,7 @@
                 <p>Prep time: 2 - 5 business days</p>
                 <label>Delivery Address</label>
                 <a class="test-link" href="map.html">
-                    <div class="label-container">
+                    <div class="address-container">
                         <span class="delivery-address light-font">Placement Text</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
@@ -46,6 +46,31 @@
         </section>
         <section class="cart-items-section">
 
+            <div class="item-container">
+                <figure class="img-container">
+                </figure>
+                <span class="info-container  light-font">
+                    <h4 class="item-name">Stuffed Oreo Cupcakes</h4>
+                    <span class="text-xxs">$22 per dozen</span>
+
+                    <label for="Quantity"></label>
+                    <div class="input-group">
+                        <input type="button" value="-" class="button-minus" data-field="quantity" />
+                        <input type="number" step="1" max="100" value="1" name="quantity" class="quantity-field"
+                            required />
+                        <input type="button" value="+" class="button-plus" data-field="quantity" />
+                    </div>
+
+                </span>
+                <button class="remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+
+
+            <button class="google-pay-btn">
+
+            </button>
+
+
         </section>
     </main>
 
@@ -53,5 +78,6 @@
 
 </body>
 <script src="js/cart.js"></script>
+<script src="js/custom-select-btn.js"></script>
 
 </html>
