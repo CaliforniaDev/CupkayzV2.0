@@ -216,6 +216,13 @@ display: flex;
   color: #f9f8f6;
 }
 
+.input-group input[type='button']:hover {
+    background-color: #333;
+}
+
+
+
+
 .input-group .button-minus,
 .input-group .button-plus {
   font-weight: bold;
