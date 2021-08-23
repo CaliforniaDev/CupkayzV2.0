@@ -16,7 +16,7 @@
     addClickEventListener();
 
     function addClickEventListener() {
-        let removeCartItemButton = document.querySelectorAll(".remove-btn");
+        let removeCartItemButton = document.querySelectorAll(".cart-item__remove-btn");
         for(let i = 0; i < addEventListener.length; i++) {
             let button = removeCartItemButton[i];
             button.addEventListener("click", removeItem);

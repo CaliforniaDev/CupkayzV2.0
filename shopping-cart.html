@@ -36,7 +36,7 @@
                 <h4>Review Order (1)</h4>
                 <p>Prep time: 2 - 5 business days</p>
                 <label>Delivery Address</label>
-                <a class="test-link" href="map.html">
+                <a class="order-review__map-link" href="map.html">
                     <div class="address-container">
                         <span class="delivery-address light-font">Placement Text</span>
                         <i class="fas fa-chevron-down"></i>
@@ -44,14 +44,17 @@
                 </a>
             </div>
         </section>
+
+
+
         <section class="cart-items-section">
 
-            <div class="item-container">
-                <figure class="img-container">
+            <div class="cart-item">
+                <figure class="cart-item__img">
                 </figure>
-                <span class="info-container  light-font">
-                    <h4 class="item-name">Stuffed Oreo Cupcakes</h4>
-                    <span class="text-xxs">$22 per dozen</span>
+                <div class="cart-item__text-block  light-font">
+                    <h4 class="cart-item__title">Stuffed Oreo Cupcakes</h4>
+                    <span class="cart-item__price text-xxs">$22 per dozen</span>
 
                     <label for="Quantity"></label>
                     <div class="input-group">
@@ -60,32 +63,14 @@
                             required />
                         <input type="button" value="+" class="button-plus" data-field="quantity" />
                     </div>
-                </span>
-                <button class="remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
+                <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
             </div>
 
-            <div class="item-container">
-                <figure class="img-container">
-                </figure>
-                <span class="info-container  light-font">
-                    <h4 class="item-name">Stuffed Oreo Cupcakes</h4>
-                    <span class="text-xxs">$22 per dozen</span>
-
-                    <label for="Quantity"></label>
-                    <div class="input-group">
-                        <input type="button" value="-" class="button-minus" data-field="quantity" />
-                        <input type="number" step="1" max="100" value="1" name="quantity" class="quantity-field"
-                            required />
-                        <input type="button" value="+" class="button-plus" data-field="quantity" />
-                    </div>
-                </span>
-                <button class="remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
-            </div>
+            
 
 
-            <button class="google-pay-btn">
-
-            </button>
+            <button class="google-pay-btn"> </button>
 
 
         </section>

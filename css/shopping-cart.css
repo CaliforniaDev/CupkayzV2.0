@@ -23,20 +23,6 @@ a, a:hover, a:focus, a:active {
     margin-left: 2.4rem;
     text-decoration: none;
 }
-.remove-btn {
-    height: 4rem;
-    padding: 0 1.6rem;
-    border-radius: 0.8rem;
-    border-style: none;
-    color: #444;
-    background-color: transparent;
-    margin-top: auto;
-    margin-left: auto;
-    background-color: #EDA39E;
-    cursor: pointer;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .backToMenu-link > p {
     display: inline-block;
     transition: 0.4s;
@@ -86,6 +72,12 @@ main {
     justify-content: space-between;
     cursor: pointer;
 }
+.order-review__map-link {
+    text-decoration: none;
+    color: #f9f8f6;
+}
+
+
 .cart-items-section {
     overflow-y: scroll;
     display: flex;
@@ -95,11 +87,7 @@ main {
     grid-column: 6 / 13;
     grid-row: 1 / 13;
 }
-.test-link {
-    text-decoration: none;
-    color: #f9f8f6;
-}
-.item-container {
+.cart-item {
     display: flex;
     margin: 2.4rem auto;
     padding: 2.4rem;
@@ -110,31 +98,37 @@ main {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-.info-container {
-    display: flex;
-    flex-direction: column;
-}
-.info-container > h4 {
-    display: block;
- 
-    
-   
-}
-.item-qty select {
-    display: none;
-}
-.img-container {
+.cart-item__img {
     border-radius: 1.6rem;
     background-color: #f9f8f6;
     width: 12.6rem;
     height: 12.6rem;
     margin-right: 2.4rem;
 }
-.btn-container {
-    position: fixed;
-    margin: 0 auto;
-    width: 59.2rem;
+.cart-item__text-block {
+    display: flex;
+    flex-direction: column;
 }
+.cart-item__title {
+    display: block;
+    
+}
+.cart-item__remove-btn {
+    height: 4rem;
+    padding: 0 1.6rem;
+    border-radius: 0.8rem;
+    border-style: none;
+    color: #444;
+    background-color: transparent;
+    margin-top: auto;
+    margin-left: auto;
+    background-color: #EDA39E;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+
 .google-pay-btn {
     position: fixed;
     bottom: 2.4rem;
@@ -154,7 +148,6 @@ main {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin: 8px 0px 12px 10px;
 }
-
 .google-pay-btn:active {
     box-shadow: none;
     transform: translateY(4px);
@@ -162,7 +155,7 @@ main {
 
 
 
-
+         
 
 
 
