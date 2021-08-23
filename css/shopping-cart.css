@@ -89,7 +89,7 @@ main {
 }
 .cart-item {
     display: flex;
-    margin: 2.4rem auto;
+    margin: 2.4rem auto 0 auto;
     padding: 2.4rem;
     background-color: #667A68;
     height: 19.4rem;
@@ -143,6 +143,23 @@ main {
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     
     
+}
+
+.cart-receipt-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.4rem auto;
+    width: 59.2rem;
+    height: 10.8rem;
+    border-radius: 0.8rem;
+    background-color: #667A68;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cart-total, .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.4rem;
 }
 .google-pay-btn:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

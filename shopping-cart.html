@@ -66,12 +66,34 @@
                 </div>
                 <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
             </div>
+            <div class="cart-item">
+                <figure class="cart-item__img">
+                </figure>
+                <div class="cart-item__text-block  light-font">
+                    <h4 class="cart-item__title">Stuffed Oreo Cupcakes</h4>
+                    <span class="cart-item__price text-xxs">$22 per dozen</span>
 
-            
-
-
+                    <label for="Quantity"></label>
+                    <div class="input-group">
+                        <input type="button" value="-" class="button-minus" data-field="quantity" />
+                        <input type="number" step="1" max="100" value="1" name="quantity" class="quantity-field"
+                            required />
+                        <input type="button" value="+" class="button-plus" data-field="quantity" />
+                    </div>
+                </div>
+                <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
+            </div>
+            <div class="cart-receipt-block light-font">
+                <div class="cart-subtotal">
+                    <span class="cart-subtotal__title">Subtotal</span>
+                    <span class="cart-subtotal__price">$0.00</span>
+                </div>
+                <div class="cart-total">
+                    <h4 class="cart-total__title">Total</h4>
+                    <h4 class="cart-total__price">$0.00</h4>
+                </div>
+            </div>
             <button class="google-pay-btn"> </button>
-
 
         </section>
     </main>
