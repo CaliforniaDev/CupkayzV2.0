@@ -1,24 +1,54 @@
 (function () {
-    document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
-    const shoppingCart_deserialized = JSON.parse(localStorage.getItem("cart-array"));
-    
     if (document.readyState == "loading") {
         document.addEventListener("DOMContentLoaded", documentIsReady())
     } else {
         documentIsReady()
     }
+
+    document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
+    const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
+
+
+
+
     function documentIsReady() {
         if (isOrderEmpty()){
+            updateCartTotal();
             return alert("cart is empty");
         }
+
+        addQuantityInputListeners();
+        addRemoveButtonListeners();
+        updateReviewTitle();
+        updateCartTotal();
+    }
+
+
+    function addQuantityInputListeners() {
+        const QUANTITY_FIELD = document.querySelectorAll(".quantity-field");
+        const INPUT_BUTTONS = document.querySelectorAll(".quantity-input button");
+        for (let i = 0; i < INPUT_BUTTONS.length; i++) {
+            const input = INPUT_BUTTONS[i];
+            input.addEventListener("click", updateCartTotal);
+        }
+        for (let j = 0; j < QUANTITY_FIELD.length; j++) {
+            const textField = QUANTITY_FIELD[j];
+            textField.addEventListener("input", updateCartTotal);
+        }
+    }
+
+    function addRemoveButtonListeners() {
         const REMOVE_CART_ITEM_BUTTONS_ARR = document.querySelectorAll(".cart-item__remove-btn");
         for (let i = 0; i < REMOVE_CART_ITEM_BUTTONS_ARR.length; i++) {
             const removeButton = REMOVE_CART_ITEM_BUTTONS_ARR[i];
             removeButton.addEventListener("click", removeCartItem);
         }
-        
-      
-        updateReviewTitle();
+
+    }
+
+
+
+    function quantityChanged(event) {
         updateCartTotal();
     }
     function removeCartItem(event) {
