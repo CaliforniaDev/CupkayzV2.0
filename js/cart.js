@@ -46,11 +46,6 @@
 
     }
 
-
-
-    function quantityChanged(event) {
-        updateCartTotal();
-    }
     function removeCartItem(event) {
         const buttonClicked = event.currentTarget;
         buttonClicked.parentElement.remove();
