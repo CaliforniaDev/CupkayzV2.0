@@ -128,23 +128,6 @@ main {
 }
 
 
-
-.google-pay-btn {
-    position: fixed;
-    bottom: 2.4rem;
-    right: 2.4rem;
-    width: 17.5rem;
-    height: 5.9rem;
-    border-radius: 3.2rem;
-    border: none;
-    background-color: #f9f8f6;
-    cursor: pointer;
-    
-    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-    
-}
-
 .cart-receipt-block {
     display: flex;
     flex-direction: column;
@@ -161,6 +144,27 @@ main {
     justify-content: space-between;
     padding: 0 2.4rem;
 }
+
+
+
+.google-pay-btn {
+    display: none;/*temporary display: none during console testing*/
+    position: fixed;
+    bottom: 2.4rem;
+    right: 2.4rem;
+    width: 17.5rem;
+    height: 5.9rem;
+    border-radius: 3.2rem;
+    border: none;
+    background-color: #f9f8f6;
+    cursor: pointer;
+    
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    
+    
+}
+
+
 .google-pay-btn:hover {
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     margin: 8px 0px 12px 10px;
@@ -219,10 +223,6 @@ display: flex;
 .input-group input[type='button']:hover {
     background-color: #333;
 }
-
-
-
-
 .input-group .button-minus,
 .input-group .button-plus {
   font-weight: bold;
