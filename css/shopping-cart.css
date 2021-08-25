@@ -174,7 +174,31 @@ main {
     transform: translateY(4px);
 }
 
+.quantity-input {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    width: 9.2rem;
+    
+}
 
+.quantity-input button {
+    height: 4rem;
+    width: 4rem;
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+   
+}
+.quantity-input input {
+    border: none;
+    width: 4rem;
+    text-align: center;
+    background-color: #444;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
 
          
 
@@ -182,77 +206,6 @@ main {
 
 
 
-
-
-
-input,
-textarea {
-  border: none;
-  background-color: #444;
-  color:#f9f8f6;
-  box-sizing: border-box;
-  margin: 0;
-  outline: none;
-  padding: 10px;
-}
-
-input[type="button"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.input-group {
-display: flex;
-  clear: both;
-  position: relative;
-}
-
-.input-group input[type='button'] {
-  background-color: #444;
-  min-width: 24px;
-  width: auto;
-  transition: all 300ms ease;
-  color: #f9f8f6;
-}
-
-.input-group input[type='button']:hover {
-    background-color: #333;
-}
-.input-group .button-minus,
-.input-group .button-plus {
-  font-weight: bold;
-  height: 38px;
-  padding: 0;
-  position: relative;
-}
-
-.input-group .quantity-field {
-  position: relative;
-  text-align: center;
-  height: 38px;
-  width: 5rem;
-  display: inline-block;
-  font-size: 13px;
-  resize: vertical;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-}
-.button-plus {
-    border-bottom-right-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
-}
-.button-minus {
-    border-bottom-left-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-}
 
 
 
