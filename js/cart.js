@@ -15,7 +15,6 @@
             let button = removeCartItemButton[i];
             button.addEventListener("click", removeItem);
             updateCartTotal();
-
         }
     }
     function removeItem(event) {
@@ -28,18 +27,14 @@
     function updateReviewTitle() {
         let totalItems = 0;
         const orderReviewTitle = document.querySelector(".order-review__title");
+        const receiptBlock = document.querySelector(".cart-receipt-block");
         const orderItems = document.querySelectorAll(".cart-item");
         for (let i = 0; i < orderItems.length; i++) {
             totalItems++;
-
         }
-
-        (isOrderEmpty(totalItems) ? console.log(true) : console.log(false));
         return orderReviewTitle.innerHTML = "Review Order " + "(" + totalItems + ")";
     }
-    function isOrderEmpty(totalItems) {
-        return totalItems <= 0 ? true : false;
-    }
+
 
     function updateCartTotal() {
         let counter = 0;
@@ -52,10 +47,22 @@
             const itemQuantity = quantityArray[i].value;
             counter += itemQuantity * itemPrice;
         }
-        subtotalContainer.innerHTML = "$" + (Math.round(counter * 100) / 100).toFixed(2);
-        return totalContainer.innerHTML = subtotalContainer.innerHTML;
+        (isOrderEmpty(counter)) ? subtotalContainer.parentElement.parentElement.remove() : false;
+
+        subtotalContainer.innerText = convertDollarAmount(counter);
+        return totalContainer.innerText = subtotalContainer.innerHTML;
 
     }
+
+    function isOrderEmpty(totalItems) {
+        return totalItems <= 0 ? true : false;
+    }
+    function convertDollarAmount(counter) {
+        const dollarAmount = "$" + (Math.round(counter * 100) / 100).toFixed(2);
+        return dollarAmount;
+    }
+
+    
 
 
     const appHeight = () => {
