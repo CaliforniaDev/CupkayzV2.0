@@ -57,32 +57,16 @@
                     <span class="cart-item__price text-xxs">$22 per dozen</span>
 
                     <label for="Quantity"></label>
-                    <div class="input-group">
-                        <input type="button" value="-" class="button-minus" data-field="quantity" />
-                        <input type="number" step="1" max="100" value="1" name="quantity" class="quantity-field"
+                    <div class="quantity-input">
+                        <button type="button" value="-" class="light-font minus-btn" data-field="quantity" disabled>-</button>
+                        <input type="text" step="1" max="100" value="1" name="quantity" class="light-font quantity-field"
                             required />
-                        <input type="button" value="+" class="button-plus" data-field="quantity" />
+                        <button type="button" value="+" class="light-font plus-btn" data-field="quantity">+</button>
                     </div>
                 </div>
                 <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
             </div>
-            <div class="cart-item">
-                <figure class="cart-item__img">
-                </figure>
-                <div class="cart-item__text-block  light-font">
-                    <h4 class="cart-item__title">Stuffed Oreo Cupcakes</h4>
-                    <span class="cart-item__price text-xxs">$22 per dozen</span>
 
-                    <label for="Quantity"></label>
-                    <div class="input-group">
-                        <input type="button" value="-" class="button-minus" data-field="quantity" />
-                        <input type="number" step="1" max="100" value="2" name="quantity" class="quantity-field"
-                            required />
-                        <input type="button" value="+" class="button-plus" data-field="quantity" />
-                    </div>
-                </div>
-                <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
-            </div>
             <div class="cart-receipt-block light-font">
                 <div class="cart-subtotal">
                     <span class="cart-subtotal__title">Subtotal</span>
@@ -101,7 +85,8 @@
 
 
 </body>
-<script src="js/cart.js"></script>
 <script src="js/custom-select-btn.js"></script>
+<script src="js/cart.js"></script>
+
 
 </html>
