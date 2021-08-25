@@ -1,19 +1,21 @@
 (function () {
     document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     const shoppingCart_deserialized = JSON.parse(localStorage.getItem("cart-array"));
-
-
-
-
-    addClickEventListener();
-    updateReviewTitle();
-    isOrderEmpty();
-
-    function addClickEventListener() {
-        const removeCartItemButton = document.querySelectorAll(".cart-item__remove-btn");
+    
+    if (document.readyState == "loading") {
+        document.addEventListener("DOMContentLoaded", documentIsReady())
+    } else {
+        documentIsReady()
+    }
+    function documentIsReady() {
+        if (isOrderEmpty()){
+            return alert("cart is empty");
+        }
+        const REMOVE_CART_ITEM_BUTTONS_ARR = document.querySelectorAll(".cart-item__remove-btn");
         for (let i = 0; i < addEventListener.length; i++) {
-            let button = removeCartItemButton[i];
-            button.addEventListener("click", removeItem);
+            const removeButton = REMOVE_CART_ITEM_BUTTONS_ARR[i];
+            removeButton.addEventListener("click", removeItem);
+            updateReviewTitle();
             updateCartTotal();
         }
     }
@@ -27,7 +29,6 @@
     function updateReviewTitle() {
         let totalItems = 0;
         const orderReviewTitle = document.querySelector(".order-review__title");
-        const receiptBlock = document.querySelector(".cart-receipt-block");
         const orderItems = document.querySelectorAll(".cart-item");
         for (let i = 0; i < orderItems.length; i++) {
             totalItems++;
@@ -47,15 +48,16 @@
             const itemQuantity = quantityArray[i].value;
             counter += itemQuantity * itemPrice;
         }
-        (isOrderEmpty(counter)) ? subtotalContainer.parentElement.parentElement.remove() : false;
+        (isOrderEmpty()) ? subtotalContainer.parentElement.parentElement.remove() : false;
 
         subtotalContainer.innerText = convertDollarAmount(counter);
         return totalContainer.innerText = subtotalContainer.innerHTML;
 
     }
 
-    function isOrderEmpty(totalItems) {
-        return totalItems <= 0 ? true : false;
+    function isOrderEmpty() {
+        const cartItemsArr =  document.querySelectorAll(".cart-item");
+        return cartItemsArr.length <= 0 ? true : false;
     }
     function convertDollarAmount(counter) {
         const dollarAmount = "$" + (Math.round(counter * 100) / 100).toFixed(2);
