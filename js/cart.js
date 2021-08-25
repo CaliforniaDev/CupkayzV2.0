@@ -12,15 +12,15 @@
 
 
     function documentIsReady() {
-        if (isOrderEmpty()){
+        if (isOrderEmpty()) {
             updateCartTotal();
             return alert("cart is empty");
+        } else {
+            addQuantityInputListeners();
+            addRemoveButtonListeners();
+            updateReviewTitle();
+            updateCartTotal();
         }
-
-        addQuantityInputListeners();
-        addRemoveButtonListeners();
-        updateReviewTitle();
-        updateCartTotal();
     }
 
 
@@ -76,14 +76,13 @@
             counter += itemQuantity * itemPrice;
         }
         (isOrderEmpty()) ? subtotalContainer.parentElement.parentElement.remove() : false;
-
         subtotalContainer.innerText = convertDollarAmount(counter);
         return totalContainer.innerText = subtotalContainer.innerHTML;
 
     }
 
     function isOrderEmpty() {
-        const cartItemsArr =  document.querySelectorAll(".cart-item");
+        const cartItemsArr = document.querySelectorAll(".cart-item");
         return cartItemsArr.length <= 0 ? true : false;
     }
     function convertDollarAmount(counter) {
@@ -91,7 +90,7 @@
         return dollarAmount;
     }
 
-    
+
 
 
     const appHeight = () => {
