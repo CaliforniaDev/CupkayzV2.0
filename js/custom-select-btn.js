@@ -1,39 +1,33 @@
+(function() {
 
-    function incrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
-      
-        if (!isNaN(currentVal)) {
-          parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
-        } else {
-          parent.find('input[name=' + fieldName + ']').val(0);
-        }
-      }
-      
-      function decrementValue(e) {
-        e.preventDefault();
-        var fieldName = $(e.target).data('field');
-        var parent = $(e.target).closest('div');
-        var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
-      
-        if (!isNaN(currentVal) && currentVal > 0) {
-          parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
-        } else {
-          parent.find('input[name=' + fieldName + ']').val(0);
-        }
-      }
-      
-      $('.input-group').on('click', '.button-plus', function(e) {
-        incrementValue(e);
-      });
-      
-      $('.input-group').on('click', '.button-minus', function(e) {
-        decrementValue(e);
-      });
-      
-      
+  if (document.readyState = "loading") {
+    document.addEventListener("DOMContentLoaded", documentIsReady());
+  } else {
+    documentIsReady();
+  }
+
+  function documentIsReady() {
+    const MINUS_BUTTON = document.querySelectorAll(".minus-btn");
+    const PLUS_BUTTON = document.querySelectorAll(".plus-btn");
+    for (let i = 0; i < MINUS_BUTTON.length; i++) {
+      MINUS_BUTTON[i].setAttribute("disabled", "disabled");
+      PLUS_BUTTON[i].addEventListener("click", addQuantity);
+    }
+    
+  }
+
+  function addQuantity(event) {
+    const plusButton = event.currentTarget;
+    const inputField = plusButton.previousElementSibling;
+    inputField.value == 100 ? plusButton.setAttribute("disabled", "disabled") : inputField.value++;
+    plusButton.getAttribute("disabled") ? alert("reached max quantity") : false;
+
+  }
+
+
+
+
+}());
 
 
 
