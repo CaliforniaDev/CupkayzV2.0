@@ -12,14 +12,16 @@
             return alert("cart is empty");
         }
         const REMOVE_CART_ITEM_BUTTONS_ARR = document.querySelectorAll(".cart-item__remove-btn");
-        for (let i = 0; i < addEventListener.length; i++) {
+        for (let i = 0; i < REMOVE_CART_ITEM_BUTTONS_ARR.length; i++) {
             const removeButton = REMOVE_CART_ITEM_BUTTONS_ARR[i];
-            removeButton.addEventListener("click", removeItem);
-            updateReviewTitle();
-            updateCartTotal();
+            removeButton.addEventListener("click", removeCartItem);
         }
+        
+      
+        updateReviewTitle();
+        updateCartTotal();
     }
-    function removeItem(event) {
+    function removeCartItem(event) {
         const buttonClicked = event.currentTarget;
         buttonClicked.parentElement.remove();
         updateReviewTitle();
