@@ -8,9 +8,6 @@
     document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
 
-
-
-
     function documentIsReady() {
         if (isOrderEmpty()) {
             updateCartTotal();
@@ -33,10 +30,20 @@
         }
         for (let j = 0; j < QUANTITY_FIELD.length; j++) {
             const textField = QUANTITY_FIELD[j];
-            textField.addEventListener("input", updateCartTotal);
+            textField.addEventListener("change", quantityChange);
+            textField.addEventListener("click", (event) => event.currentTarget.select());
         }
     }
 
+    function quantityChange(event) {
+        const textField = event.currentTarget;
+        if (isNaN(textField.value) || textField.value <= 0) {
+            textField.value = 1;
+        } else if (textField.value > 100) {
+            textField.value = 100; 
+        }
+        updateCartTotal();
+    }
     function addRemoveButtonListeners() {
         const REMOVE_CART_ITEM_BUTTONS_ARR = document.querySelectorAll(".cart-item__remove-btn");
         for (let i = 0; i < REMOVE_CART_ITEM_BUTTONS_ARR.length; i++) {
