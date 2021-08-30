@@ -7,8 +7,18 @@
 
     document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
+    console.log(CART_DESERIALIZED);
 
     function documentIsReady() {
+        
+
+
+
+
+
+
+
+
         if (isOrderEmpty()) {
             updateCartTotal();
             return alert("cart is empty");
@@ -20,7 +30,9 @@
         }
     }
 
+    function addCartItems() {
 
+    }
     function addQuantityInputListeners() {
         const QUANTITY_FIELD = document.querySelectorAll(".quantity-field");
         const INPUT_BUTTONS = document.querySelectorAll(".quantity-input button");
@@ -44,6 +56,7 @@
         }
         updateCartTotal();
     }
+    
     function addRemoveButtonListeners() {
         const REMOVE_CART_ITEM_BUTTONS_ARR = document.querySelectorAll(".cart-item__remove-btn");
         for (let i = 0; i < REMOVE_CART_ITEM_BUTTONS_ARR.length; i++) {
