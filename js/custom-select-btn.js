@@ -31,7 +31,6 @@
   function subtractQuantityField(event) {
     const minusButton = event.currentTarget;
     const inputField = minusButton.nextElementSibling;
-    console.log
     inputField.value == 1 ? minusButton.setAttribute("disabled", "disabled") : inputField.value--;
     minusButton.getAttribute("disabled") ? alert("please enter valid amount") : false;
   } 
