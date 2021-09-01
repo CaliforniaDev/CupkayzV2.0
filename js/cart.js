@@ -24,12 +24,6 @@
                 loadItemsToCart(title, imageSrc, price, quantity);
             }
 
-
-
-
-
-
-
             HIDDEN_CART_ITEM.remove()
 
             addQuantityInputListeners();
@@ -145,13 +139,8 @@
         }
         if (isOrderEmpty()) {
             subtotalContainer.parentElement.parentElement.remove()
-        } else {
-            return false
-        };
-
-
+        } 
         subtotalContainer.innerText = convertDollarAmount(counter);
-        
         return totalContainer.innerText = subtotalContainer.innerHTML;
     }
 
