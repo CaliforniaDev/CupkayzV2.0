@@ -5,8 +5,9 @@
         documentIsReady()
     }
 
-    document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
 
+
+    document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     function documentIsReady() {
         const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
         const HIDDEN_CART_ITEM = document.querySelector(".cart-item.hidden");
@@ -14,7 +15,6 @@
             updateCartTotal();
             return alert("cart is empty");
         } else {
-
             for (let i = 0; i < CART_DESERIALIZED.length; i++) {
                 const cartItem = CART_DESERIALIZED[i];
                 const title = cartItem.itemName;
@@ -23,6 +23,13 @@
                 const quantity = cartItem.quantity;
                 loadItemsToCart(title, imageSrc, price, quantity);
             }
+
+
+
+
+
+
+
             HIDDEN_CART_ITEM.remove()
 
             addQuantityInputListeners();
@@ -31,6 +38,16 @@
             updateCartTotal();
         }
     }
+
+
+
+
+
+
+
+
+
+
 
     function loadItemsToCart(title, imageSrc, price, quantity) {
         const cartItem = document.querySelector(".cart-item.hidden");
@@ -47,16 +64,37 @@
 
     function addQuantityInputListeners() {
         const QUANTITY_FIELD = document.querySelectorAll(".quantity-field");
-        const INPUT_BUTTONS = document.querySelectorAll(".quantity-input button");
-        for (let i = 0; i < INPUT_BUTTONS.length; i++) {
-            const input = INPUT_BUTTONS[i];
-            input.addEventListener("click", updateCartTotal);
+        const MINUS_BUTTON = document.querySelectorAll(".minus-btn");
+        const PLUS_BUTTON = document.querySelectorAll(".plus-btn");
+        for (let i = 0; i < MINUS_BUTTON.length; i++) {
+            MINUS_BUTTON[i].setAttribute("disabled", "disabled");
+            MINUS_BUTTON[i].addEventListener("click", subtractQuantityClicked)
+            MINUS_BUTTON[i].addEventListener("click", updateCartTotal);
+            PLUS_BUTTON[i].addEventListener("click", incrementQuantityClicked);
+            PLUS_BUTTON[i].addEventListener("click", updateCartTotal);
         }
         for (let j = 0; j < QUANTITY_FIELD.length; j++) {
             const textField = QUANTITY_FIELD[j];
             textField.addEventListener("change", quantityChange);
             textField.addEventListener("click", (event) => event.currentTarget.select());
         }
+    }
+
+
+    function incrementQuantityClicked(event) {
+        const plusButton = event.currentTarget;
+        const inputField = plusButton.previousElementSibling;
+        const minusButton = inputField.previousElementSibling;
+        inputField.value > 1 ? minusButton.removeAttribute("disabled") : false;
+        inputField.value == 100 ? plusButton.setAttribute("disabled", "disabled") : inputField.value++;
+        plusButton.getAttribute("disabled") ? alert("reached max quantity") : false;
+    }
+
+    function subtractQuantityClicked(event) {
+        const minusButton = event.currentTarget;
+        const inputField = minusButton.nextElementSibling;
+        inputField.value == 1 ? minusButton.setAttribute("disabled", "disabled") : inputField.value--;
+        minusButton.getAttribute("disabled") ? alert("please enter valid amount") : false;
     }
 
     function quantityChange(event) {
@@ -105,10 +143,16 @@
             const itemQuantity = quantityArray[i].value;
             counter += itemQuantity * itemPrice;
         }
-        (isOrderEmpty()) ? subtotalContainer.parentElement.parentElement.remove() : false;
-        subtotalContainer.innerText = convertDollarAmount(counter);
-        return totalContainer.innerText = subtotalContainer.innerHTML;
+        if (isOrderEmpty()) {
+            subtotalContainer.parentElement.parentElement.remove()
+        } else {
+            return false
+        };
 
+
+        subtotalContainer.innerText = convertDollarAmount(counter);
+        
+        return totalContainer.innerText = subtotalContainer.innerHTML;
     }
 
     function isOrderEmpty() {
