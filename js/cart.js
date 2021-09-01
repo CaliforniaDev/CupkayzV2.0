@@ -9,7 +9,6 @@
 
     function documentIsReady() {
         const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
-        const cartItemDiv = document.querySelector(".cart-item");
     
 
 
@@ -21,6 +20,7 @@
             const quantity = cartItem.quantity;
             loadItemsToCart(title, imageSrc, price, quantity);
         }
+
         if (isOrderEmpty()) {
             updateCartTotal();
             return alert("cart is empty");
@@ -40,14 +40,14 @@
         cartItemClone.querySelector(".cart-item__title").innerText = title;
         cartItemClone.querySelector(".cart-item__price").innerText = price;
         cartItemClone.querySelector(".quantity-field").value = quantity;
-        cartItem.classList.add("active");
+        cartItemClone.classList.add("active");
         cartReceipt.classList.add("active");
-        console.log(cartItemClone.classList)
         cartItem.after(cartItemClone);
     }
     function addQuantityInputListeners() {
         const QUANTITY_FIELD = document.querySelectorAll(".quantity-field");
         const INPUT_BUTTONS = document.querySelectorAll(".quantity-input button");
+        console.log(INPUT_BUTTONS);
         for (let i = 0; i < INPUT_BUTTONS.length; i++) {
             const input = INPUT_BUTTONS[i];
             input.addEventListener("click", updateCartTotal);
@@ -61,6 +61,7 @@
 
     function quantityChange(event) {
         const textField = event.currentTarget;
+        console.log(textField);
         if (isNaN(textField.value) || textField.value <= 0) {
             textField.value = 1;
         } else if (textField.value > 100) {
@@ -98,8 +99,6 @@
 
     function updateCartTotal() {
         let counter = 0;
-        const cartItems = document.querySelectorAll(".cart-item.active");
-        console.log(cartItems);
         const itemPriceArr = document.querySelectorAll(".cart-item__price");
         const quantityArray = document.querySelectorAll(".quantity-field");
         const subtotalContainer = document.querySelector(".cart-subtotal__price");
