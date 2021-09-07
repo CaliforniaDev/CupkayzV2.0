@@ -5,12 +5,11 @@
         documentIsReady()
     }
 
-
-
     document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     function documentIsReady() {
         const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
         const HIDDEN_CART_ITEM = document.querySelector(".cart-item.hidden");
+        const payButton = document.querySelector(".google-pay-btn");
         if (isOrderEmpty()) {
             updateCartTotal();
             return alert("cart is empty");
@@ -33,25 +32,17 @@
         }
     }
 
-
-
-
-
-
-
-
-
-
-
     function loadItemsToCart(title, imageSrc, price, quantity) {
         const cartItem = document.querySelector(".cart-item.hidden");
         const cartReceipt = document.querySelector(".cart-receipt-block");
         const cartItemClone = cartItem.cloneNode(true);
+        const payButton = document.querySelector(".google-pay-btn");
         cartItemClone.querySelector(".cart-item__img").src = imageSrc;
         cartItemClone.querySelector(".cart-item__title").innerText = title;
         cartItemClone.querySelector(".cart-item__price").innerText = price;
         cartItemClone.querySelector(".quantity-field").value = quantity;
         cartItemClone.classList.replace("hidden", "active");
+        payButton.classList.add("active");
         cartReceipt.classList.add("active");
         return cartItem.after(cartItemClone);
     }
@@ -66,6 +57,7 @@
             MINUS_BUTTON[i].addEventListener("click", updateCartTotal);
             PLUS_BUTTON[i].addEventListener("click", incrementQuantityClicked);
             PLUS_BUTTON[i].addEventListener("click", updateCartTotal);
+
         }
         for (let j = 0; j < QUANTITY_FIELD.length; j++) {
             const textField = QUANTITY_FIELD[j];
@@ -73,7 +65,6 @@
             textField.addEventListener("click", (event) => event.currentTarget.select());
         }
     }
-
 
     function incrementQuantityClicked(event) {
         const plusButton = event.currentTarget;
@@ -132,15 +123,21 @@
         const quantityArray = document.querySelectorAll(".quantity-field");
         const subtotalContainer = document.querySelector(".cart-subtotal__price");
         const totalContainer = document.querySelector(".cart-total__price");
+        const payButton = document.querySelector(".google-pay-btn");
+
         for (let i = 0; i < itemPriceArr.length; i++) {
             const itemPrice = parseFloat(itemPriceArr[i].innerText.replace("$", ""));
             const itemQuantity = quantityArray[i].value;
             counter += itemQuantity * itemPrice;
         }
         if (isOrderEmpty()) {
+            payButton.remove();
             subtotalContainer.parentElement.parentElement.remove()
+            console.log(subtotalContainer.parentElement.parentElement);
+
         } 
         subtotalContainer.innerText = convertDollarAmount(counter);
+
         return totalContainer.innerText = subtotalContainer.innerHTML;
     }
 
@@ -172,8 +169,6 @@
             }
         }
     }
-
-
 
     const appHeight = () => {
         const doc = document.documentElement

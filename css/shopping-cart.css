@@ -40,7 +40,8 @@ main {
     display: grid;
     height: var(--app-height);
     width: 100vw;
-    min-width: 100%;
+    
+    max-width: 100%;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
@@ -153,6 +154,7 @@ main {
     border-radius: 0.8rem;
     background-color: #667A68;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 200px;
 }
 .cart-total, .cart-subtotal {
     display: flex;
@@ -162,22 +164,26 @@ main {
 
 
 
-.google-pay-btn {
-    display: none;/*temporary display: none during console testing*/
+.google-pay-btn.active {
+    display: flex;
     position: fixed;
-    bottom: 2.4rem;
     right: 2.4rem;
+    bottom: 2.4rem;
+    overflow: hidden;
+  
     width: 17.5rem;
-    height: 5.9rem;
     border-radius: 3.2rem;
-    border: none;
-    background-color: #f9f8f6;
+    border: none; 
     cursor: pointer;
     
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-    
-    
 }
+
+.google-pay-btn {
+display: none;
+}
+
+
 
 
 .google-pay-btn:hover {
