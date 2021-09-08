@@ -170,19 +170,19 @@ main {
     background-color: #667a66;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.modal-box > figure {
+.modal-box__img-container {
     width: 100%;
     height: 22.4rem;
     overflow: hidden;
     background-color: #777;
 }
-.modal-box > figure > img {
+.modal-box__img-container > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50% ;
 }
-.modal-box .info-container{
+.modal-box__info-container{
     text-align: justify;
     margin: 2.4rem 1.6rem 0 1.6rem;
 }
@@ -260,10 +260,8 @@ footer {
     height: 8rem;
     width: 100vw;
     max-width: 100%;
-    min-width: 100%;
     padding: 0 9.2rem;
     bottom: 0;
-    opacity: 0.9;
     align-items: center;
     justify-content: space-between;
     background-color: #604543;
@@ -276,9 +274,6 @@ footer {
     padding-bottom: 0.4rem;
     align-self: center;
     text-align: center;
-}
-#bottom-nav > img:nth-child(3) {
-    width: 3.2rem;
 }
 .bottom-nav__address-container {
     display: flex;
@@ -296,6 +291,65 @@ footer {
     padding: 0 1.6rem 0.2rem 2.4rem;
     border-bottom: 2px solid #f9f8f6;
 }
+.bottom-nav__cart-container {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    
+   
+}
+.bottom-nav__cart-container > p {
+    font-size: 2.4rem;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #444;
+}
+#cart-notification-bar {
+    display: block;
+    padding: 3rem 0 2.4rem 9.2rem;
+    width: 100vw;
+    max-width: 100%;
+    height: 8rem;
+    background-color: #EED1CA;
+    position: fixed;
+    bottom: -8rem;
+    transition: ease-in, 0.3s;
+}
+#cart-notification-bar.active {
+    bottom: 8rem;
+    transition: ease-in, 0.3s;
+}
+
+.clip-icon {
+    z-index: -1;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: -20px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s linear;
+    overflow: hidden;
+    
+}
+.clip-circle {
+    z-index: -1;
+    top: -32.5px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    clip-path: circle(30px at center);
+    transition: all .08s linear;
+}
+.cart {
+    z-index: 1;
+}
+
 
 
 @media only screen and (max-width: 1112px) {
@@ -326,6 +380,9 @@ footer {
         width: 100vw;
         max-width: 100%;
         
+    }
+    #cart-notification-bar {
+        padding-left: 1.6rem;
     }
     #bottom-nav {
         padding: 0 1.6rem;

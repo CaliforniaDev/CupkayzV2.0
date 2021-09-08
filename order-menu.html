@@ -1,12 +1,12 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Cupkayz</title>
+    <title>Order Menu</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -117,12 +117,25 @@
             </div>
         </section>
     </main>
+
+    <span id="cart-notification-bar">
+        <p><span id="cart-notification__item-quantity">1</span> Dozen added: <span class="item-name"></span></p>
+    </span>
+
     <aside id="bottom-nav">
         <img src="images/map-pin.svg" />
         <div class="bottom-nav__address-container">
             <a href="map.html" class="light-font bottom-nav__address no-wrap" id="address-result"></a>
         </div>
-        <img src="images/icon-shopping-bag.svg" />
+        <a href="shopping-cart.html" class="bottom-nav__cart-container">
+            
+            <img class="cart" src="images/icon-shopping-bag.svg" />
+            <p class= "cart-quantity"></p>
+            <img class="clip-icon" src="images/clip-icon.svg" width="0px"/>
+            <img class="clip-circle" src="images/reeses-cup.jpg" width="0px" />
+         
+            
+        </a>
     </aside>
 
 
@@ -133,18 +146,17 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
-
             <figure class="modal-box__img-container">
                 <img src="images/reeses-cup.jpg">
             </figure>
-            <div class="info-container">
+            <div class="modal-box__info-container">
                 <h4 class="light-font">Item Name</h4>
                 <p class="light-font">Item Description</p>
             </div>
-            <p class="light-font">DOZEN: $<span class="total-price">00</span></p>
+            <p class="light-font">DOZEN: $<span class="modal-box__total-price">00</span></p>
             <div class="form-container">
-                <label class="light-font">Qty:</label>
-                <input type="number" max="99"/>
+                <label for="Quantity" class="light-font">Qty:</label>
+                <input name="Quantity" class="item-qty" type="number" min="1"max="99" value="1"/>
                 <button class="order-btn">
                     <p>Order Now</p>
                 </button>
@@ -184,11 +196,8 @@
 
 </body>
 <script src="js/main.js"></script>
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="js/plugins.js"></script>
-<script src="js/modalbox.js"></script>
-<script>
-    document.getElementById("address-result").innerHTML = localStorage.getItem("textvalue");
-</script>
+<script src="js/order-menu.js"></script>
+
 
 </html>

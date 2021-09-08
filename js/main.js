@@ -1,4 +1,11 @@
+(function() {
+if (document.readyState = "loading") {
+    document.addEventListener("DOMContentLoaded", documentIsReady) 
+} else {
+    documentIsReady()
+}
 
+function documentIsReady() {
     const hamburger = document.querySelector(".hamburger");
     const navMenu = document.querySelector("#mobile-nav-menu");
     const navOverlay = document.querySelector(".nav-overlay");
@@ -25,6 +32,9 @@
     }
     window.addEventListener("resize", appHeight);
     appHeight()
+}
+}())
+    
     
 
 

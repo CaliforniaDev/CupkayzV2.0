@@ -257,7 +257,7 @@ function initMap() {
         passValue(recipientMarker.place.formatted_address);
     });
     function passValue(address) {
-        localStorage.setItem("textvalue", address);
+        localStorage.setItem("recipient-address", address);
     }
 
 
