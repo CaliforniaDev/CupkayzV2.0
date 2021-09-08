@@ -1,0 +1,411 @@
+.no-wrap {
+    white-space: nowrap;
+}
+
+.nav-item:nth-child(2) a {
+    color: #EDA39E;
+}
+.nav-item:nth-child(1) a {
+    color: #f9f8f6;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+    justify-content: center;
+    background-color: #604543;
+    padding: 10rem 9.2rem 10rem 9.2rem;
+}
+
+.top-section {
+    display: grid;
+    flex: auto;
+    margin: 1.6rem 0;
+}
+.top-section__flex-container {
+    position: relative;
+    display: flex;
+    height: 24rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.flex-container__image {
+    width: 100%; 
+    height: 32rem;
+    border-radius: 0.8rem;
+    background-image: url("../images/cup-cake-mask@2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.flex-container__overlay {
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    opacity: 0.75;
+    background-color: #1B241C;
+    border-top-right-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+}
+.flex-container__overlay:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.flex-container__overlay  > h4 {
+    margin: auto;
+    padding: 0 1.6rem;
+    text-align: center;
+}
+
+
+
+.product-section {
+    position: relative;
+    display: grid;
+    flex: auto;
+    width: 100%;
+    gap: 1.6rem;
+    margin-bottom: 9.6rem;
+    grid-template-columns: repeat(auto-fit , minmax(25rem, 1fr));
+}
+
+.card {
+    position: relative;
+    display: flex;
+    height: 30rem;
+    border: none;
+    overflow: hidden;
+    transform: rotate(0);
+    border-radius: 0.8rem;
+    flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card:hover {
+    cursor: pointer;
+}
+.card:hover > .card-btn {
+    cursor: pointer;
+    box-shadow: 0 0 20px #EDA39E;
+    text-shadow: 0 0 20px #EDA39E;
+}
+.card:hover > .card__image-container > img {
+    transform: scale(1.10);
+    border-radius: 0.8rem;
+}
+.card__image-container {
+    width: 100%;
+    height: 35rem;
+    overflow: hidden;
+}
+
+.card__image-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-height: 25rem;
+    overflow: hidden;
+    transition: .5s;
+    object-position: 50% 50%;
+}
+
+.card-btn {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition: 0.5s;
+    overflow: hidden;
+    text-align: center;
+    background-color: #667A68;
+}
+
+.card-btn > p {
+    padding: 2.4rem 0;
+}
+.card-btn > .item-detail,
+.card-btn > .item-price {
+    display: none;
+    /* detail will only show inside modalbox using modalbox.js script */
+}
+
+
+
+
+
+.modal-container {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding: 1.6rem; 
+    visibility: hidden;
+    justify-items: flex-end;
+    background-color: rgba(0,0,0,0.5);
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+.modal-container.active {
+    visibility: visible;
+    opacity: 1;
+}
+.modal-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 38.4rem;
+    height: 43.2rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
+    background-color: #667a66;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modal-box__img-container {
+    width: 100%;
+    height: 22.4rem;
+    overflow: hidden;
+    background-color: #777;
+}
+.modal-box__img-container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50% ;
+}
+.modal-box__info-container{
+    text-align: justify;
+    margin: 2.4rem 1.6rem 0 1.6rem;
+}
+.modal-box > p {
+    text-align: right;
+    margin-top: auto;
+    margin-right: 1.6rem;
+    padding-top: 2.4rem;
+}
+.close-btn {
+    position: absolute;
+    width: 4.8rem;
+    height: 4.8rem;
+    top: 0;
+    opacity: 0.9;
+    cursor: pointer;
+    background-color: #667A68;
+    border-bottom-right-radius: 0.8rem;
+}
+
+/* .bar class can be found in styles.css*/
+.close-btn .bar {
+    background-color: #aaa;
+}
+.close-btn:hover > .bar,
+.close-btn:focus > .bar {
+    background-color: #f9f8f6;
+}
+.close-btn > .bar:nth-child(1) {
+    transform: translateY(18px) rotate(45deg);
+}
+.close-btn > .bar:nth-child(2) {
+    transform: translateY(10px) rotate(-45deg);
+}
+/*/////////////////////////////////////////// */
+
+.form-container {
+    display: flex;
+    align-items: center;
+    border-radius: 0.8rem;
+    margin-top: auto;
+    margin-left: auto;
+    padding: 0 1.6rem 1.6rem 0;
+
+}
+.form-container button {
+    cursor: pointer;
+    padding: 1.2rem 2.4rem;
+    border-radius: 0.4rem;
+    border: none;
+    background-color: #EDA39E;
+    margin-left: 1.6rem;
+}
+.form-container button:hover {
+    background-color: #EED1CA;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+.form-container input {
+    font-size: 1.6rem;
+    width: 5.2rem;
+    margin-left: 0.8rem;
+    border: none;
+    border-radius: 0.4rem;
+    padding-left: 0.8rem;
+   
+}
+footer {
+    margin-bottom: 8rem;
+}
+
+#bottom-nav {
+    position: fixed;
+    display: flex;
+    height: 8rem;
+    width: 100vw;
+    max-width: 100%;
+    padding: 0 9.2rem;
+    bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #604543;
+    box-shadow: 0px -3px 6px rgba(0, 0, 0, .16);
+}
+#bottom-nav > img:nth-child(1) {
+    position: absolute;
+    left: 9.2rem;
+    height: 2.4rem;
+    padding-bottom: 0.4rem;
+    align-self: center;
+    text-align: center;
+}
+.bottom-nav__address-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-right: 1.6rem;
+    overflow: hidden;
+}
+.bottom-nav__address {
+    position: relative;
+    align-self: center;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    padding: 0 1.6rem 0.2rem 2.4rem;
+    border-bottom: 2px solid #f9f8f6;
+}
+.bottom-nav__cart-container {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    
+   
+}
+.bottom-nav__cart-container > p {
+    font-size: 2.4rem;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #444;
+}
+#cart-notification-bar {
+    display: block;
+    padding: 3rem 0 2.4rem 9.2rem;
+    width: 100vw;
+    max-width: 100%;
+    height: 8rem;
+    background-color: #EED1CA;
+    position: fixed;
+    bottom: -8rem;
+    transition: ease-in, 0.3s;
+}
+#cart-notification-bar.active {
+    bottom: 8rem;
+    transition: ease-in, 0.3s;
+}
+
+.clip-icon {
+    z-index: -1;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    top: -20px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s linear;
+    overflow: hidden;
+    
+}
+.clip-circle {
+    z-index: -1;
+    top: -32.5px;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    clip-path: circle(30px at center);
+    transition: all .08s linear;
+}
+.cart {
+    z-index: 1;
+}
+
+
+
+@media only screen and (max-width: 1112px) {
+    nav {
+        padding: 0 1.6rem;
+    }
+    main {
+        padding: 10rem 1.6rem 0 1.6rem;
+        max-width: 100%; 
+    }
+    .top-picks-col-1 {
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    .card {
+        min-height: 40rem;
+    }
+    .card__image-container > img {
+        max-height: 40rem;
+    }
+    .section-title {
+        left: 1.6rem;
+    }
+    .top-picks-col-1 {
+        width: 100vw;
+        
+    }
+    .top-picks-col-2 {
+        width: 100vw;
+        max-width: 100%;
+        
+    }
+    #cart-notification-bar {
+        padding-left: 1.6rem;
+    }
+    #bottom-nav {
+        padding: 0 1.6rem;
+    }
+    #bottom-nav > img:nth-child(1) {
+        left: 1.6rem;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .top-picks-col-1 {
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+    .card {
+        min-height: 30rem;
+    }
+    .card__image-container > img {
+        max-height: 300px;
+    }
+    .flex-container__overlay {
+        width: 100%;
+   
+    }
+}

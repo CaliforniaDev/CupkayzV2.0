@@ -7,28 +7,27 @@
     <title>Cupkayz</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
 </head>
 
 <body>
-    <header class="container">
     <nav id="top-nav">
-        <a href="#" class="logo">
-            <img src="images/cupkaysFamicom_icon.svg" alt="Cup Kayz logo" />
-            <img src="images/cupkaysFamicon_name.svg" alt="Cup Kayz" />
+        <a href="index.html" class="logo">
+            <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
+            <img src="images/cupkayzFamicom_name.svg" alt="Cup Kayz" />
         </a>
         <ul id="nav-menu">
-            <li class="nav-item"><a class="nav-link" href="#">HOME </a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="order-menu.html">ORDER MENU</a></li>
             <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
             <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
-            <li class="nav-item"><a class="nav-link"href="#">CONTACT</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -36,10 +35,120 @@
             <span class="bar"></span>
         </div>
     </nav>
-</header>
+
+    <aside>
+        <ul id="mobile-nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+    </aside>
+
+    <span class="nav-overlay"></span>
+
+    <section class="hero ">
+        <header class="hero-col-1">
+            <img src="images/SVG/Arrow.svg" alt="Arrow pointing down, instructing user to scroll">
+
+            <div class="header-content">
+                <h1>Treat <br> Yourself <br> Sweet</h1>
+                <a href="map.html" class="order-menu-btn">ORDER MENU</a>
+                <a href="#" class="special-btn">MAKE IT SPECIAL</a>
+            </div>
+
+        </header>
+        <div class="hero-col-2">
+            <img src="images/SVG/half-cupcake.svg" alt="Half of a cupcake">
+        </div>
+    </section>
+
+    <section class="popular-items-section light-font">
+        <h3>Most Popular Items</h3>
+        <div class="card-container">
+            <div class="product-card">
+                <figure class="product-img"></figure>
+                <div class="card-body">
+                    <h4>Stuffed Oreo Cupkay</h4>
+                    <p>Chocolate cupcake stuffed with a Oreo and topped off with our special whipped icing. </p>
+                    <a href="map.html">ORDER NOW</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <figure class="product-img"></figure>
+                <div class="card-body">
+                    <h4>Strawberry Shortcake</h4>
+                    <p>Strawberry or White cake, strawberry icing, SWEET strawberry TREAT on top! And Oh So FRESH!</p>
+                    <a href="map.html">ORDER NOW</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <figure class="product-img"></figure>
+                <div class="card-body">
+                    <h4>Stuffed Reese’s Cupkay</h4>
+                    <p>Chocolate cupcake stuffed with a Reese’s and our delicious creme cheese frosting yum!</p>
+                    <a href="map.html">ORDER NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="special-btn view-all-btn">VIEW ALL PRODUCT</a>
+    </section>
+
+    <section class="make-it-special-section">
+        <article class="article-info">
+            <div class="info-container">
+                <h2 class="dark-font">Make It Special <br>Imagine And Create</h2>
+                <p class="dark-font">
+                    Our custom Cakes and Cupcakes are created for any occassion or celebration. Offering delicious baked
+                    goods,
+                    from cake pops, cupcakes, cakes, and muffins. Create anything that you can imagine. If we can do it,
+                    it'll
+                    be done. Everything fresh, nothing less. <span class="no-wrap">Treat Yourself Sweet!</span>
+                </p>
+                <a href="#">MAKE IT SPECIAL</a>
+            </div>
+
+
+
+        </article>
+
+    </section>
+    <section class="news-letter-section">
+        <h3 class="dark-font">
+            Subscribe and recieve our newsletters about <br> <span class="no-wrap">our fresh deals and more!</span>
+        </h3>
+        <form class="news-letter-form">
+            <input class="light-font" type="email" id="email" name="email" placeholder="Enter your email here...">
+            <input for="email" type="submit" value="JOIN">
+        </form>
+    </section>
+
+    <footer class="light-font">
+        <div class="footer-col-1">
+            <p>EMAIL US</p>
+            <br>
+            <p>For inquires email us at <br> info@cupkayz.com</p>
+        </div>
+        <div class="footer-col-2">
+            <p>SAY HELLO</p>
+            <br>
+            <p>Riverside, CA 92503 <br> (951) 123 4567</p>
+        </div>
+        <div class="footer-col-3">
+            <i class="fab fa-instagram fa-lg"></i>
+            <i class="fab fa-twitter fa-lg"></i>
+            <i class="fab fa-facebook-f fa-lg"></i>
+        
+        </div>
+
+    </footer>
+
     <script src="js/main.js"></script>
-    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
+
+
 </body>
 
 </html>

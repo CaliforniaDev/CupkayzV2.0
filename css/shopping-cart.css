@@ -1,0 +1,234 @@
+:root {
+    --app-height: 100%;
+}
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    }
+    
+.text-xxs {
+    font-size: 1.3rem;
+}
+
+#top-nav {
+    justify-content: flex-start;
+    padding: 0 2.4rem;
+}
+
+.backToMenu-link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #f9f8f6;
+    transition: 0.4s;
+    margin-left: 2.4rem;
+    text-decoration: none;
+}
+.backToMenu-link > p {
+    display: inline-block;
+    transition: 0.4s;
+    padding-left: 0.8rem;
+    
+}
+.backToMenu-link:hover > p {
+    padding-left: 1.6rem;
+}
+.backToMenu-link:hover {
+    margin-left: 1.6rem;
+
+}
+main {
+    display: grid;
+    height: var(--app-height);
+    width: 100vw;
+    
+    max-width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+.review-order-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: #667A68;
+    grid-row: 1/ 13;
+    grid-column: 1 / 6;
+}
+.order-review {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 13.2rem;
+}
+.order-review > label {
+    font-size: 1.3rem;
+}
+.order-review > p {
+    margin-bottom: 0.8rem;
+}
+.address-container {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #f9f8f6;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.order-review__map-link {
+    text-decoration: none;
+    color: #f9f8f6;
+}
+
+
+.cart-items-section {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    background-color: #604543;
+    grid-column: 6 / 13;
+    grid-row: 1 / 13;
+}
+.cart-item.active {
+    display: flex;
+    margin: 2.4rem auto 0 auto;
+    padding: 2.4rem;
+    background-color: #667A68;
+    height: 19.4rem;
+    width: 59.2rem;
+    border-radius: 1.6rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cart-item.hidden {
+    display: none;
+}
+
+
+.cart-receipt-block {
+    display: none;
+}
+.cart-item__img-container {
+    border-radius: 1.6rem;
+    background-color: #f9f8f6;
+    width: 12.6rem;
+    height: 12.6rem;
+    margin-right: 2.4rem;
+    overflow: hidden;
+}
+.cart-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+}
+.cart-item__text-block {
+    display: flex;
+    flex-direction: column;
+}
+.cart-item__title {
+    display: block;
+    
+}
+.cart-item__remove-btn {
+    height: 4rem;
+    padding: 0 1.6rem;
+    border-radius: 0.8rem;
+    border-style: none;
+    color: #444;
+    background-color: transparent;
+    margin-top: auto;
+    margin-left: auto;
+    background-color: #EDA39E;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+
+.cart-receipt-block.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2.4rem auto;
+    width: 59.2rem;
+    height: 10.8rem;
+    border-radius: 0.8rem;
+    background-color: #667A68;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 200px;
+}
+.cart-total, .cart-subtotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+}
+
+
+
+.google-pay-btn.active {
+    display: flex;
+    position: fixed;
+    right: 2.4rem;
+    bottom: 2.4rem;
+    overflow: hidden;
+  
+    width: 17.5rem;
+    border-radius: 3.2rem;
+    border: none; 
+    cursor: pointer;
+    
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.google-pay-btn {
+display: none;
+}
+
+
+
+
+.google-pay-btn:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 8px 0px 12px 10px;
+}
+.google-pay-btn:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.quantity-input {
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    width: 9.2rem;
+    
+}
+
+.quantity-input button {
+    height: 4rem;
+    width: 4rem;
+    background-color: #444;
+    border: none;
+    cursor: pointer;
+   
+}
+.quantity-input input {
+    border: none;
+    width: 4rem;
+    text-align: center;
+    background-color: #444;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+}
+
+         
+
+
+
+
+
+
+
+
+
+

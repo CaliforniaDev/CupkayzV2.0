@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Cupkayz Map</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/map-styles.css">
+    <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script async type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
+
+
+</head>
+
+<body>
+    <nav id="top-nav">
+        <a href="index.html" class="logo">
+            <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
+            <img src="images/cupkayzFamicom_name.svg" alt="Cup Kayz" />
+        </a>
+        <ul id="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <aside>
+        <ul id="mobile-nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+    </aside>
+
+    <span class="nav-overlay"></span>
+    <main>
+        <section class="search-input-container">
+            <img class="map-pin-icon" src="images/map-pin.svg">
+            <input id="origins" type="hidden" name="origin" required />
+            <input id="search_input" type="text" name="address"  
+                placeholder="Enter delivery address here.." />
+        </section>
+        <form class="form-container" method="get" action="order-menu.html">
+
+            <section id="address-input-container" class="light-font">
+            
+                
+                <input class="address1-input" id="delivery-address" type="text" name="delivery address" disabled="disabled"/>
+                <input class="address2-input" id="address2" type="text" name="address2" placeholder="Enter Apartment or unit #" />
+                <input class="locality-input" id="locality" type="text" name="locality" disabled="disabled"/>
+                <input class="state-input" id="state" type="text" name="state" disabled="disabled"/>
+                <input class="postcode-input" id="postcode" type="text" name="postcode" disabled="disabled"/>
+                <input class="country-input" id="country" type="text" name="country" disabled="disabled"/>
+            </section>
+            <button id="confirmation-btn" type="submit" class="light-font">Confirm</button>
+            <span id="search-error" class="light-font">
+                <h2>Uh OH!</h2>
+                <p>We couldnt find that location.</p>
+                <p>Please search again.</p>
+            </span>
+
+            
+
+        </form>
+
+        <div id="map"></div>
+
+    </main>
+    <script src="js/main.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuUZPVWbBbeA4-dNTIoHvJ2_C4npd5UjE&map_ids=3a2b78e6ed566683&callback=initMap&libraries=places"> </script>
+
+</body>
+
+
+</html>

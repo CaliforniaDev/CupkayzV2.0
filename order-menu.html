@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Order Menu</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/order-menu-styles.css" />
+    <link rel="apple-touch-icon" href="images/cupkaysFamicom_icon.svg" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <nav id="top-nav">
+        <a href="index.html" class="logo">
+            <img src="images/cupkayzFamicom_icon.svg" alt="Cup Kayz logo" />
+            <img src="images/cupkayzFamicom_name.svg" alt="Cup Kayz" />
+        </a>
+        <ul id="nav-menu">
+            <li class="nav-item"><a class="nav-link" href="index.html">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <aside>
+        <ul id="mobile-nav-menu">
+            <li class="nav-item"><a class="nav-link" href="#">HOME </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ORDER MENU</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">MAKE IT SPECIAL</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">JOIN</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+    </aside>
+
+    <span class="nav-overlay"></span>
+    <main>
+        <section class="top-section">
+            <div class="top-section__flex-container">
+                <figure class="flex-container__image"></figure>
+                <div class="flex-container__overlay">
+                    <h4 class="light-font">
+                        <span class="no-wrap">Click here</span> and get 15% off a
+                        <span class="no-wrap"> Special Order</span>
+                    </h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <div class="card">
+                <div class="card__image-container">
+                    <img class="item-img" src="images/stuffed-oreo.jpg" />
+                </div>
+                <div class="card-btn">
+                    <p class="light-font item-name">Stuffed Oreo Cupkay</p>
+                    <p class="item-price">26</p>
+                    <p class="light-font item-detail">Chocolate cupcake stuffed
+                        with a Oreo and topped off with our special
+                        whipped icing.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__image-container">
+                    <img class="item-img" src="images/reeses-cup.jpg" />
+                </div>
+                <div class="card-btn">
+                    <p class="light-font item-name">Stuffed Reese's Cupkay</p>
+                    <p class="item-price">26</p>
+                    <p class="light-font item-detail">Chocolate cupcake stuffed
+                        with a Reese’s and our delicious creme cheese
+                        frosting yum! </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__image-container">
+                    <img class="item-img" src="images/strawberry-special.jpg" />
+                </div>
+                <div class="card-btn">
+                    <p class="light-font item-name">Strawberry Special</p>
+                    <p class="item-price">22</p>
+                    <p class="light-font item-detail">Strawberry or White cake,
+                        strawberry icing, SWEET strawberry TREAT on top!
+                        And Oh So FRESH!</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card__image-container">
+                    <img class="item-img" src="images/banana-nut.jpg" />
+                </div>
+                <div class="card-btn">
+                    <p class="light-font item-name">Dulce de Leche</p>
+                    <p class="light-font item-price">28</p>
+                    <p class="light-font item-detail">Try our delicious SWEET
+                        Banana Nut Bread, with Dulce de Leche fused inside the
+                        center.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <span id="cart-notification-bar">
+        <p><span id="cart-notification__item-quantity">1</span> Dozen added: <span class="item-name"></span></p>
+    </span>
+
+    <aside id="bottom-nav">
+        <img src="images/map-pin.svg" />
+        <div class="bottom-nav__address-container">
+            <a href="map.html" class="light-font bottom-nav__address no-wrap" id="address-result"></a>
+        </div>
+        <a href="shopping-cart.html" class="bottom-nav__cart-container">
+            
+            <img class="cart" src="images/icon-shopping-bag.svg" />
+            <p class= "cart-quantity"></p>
+            <img class="clip-icon" src="images/clip-icon.svg" width="0px"/>
+            <img class="clip-circle" src="images/reeses-cup.jpg" width="0px" />
+         
+            
+        </a>
+    </aside>
+
+
+    <!-- Modal Box Start -->
+    <div class="modal-container">
+        <div class="modal-box">
+            <div class="close-btn">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <figure class="modal-box__img-container">
+                <img src="images/reeses-cup.jpg">
+            </figure>
+            <div class="modal-box__info-container">
+                <h4 class="light-font">Item Name</h4>
+                <p class="light-font">Item Description</p>
+            </div>
+            <p class="light-font">DOZEN: $<span class="modal-box__total-price">00</span></p>
+            <div class="form-container">
+                <label for="Quantity" class="light-font">Qty:</label>
+                <input name="Quantity" class="item-qty" type="number" min="1"max="99" value="1"/>
+                <button class="order-btn">
+                    <p>Order Now</p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--Modal Box End -->
+    <section class="news-letter-section">
+        <h3 class="dark-font">
+            Subscribe and recieve our newsletters about <br> <span class="no-wrap">our fresh deals and more!</span>
+        </h3>
+        <form class="news-letter-form">
+            <input class="light-font" type="email" id="email" name="email" placeholder="Enter your email here...">
+            <input for="email" type="submit" value="JOIN">
+        </form>
+    </section>
+
+    <footer class="light-font">
+        <div class="footer-col-1">
+            <p>EMAIL US</p>
+            <br>
+            <p>For inquires email us at <br> info@cupkayz.com</p>
+        </div>
+        <div class="footer-col-2">
+            <p>SAY HELLO</p>
+            <br>
+            <p>Riverside, CA 92503 <br> (951) 123 4567</p>
+        </div>
+        <div class="footer-col-3">
+            <i class="fab fa-instagram fa-lg"></i>
+            <i class="fab fa-twitter fa-lg"></i>
+            <i class="fab fa-facebook-f fa-lg"></i>
+
+        </div>
+
+    </footer>
+
+</body>
+<script src="js/main.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/order-menu.js"></script>
+
+
+</html>
