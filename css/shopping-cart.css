@@ -1,6 +1,9 @@
 :root {
     --app-height: 100%;
 }
+span , label {
+    font-family: 'Karla', sans-serif;
+}
 a, a:hover, a:focus, a:active {
     text-decoration: none;
     }
