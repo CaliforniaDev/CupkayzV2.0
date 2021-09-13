@@ -70,8 +70,8 @@
         const plusButton = event.currentTarget;
         const inputField = plusButton.previousElementSibling;
         const minusButton = inputField.previousElementSibling;
-        inputField.value > 1 ? minusButton.removeAttribute("disabled") : false;
         inputField.value == 100 ? plusButton.setAttribute("disabled", "disabled") : inputField.value++;
+        inputField.value > 1 ? minusButton.removeAttribute("disabled") : false;
         plusButton.getAttribute("disabled") ? alert("reached max quantity") : false;
     }
 
