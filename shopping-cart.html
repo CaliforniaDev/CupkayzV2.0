@@ -33,6 +33,11 @@
     <main>
         <section class="review-order-section light-font">
             <div class="order-review">
+                <aside id="mobile-back-btn">
+                    <a href="order-menu.html" >
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                </aside>
                 <h4 class="order-review__title">Review Order (0)</h4>
                 <p>Prep time: 2 - 5 business days</p>
                 <label>Delivery Address</label>
@@ -50,22 +55,34 @@
         <section class="cart-items-section">
 
             <div class="cart-item hidden">
-                <figure class="cart-item__img-container">
-                    <img class="cart-item__img" src="images/banana-nut.jpg" />
-                </figure>
-                <div class="cart-item__text-block  light-font">
-                    <h4 class="cart-item__title">Stuffed Oreo Cupcakes</h4>
-                    <span class="cart-item__price text-xxs">$22 per dozen</span>
+                <div class="cart-item__wrapper">
+                    <figure class="cart-item__img-container">
+                        <img class="cart-item__img" src="images/banana-nut.jpg" />
+                    </figure>
+                    <div class="cart-item__content-wrapper">
+                        <div class="cart-item__content  light-font">
+                            <h4 class="cart-item__title">Stuffed Oreo Cupcakes</h4>
+                            <span class="cart-item__price text-xxs">$22 per dozen</span>
 
-                    <label for="Quantity"></label>
-                    <div class="quantity-input">
-                        <button type="button" value="-" class="light-font minus-btn" data-field="quantity" disabled>-</button>
-                        <input type="text" step="1" max="100" value="1" name="quantity" class="light-font quantity-field"
-                            required />
-                        <button type="button" value="+" class="light-font plus-btn" data-field="quantity">+</button>
+                            <label for="Quantity"></label>
+                            <div class="quantity-input">
+                                <button type="button" value="-" class="light-font minus-btn" data-field="quantity"
+                                    disabled>-</button>
+                                <input type="text" step="1" max="100" value="1" name="quantity"
+                                    class="light-font quantity-field" required />
+                                <button type="button" value="+" class="light-font plus-btn"
+                                    data-field="quantity">+</button>
+                            </div>
+                            <button class="cart-item__remove-btn">
+                                <div class="remove-btn__wrapper">
+                                    <p>Remove |</p> <i class="fa fa-trash" aria-hidden="true"></i>
+                                </div>
+                                
+                            </button>
+                        </div>
+
                     </div>
                 </div>
-                <button class="cart-item__remove-btn">Remove | <i class="fa fa-trash" aria-hidden="true"></i></button>
             </div>
 
             <div class="cart-receipt-block light-font">
