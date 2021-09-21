@@ -103,7 +103,7 @@
 
     function removeCartItem(event) {
         const buttonClicked = event.currentTarget;
-        buttonClicked.parentElement.remove();
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
         return updateReviewTitle(), updateCartTotal();
     }
 
@@ -133,8 +133,6 @@
         if (isOrderEmpty()) {
             payButton.remove();
             subtotalContainer.parentElement.parentElement.remove()
-            console.log(subtotalContainer.parentElement.parentElement);
-
         } 
         subtotalContainer.innerText = convertDollarAmount(counter);
 
