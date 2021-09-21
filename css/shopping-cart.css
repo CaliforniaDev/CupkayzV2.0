@@ -79,6 +79,11 @@ main {
     cursor: pointer;
     text-overflow: ellipsis;
 }
+.delivery-address {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
 .order-review__map-link {
     text-decoration: none;
     color: #f9f8f6;
