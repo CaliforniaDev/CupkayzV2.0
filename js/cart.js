@@ -70,8 +70,8 @@
         const plusButton = event.currentTarget;
         const inputField = plusButton.previousElementSibling;
         const minusButton = inputField.previousElementSibling;
-        inputField.value > 1 ? minusButton.removeAttribute("disabled") : false;
         inputField.value == 100 ? plusButton.setAttribute("disabled", "disabled") : inputField.value++;
+        inputField.value > 1 ? minusButton.removeAttribute("disabled") : false;
         plusButton.getAttribute("disabled") ? alert("reached max quantity") : false;
     }
 
@@ -103,7 +103,7 @@
 
     function removeCartItem(event) {
         const buttonClicked = event.currentTarget;
-        buttonClicked.parentElement.remove();
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
         return updateReviewTitle(), updateCartTotal();
     }
 
@@ -133,8 +133,6 @@
         if (isOrderEmpty()) {
             payButton.remove();
             subtotalContainer.parentElement.parentElement.remove()
-            console.log(subtotalContainer.parentElement.parentElement);
-
         } 
         subtotalContainer.innerText = convertDollarAmount(counter);
 
