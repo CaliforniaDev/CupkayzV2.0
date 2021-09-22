@@ -5,8 +5,8 @@
         documentIsReady()
     }
 
-    document.querySelector(".delivery-address").innerHTML = localStorage.getItem("recipient-address");
     function documentIsReady() {
+        document.querySelector(".delivery-address").innerText = getAddress()
         const CART_DESERIALIZED = JSON.parse(localStorage.getItem("cart-array"));
         const HIDDEN_CART_ITEM = document.querySelector(".cart-item.hidden");
         const payButton = document.querySelector(".google-pay-btn");
@@ -31,7 +31,12 @@
             updateCartTotal();
         }
     }
-
+    function getAddress() {
+        const storedAddress = localStorage.getItem("recipient-address");
+        const instructions = "Please click here to confirm a valid address...";
+        return (storedAddress !== null) ? storedAddress : instructions;         
+    }
+    
     function loadItemsToCart(title, imageSrc, price, quantity) {
         const cartItem = document.querySelector(".cart-item.hidden");
         const cartReceipt = document.querySelector(".cart-receipt-block");
